@@ -10,10 +10,15 @@ Ces solutions possèdent des propriétés qui seront vérifiées, potentiellemen
 ## Dossiers
 
 -docs => Pour la génération de docs style doxygen
+
 -headers => Pour les fichiers *.h
+
 -obj => Pour les fichiers *.o
+
 -src => Pour les fichiers *.cpp
+
 -target => Dossier qui contient les exécutables, les fichiers à la fin de la chaîne de compilation
+
 -tests => Pour les tests
 
 ## Pour compiler sans avoir à installer armadillo
