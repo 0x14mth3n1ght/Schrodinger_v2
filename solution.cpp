@@ -39,15 +39,33 @@ double fact(double n){
 
 */
 double phi(double n, double z){
-        double h=Hermite(n,sqrt(z*m*omega/hbar));
+        double h=Hermite(n,z*sqrt(m*omega/hbar));
         double e=exp(-m*omega*z*z/(2*hbar));
         double c=pow(m*omega/(M_PI*hbar),0.25)/sqrt(fact(n)*pow(2,n));
         double phi_sol=c*e*h;
         return phi_sol;
 }
 
+/* wi et zi dans headers/constantes.h*/
+double ortho(double l,double n){
+        double c = pow(m*omega/(M_PI*hbar),0.5)/sqrt(pow(2,n+l)*fact(n)*fact(l));
+        double sum=0;
+        double changvar = 1/sqrt((l+n)*omega/(2*hbar)); //changement variable exp pour quadrature
+        for(int i=0;i<10;i++){
+                sum+=wi[i]*Hermite(n,zi[i]*sqrt(m*omega/hbar)/changvar)*Hermite(l,zi[i]*sqrt(m*omega/hbar)/changvar);
+        }
+        return c*sum;
+
+}
+
 int main(){
-        std::cout << 2*1.2;
-        std::cout << pow(2.0,0.25); /*attention pow renvoie 1 si int*/
+        double n=2;
+        double l=3;
+        //double phi_n = phi(n,z);
+        //double phi_l = phi(l,z);
+        double ortho_diff = ortho(l,n);
+        double ortho_same = ortho(l,l);
+        std::cout << ortho_diff;
+        std::cout << ortho_same;
 	return 0;
 }
