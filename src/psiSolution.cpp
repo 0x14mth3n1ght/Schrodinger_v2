@@ -33,13 +33,13 @@ arma::mat calculeSolution(arma::mat hermiteMat, int n_max, arma::vec vecteurZ)
     arma::mat res(tailleZ, n_max, arma::fill::zeros);
     //Variables
     double e,c;
-    for(int z=0; z<tailleZ; z++)
+    for(int z_i=0; z_i<tailleZ; z_i++)
     {
         for(int n=0; n<n_max; n++)
         {
-            e=exp(-m*omega*z*z/(2*hbar));
+            e=exp(-m*omega*z_i*z_i/(2*hbar));
             c=pow(m*omega/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
-            res(z,n) = hermiteMat(z,n) * c*e;
+            res(z_i,n) = hermiteMat(z_i,n) * c*e;
         }
     }
     return res;
