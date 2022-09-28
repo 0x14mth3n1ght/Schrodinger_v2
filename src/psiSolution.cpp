@@ -1,6 +1,6 @@
 #include "../headers/psiSolution.h"
 #include <math.h>
-#include <constantes.h>
+#include "../headers/constantes.h"
 
 
 //temporaire
