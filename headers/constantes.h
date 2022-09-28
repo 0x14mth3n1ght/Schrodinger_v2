@@ -1,3 +1,6 @@
+#ifndef CONSTANTES_H
+#define CONSTANTES_H
+
 /**
  * @file constantes.h
  * @brief Ce fichier contient les constantes utiles pour le projet
@@ -54,3 +57,6 @@ double zi[10] = {-3.43615912, -2.53273167, -1.75668365, -1.03661083, -0.34290133
 double wi[10] = {7.64043286e-06, 1.34364575e-03, 3.38743945e-02, 2.40138611e-01,
        6.10862634e-01, 6.10862634e-01, 2.40138611e-01, 3.38743945e-02,
        1.34364575e-03, 7.64043286e-06};
+
+
+#endif
