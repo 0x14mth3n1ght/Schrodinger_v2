@@ -50,7 +50,7 @@ double phi(double n, double z){
 double ortho(double l,double n){
         double c = 1/sqrt(pi*pow(2,n+l)*fact(n)*fact(l));
         double sum=0;
-        for(int i=0;i<10;i++){
+        for(int i=0;i<50;i++){
                 sum+=wi[i]*Hermite(n,zi[i])*Hermite(l,zi[i]);
         }
         return c*sum;
