@@ -7,9 +7,15 @@ class psiSolution
 {
 public :
 
+    //Constructeurs
+    psiSolution();
+    psiSolution(int);
+
+    //Valeur de n_max
     int n_max;
 
-    arma::mat calculeSolution(arma::mat, int, arma::vec);
+    //
+    arma::mat calculeSolution(const arma::vec);
 
 };
 

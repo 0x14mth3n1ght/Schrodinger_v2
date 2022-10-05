@@ -1,6 +1,15 @@
 #include "../headers/psiSolution.h"
 #include <math.h>
 #include "../headers/constantes.h"
+#include "../headers/hermite.h"
+#include <iostream>
+
+
+psiSolution::psiSolution() : n_max(1)
+{};
+
+psiSolution::psiSolution(int n) : n_max(n)
+{};
 
 
 //temporaire
@@ -15,6 +24,8 @@ double fact(double n)
         return n*fact(n-1);
     }
 }
+
+
 /**
  * @brief retourne une matrice à 2 dimensions, contenant les valeurs de psi_i(z) ;
  * La ième colonne correspond aux valeurs de psi_i évalué à une valeur de z différente à chaque ligne;
@@ -29,8 +40,10 @@ double fact(double n)
  * d'Hermite
  * @return arma::mat
  */
-arma::mat calculeSolution(arma::mat hermiteMat, int n_max, arma::vec vecteurZ)
+arma::mat calculeSolution(const arma::vec &vecteurZ)
 {
+    //Récupération de la matrice Hermite
+    arma::mat hermiteMatrix = hermiteMat(n_max, vecteurZ);
     int tailleZ = vecteurZ.size();
     //On créer une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n_max, arma::fill::zeros);
@@ -42,7 +55,7 @@ arma::mat calculeSolution(arma::mat hermiteMat, int n_max, arma::vec vecteurZ)
         {
             e=exp(-m*omega*z_i*z_i/(2*hbar));
             c=pow(m*omega/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
-            res(z_i,n) = hermiteMat(z_i,n) * c*e;
+            res(z_i,n) = hermiteMatrix(z_i,n) * c*e;
         }
     }
     return res;
