@@ -48,11 +48,10 @@ double phi(double n, double z){
 
 /* wi et zi dans headers/constantes.h*/
 double ortho(double l,double n){
-        double c = pow(m*omega/(M_PI*hbar),0.5)/sqrt(pow(2,n+l)*fact(n)*fact(l));
+        double c = 1/sqrt(pi*pow(2,n+l)*fact(n)*fact(l));
         double sum=0;
-        double changvar = 1/sqrt((l+n)*omega/(2*hbar)); //changement variable exp pour quadrature
         for(int i=0;i<10;i++){
-                sum+=wi[i]*Hermite(n,zi[i]*sqrt(m*omega/hbar)/changvar)*Hermite(l,zi[i]*sqrt(m*omega/hbar)/changvar);
+                sum+=wi[i]*Hermite(n,zi[i])*Hermite(l,zi[i]);
         }
         return c*sum;
 
