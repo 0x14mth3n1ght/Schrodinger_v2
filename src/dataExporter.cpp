@@ -12,6 +12,8 @@
 void exportToCsv(arma::vec X, arma::vec Y, char* nom)
 {
     std::ofstream fichierExport;
-    fichierExport.open(strcat("target", nom));
+    char filename[20]="target";
+    strcat(filename, nom);
+    fichierExport.open(filename);
     fichierExport<<"test";
 }
