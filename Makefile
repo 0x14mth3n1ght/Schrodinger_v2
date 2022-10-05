@@ -7,7 +7,9 @@ SOURCES=$(wildcard src/*.cpp)
 SOURCES_ASTYLE=$(wildcard src/*.cpp.orig)
 OBJ=$(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 
-all: compile_main
+all: format clean compile_main
+
+## Edition de liens et compilation exécutable ##
 
 compile_main: $(OBJ) | target #Créer le dossier target s'il n'existe pas
 	$(CC) $(CFLAGS) -o $(TARGET) $^
@@ -28,6 +30,7 @@ clean:
 	rm -f $(TARGET)
 	rm -f $(SOURCES_ASTYLE) $(HEADERS_ASTYLE)
 
+## Compile seulement les fichiers sources ##
 compile_source: $(OBJ)
 
 format: $(SOURCES) $(HEADERS)
