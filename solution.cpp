@@ -60,11 +60,17 @@ double ortho(double l,double n){
 int main(){
         double n=2;
         double l=3;
+        double m=8;
+        double k=6;
         //double phi_n = phi(n,z);
         //double phi_l = phi(l,z);
         double ortho_diff = ortho(l,n);
         double ortho_same = ortho(l,l);
-        std::cout << ortho_diff;
-        std::cout << ortho_same;
+        double ortho_diff2 = ortho(m,k);
+        double ortho_same2 = ortho(k,k);
+        std::cout << ortho_diff << "\n";
+        std::cout << ortho_same << "\n";
+        std::cout << ortho_diff2 << "\n";
+        std::cout << ortho_same2 << "\n";
 	return 0;
 }
