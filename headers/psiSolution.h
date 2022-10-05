@@ -3,9 +3,9 @@
 
 #include <armadillo>
 
-class psiSolution 
+class psiSolution
 {
-    public :
+public :
 
     int n_max;
 
