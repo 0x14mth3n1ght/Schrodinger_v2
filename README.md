@@ -16,7 +16,7 @@ Ces solutions possèdent des propriétés qui seront également vérifiées, pot
 
 -Pour lancer les tests, utilisez <code>make runtests</code> qui se chargera d'utiliser le makefile du dossier tests/.
 
--Pour générer la documentation, utilisez <code>make doc</code> qui est équivalent à <code>doxygen Doxygen</code>.
+-Pour générer la documentation, utilisez <code>make docs</code> qui est équivalent à <code>doxygen Doxygen</code>.
 
 -Pour formater le code selon le astyle, utilisez <code>make format</code>.
 

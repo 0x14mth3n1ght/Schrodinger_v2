@@ -2,8 +2,8 @@ var indexSectionsWithContent =
 {
   0: "cdhmoptwz",
   1: "pt",
-  2: "c",
-  3: "ct",
+  2: "ch",
+  3: "cht",
   4: "dhmopwz"
 };
 

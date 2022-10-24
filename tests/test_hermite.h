@@ -7,19 +7,19 @@ class TestHermiteSuite : public CxxTest::TestSuite
   public:
   /**
    * @brief Test du calcul de la matrice Hermite avec n_max=5 et 
-      \f$Z=\
-          begin{matrix}
+      \f[Z=
+          \begin{bmatrix}
           1 & 5
-          \end{matrix}}
-      \f$
+          \end{bmatrix}
+      \f]
       
       Ce calcul normalement donne le résultat suivant :
-      \f$
-      \begin{matrix}
-      1 &  2 &  2 & -4 & -20
+      \f[
+      \begin{bmatrix}
+      1 &  2 &  2 & -4 & -20 \\
       1 &  10 & 98 & 940 & 8812
-      \end{matrix}
-      \f$
+      \end{bmatrix}
+      \f]
    * 
    */
   void testHermite1( void )
@@ -32,14 +32,19 @@ class TestHermiteSuite : public CxxTest::TestSuite
   }
   /**
    * @brief Test du calcul de la matrice Hermite avec n_max=0 et 
+      \f[
       Z=\begin{bmatrix}
           1 & 1 & 1
-          \end{bmatrix}}
-      
+          \end{bmatrix}
+      \f]
       Ce calcul normalement donne le résultat suivant :
-      1
-      1
-      1
+      \f[
+        Z=\begin{bmatrix}
+          1 \\
+          1 \\
+          1
+          \end{bmatrix}
+      \f]
    * 
    */
   void testHermite2( void )

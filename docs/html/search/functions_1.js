@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testhermite1_17',['testHermite1',['../class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376',1,'TestHermiteSuite']]],
-  ['testhermite2_18',['testHermite2',['../class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6',1,'TestHermiteSuite']]]
+  ['hermitemat_22',['hermiteMat',['../hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472',1,'hermiteMat(int n_max, arma::vec Z):&#160;hermite.cpp'],['../hermite_8h.html#ab04f86934857b023659da77576c116c0',1,'hermiteMat(int, arma::vec):&#160;hermite.cpp']]]
 ];

@@ -1,0 +1,15 @@
+\_form#0=54x11:$n_max=2$
+\_form#1=136x44:\[ \begin{matrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{matrix} \]
+\_form#2=51x10:\[Z= \begin{matrix} 1 & 5 \end{matrix} \]
+\_form#3=230x10:\[ \begin{matrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{matrix} \]
+\_form#4=69x10:\[ Z=\begin{matrix} 1 & 1 & 1 \end{matrix} \]
+\_form#5=31x39:\[ Z=\begin{matrix} 1 \\ 1 \\ 1 \end{matrix} \]
+\_form#6=51x11:$n_{max}=2$
+\_form#7=146x46:\[ \begin{bmatrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{bmatrix} \]
+\_form#8=60x16:\[Z= \begin{bmatrix} 1 & 5 \end{bmatrix} \]
+\_form#9=238x16:\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\_form#10=78x16:\[ Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix} \]
+\_form#11=45x46:\[ Z=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \]
+\_form#12=81x16:$Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$
+\_form#13=133x31:\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 \\ 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\_form#14=98x16:$Z=\begin{bmatrix} z_0 & z_1 & z_2 \end{bmatrix}$

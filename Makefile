@@ -34,13 +34,16 @@ clean:
 compile_source: $(OBJ)
 
 ## Astyle ##
+.PHONY: format
 format: $(SOURCES) $(HEADERS)
 	./astyle --style=allman $^
 
 ## Documentation ##
-doc:
+.PHONY: docs
+docs:
 	doxygen Doxygen
 
 ## Tests ##
+.PHONY: runtests
 runtests:
 	$(MAKE) -C tests/

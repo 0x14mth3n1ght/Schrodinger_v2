@@ -1,19 +1,26 @@
+/**
+ * @file hermite.cpp
+ * @brief Implémentation d'hermite.h
+ *
+ */
+
 #include <iostream>
 #include <math.h>
 #include <armadillo>
-
 /**
  * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné n_max
  *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
  *
  * @param n_max Indice max des polynomes d'Hermites utilisés dans la matrice
  * @param Z Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
- * @return arma::mat Retourne une matrice de la forme suivante : exemple n_max=2
- $ \begin{matrix}
+ * @return arma::mat Retourne une matrice de la forme suivante : exemple \f$n_{max}=2\f$ et \f$Z=\begin{bmatrix} z_0 & z_1 & z_2 \end{bmatrix}\f$
+    \f[
+    \begin{bmatrix}
     H_0(z_0) & H_1(z_0) & H_2(z_0) \\
     H_0(z_1) & H_1(z_1) & H_2(z_1) \\
     H_0(z_2) & H_1(z_2) & H_2(z_2)
-    \end{matrix}  $
+    \end{bmatrix}
+    \f]
  */
 arma::mat hermiteMat(int n_max, arma::vec Z)
 {
