@@ -1,0 +1,39 @@
+\hypertarget{group__fn__sprandn}{}\doxysection{Fn\+\_\+sprandn}
+\label{group__fn__sprandn}\index{Fn\_sprandn@{Fn\_sprandn}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\arma\+\_\+warn\+\_\+unused obj\+\_\+type \mbox{\hyperlink{group__fn__sprandn_ga6074e1508449b264106c8f99871529b4}{sprandn}} (const uword n\+\_\+rows, const uword n\+\_\+cols, const double density, const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__sprandn_gac97d2e8dfc35cf96565eb8f97268620a}\label{group__fn__sprandn_gac97d2e8dfc35cf96565eb8f97268620a}} 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\arma\+\_\+warn\+\_\+unused obj\+\_\+type {\bfseries sprandn} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s, const double density, const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__sprandn_ga6e14c0fe7ef6cb17e9ca0d1d502015dc}\label{group__fn__sprandn_ga6e14c0fe7ef6cb17e9ca0d1d502015dc}} 
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{sp\+\_\+mat}} {\bfseries sprandn} (const uword n\+\_\+rows, const uword n\+\_\+cols, const double density)
+\item 
+\mbox{\Hypertarget{group__fn__sprandn_gaa020e486510b099ae11f25e29ea6b0c4}\label{group__fn__sprandn_gaa020e486510b099ae11f25e29ea6b0c4}} 
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{sp\+\_\+mat}} {\bfseries sprandn} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s, const double density)
+\item 
+{\footnotesize template$<$typename T1 $>$ }\\arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \mbox{\hyperlink{group__fn__sprandn_ga5b494110cc16ecb8aac8d270a52f2daf}{sprandn}} (const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__fn__sprandn_ga5b494110cc16ecb8aac8d270a52f2daf}\label{group__fn__sprandn_ga5b494110cc16ecb8aac8d270a52f2daf}} 
+\index{Fn\_sprandn@{Fn\_sprandn}!sprandn@{sprandn}}
+\index{sprandn@{sprandn}!Fn\_sprandn@{Fn\_sprandn}}
+\doxysubsubsection{\texorpdfstring{sprandn()}{sprandn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T1 $>$ \\
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$typename T1\+::elem\+\_\+type$>$ sprandn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&}]{X }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a sparse matrix with the non-\/zero values in the same locations as in the given sparse matrix X, with the non-\/zero values set to random values from a Gaussian distribution with zero mean and unit variance \mbox{\Hypertarget{group__fn__sprandn_ga6074e1508449b264106c8f99871529b4}\label{group__fn__sprandn_ga6074e1508449b264106c8f99871529b4}} 
+\index{Fn\_sprandn@{Fn\_sprandn}!sprandn@{sprandn}}
+\index{sprandn@{sprandn}!Fn\_sprandn@{Fn\_sprandn}}
+\doxysubsubsection{\texorpdfstring{sprandn()}{sprandn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename obj\+\_\+type $>$ \\
+arma\+\_\+warn\+\_\+unused obj\+\_\+type sprandn (\begin{DoxyParamCaption}\item[{const uword}]{n\+\_\+rows,  }\item[{const uword}]{n\+\_\+cols,  }\item[{const double}]{density,  }\item[{const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$}]{junk = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a sparse matrix with a randomly selected subset of the elements set to random values from a Gaussian distribution with zero mean and unit variance 

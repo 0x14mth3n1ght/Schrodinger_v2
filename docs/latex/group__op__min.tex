@@ -1,0 +1,67 @@
+\hypertarget{group__op__min}{}\doxysection{Op\+\_\+min}
+\label{group__op__min}\index{Op\_min@{Op\_min}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classop__min}{op\+\_\+min}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__op__min_gaaee43175ae6b0c656c31219c6e332fec}\label{group__op__min_gaaee43175ae6b0c656c31219c6e332fec}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+min\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__min}{op\+\_\+min}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__min_ga7e9b8dedef2410c89391ea07bbd91bfe}\label{group__op__min_ga7e9b8dedef2410c89391ea07bbd91bfe}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+min\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__min_ga1504998b184f40c5d5e02f2ad11bf135}\label{group__op__min_ga1504998b184f40c5d5e02f2ad11bf135}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+min\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__cx__only}{arma\+\_\+cx\+\_\+only}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__min_ga360c95ced52c37bf3962fafb74750e5d}\label{group__op__min_ga360c95ced52c37bf3962fafb74750e5d}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+min\+::apply} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op_cube}{Op\+Cube}}$<$ T1, \mbox{\hyperlink{classop__min}{op\+\_\+min}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__min_ga48093be59aa82ed312dee41727986b5b}\label{group__op__min_ga48093be59aa82ed312dee41727986b5b}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+min\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__min_ga0fb91e80d267326fd58a2cc10a5ee170}\label{group__op__min_ga0fb91e80d267326fd58a2cc10a5ee170}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+min\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__cx__only}{arma\+\_\+cx\+\_\+only}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__min_ga2c2e726dca2a6ed149fe2aef6974c7f4}\label{group__op__min_ga2c2e726dca2a6ed149fe2aef6974c7f4}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+min\+::direct\+\_\+min} (const eT $\ast$const X, const uword N)
+\item 
+\mbox{\Hypertarget{group__op__min_gab7a169dff803239bfc3afed923f8fe38}\label{group__op__min_gab7a169dff803239bfc3afed923f8fe38}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+min\+::direct\+\_\+min} (const eT $\ast$const X, const uword N, uword \&index\+\_\+of\+\_\+min\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__min_ga4fb29496aa9ef48a68a52783351f70c9}\label{group__op__min_ga4fb29496aa9ef48a68a52783351f70c9}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+min\+::direct\+\_\+min} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword row)
+\item 
+\mbox{\Hypertarget{group__op__min_gaf488bcd24c2530b38686eb3f90cfc6c2}\label{group__op__min_gaf488bcd24c2530b38686eb3f90cfc6c2}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+min\+::min} (const \mbox{\hyperlink{classsubview}{subview}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__min_gacffe5e322119ddafeb9a0e1e10d38325}\label{group__op__min_gacffe5e322119ddafeb9a0e1e10d38325}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+min\+::min} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__min_gae1952021c764269d7cedd8f3af642d75}\label{group__op__min_gae1952021c764269d7cedd8f3af642d75}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+min\+::min} (const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__min_gad7b4784a0d64c9796111b41b237749ec}\label{group__op__min_gad7b4784a0d64c9796111b41b237749ec}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+min\+::min\+\_\+with\+\_\+index} (const \mbox{\hyperlink{struct_proxy}{Proxy}}$<$ T1 $>$ \&P, uword \&index\+\_\+of\+\_\+min\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__min_ga79a993d298c85cf8fd809644702f87e5}\label{group__op__min_ga79a993d298c85cf8fd809644702f87e5}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+min\+::min\+\_\+with\+\_\+index} (const \mbox{\hyperlink{struct_proxy_cube}{Proxy\+Cube}}$<$ T1 $>$ \&P, uword \&index\+\_\+of\+\_\+min\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__min_gaf19820d9ca2421bd574dcc13ba381646}\label{group__op__min_gaf19820d9ca2421bd574dcc13ba381646}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+min\+::direct\+\_\+min} (const std\+::complex$<$ T $>$ $\ast$const X, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__op__min_gae3de3a8e45c47dfd9ceb5e37c2905f0f}\label{group__op__min_gae3de3a8e45c47dfd9ceb5e37c2905f0f}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+min\+::direct\+\_\+min} (const std\+::complex$<$ T $>$ $\ast$const X, const uword n\+\_\+elem, uword \&index\+\_\+of\+\_\+min\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__min_ga36794038348f31f4dd8011910e299f43}\label{group__op__min_ga36794038348f31f4dd8011910e299f43}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+min\+::direct\+\_\+min} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X, const uword row)
+\item 
+\mbox{\Hypertarget{group__op__min_gaeb22726edf9e5e1d698c3103c255ea8f}\label{group__op__min_gaeb22726edf9e5e1d698c3103c255ea8f}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+min\+::min} (const \mbox{\hyperlink{classsubview}{subview}}$<$ std\+::complex$<$ T $>$ $>$ \&X)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

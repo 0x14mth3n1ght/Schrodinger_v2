@@ -1,0 +1,513 @@
+\hypertarget{group__field}{}\doxysection{Field}
+\label{group__field}\index{Field@{Field}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfield__prealloc__n__elem}{field\+\_\+prealloc\+\_\+n\+\_\+elem}}
+\item 
+class \mbox{\hyperlink{classfield}{field$<$ o\+T $>$}}
+\item 
+class \mbox{\hyperlink{classfield__aux}{field\+\_\+aux}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__field_gacf969e75542b18bbb6eb5b8858c22abc}\label{group__field_gacf969e75542b18bbb6eb5b8858c22abc}} 
+\mbox{\hyperlink{group__field_gacf969e75542b18bbb6eb5b8858c22abc}{field$<$ o\+T $>$\+::field}} (const \mbox{\hyperlink{classfield}{field}} \&x)
+\begin{DoxyCompactList}\small\item\em construct a field from a given field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga462b0fa2a024b72fa269b357192007a3}\label{group__field_ga462b0fa2a024b72fa269b357192007a3}} 
+\mbox{\hyperlink{classfield}{field}} \& \mbox{\hyperlink{group__field_ga462b0fa2a024b72fa269b357192007a3}{field$<$ o\+T $>$\+::operator=}} (const \mbox{\hyperlink{classfield}{field}} \&x)
+\begin{DoxyCompactList}\small\item\em construct a field from a given field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaca3f60fe1e770af7226ffbfcb1be31c6}\label{group__field_gaca3f60fe1e770af7226ffbfcb1be31c6}} 
+\mbox{\hyperlink{group__field_gaca3f60fe1e770af7226ffbfcb1be31c6}{field$<$ o\+T $>$\+::field}} (const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \&x)
+\begin{DoxyCompactList}\small\item\em construct a field from \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (eg. construct a field from a delayed subfield operation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga866a1f8173980d4fcc9a2015283e892b}\label{group__field_ga866a1f8173980d4fcc9a2015283e892b}} 
+\mbox{\hyperlink{classfield}{field}} \& \mbox{\hyperlink{group__field_ga866a1f8173980d4fcc9a2015283e892b}{field$<$ o\+T $>$\+::operator=}} (const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \&x)
+\begin{DoxyCompactList}\small\item\em construct a field from \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (eg. construct a field from a delayed subfield operation) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__field_ga2187fdf2060a6208ed73e25bbdfe9585}{field$<$ o\+T $>$\+::field}} (const uword n\+\_\+elem\+\_\+in)
+\item 
+\mbox{\Hypertarget{group__field_gac0e658f1a4a104c1eecafd21fe912b02}\label{group__field_gac0e658f1a4a104c1eecafd21fe912b02}} 
+\mbox{\hyperlink{group__field_gac0e658f1a4a104c1eecafd21fe912b02}{field$<$ o\+T $>$\+::field}} (const uword n\+\_\+rows\+\_\+in, const uword n\+\_\+cols\+\_\+in)
+\begin{DoxyCompactList}\small\item\em construct the field with the specified dimensions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaab9e39a07956afb200966676acb1e75d}\label{group__field_gaab9e39a07956afb200966676acb1e75d}} 
+\mbox{\hyperlink{group__field_gaab9e39a07956afb200966676acb1e75d}{field$<$ o\+T $>$\+::field}} (const uword n\+\_\+rows\+\_\+in, const uword n\+\_\+cols\+\_\+in, const uword n\+\_\+slices\+\_\+in)
+\begin{DoxyCompactList}\small\item\em construct the field with the specified dimensions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga117117d8e6d7e3f7c894e6092c258569}\label{group__field_ga117117d8e6d7e3f7c894e6092c258569}} 
+{\bfseries field$<$ o\+T $>$\+::field} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s)
+\item 
+\mbox{\Hypertarget{group__field_ga8a44e21c5d6173d466cf960928960eed}\label{group__field_ga8a44e21c5d6173d466cf960928960eed}} 
+{\bfseries field$<$ o\+T $>$\+::field} (const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s)
+\item 
+void \mbox{\hyperlink{group__field_ga0d8cc9b33d72bd17c62f4492f0459ec8}{field$<$ o\+T $>$\+::set\+\_\+size}} (const uword n\+\_\+obj\+\_\+in)
+\item 
+\mbox{\Hypertarget{group__field_gadb1768eeb0cb4b5801b995d8585fad85}\label{group__field_gadb1768eeb0cb4b5801b995d8585fad85}} 
+void \mbox{\hyperlink{group__field_gadb1768eeb0cb4b5801b995d8585fad85}{field$<$ o\+T $>$\+::set\+\_\+size}} (const uword n\+\_\+rows\+\_\+in, const uword n\+\_\+cols\+\_\+in)
+\begin{DoxyCompactList}\small\item\em change the field to have the specified dimensions (data is not preserved) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga45bcbad63c6966fcbe23b29ca63a3735}\label{group__field_ga45bcbad63c6966fcbe23b29ca63a3735}} 
+void \mbox{\hyperlink{group__field_ga45bcbad63c6966fcbe23b29ca63a3735}{field$<$ o\+T $>$\+::set\+\_\+size}} (const uword n\+\_\+rows\+\_\+in, const uword n\+\_\+cols\+\_\+in, const uword n\+\_\+slices\+\_\+in)
+\begin{DoxyCompactList}\small\item\em change the field to have the specified dimensions (data is not preserved) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga4c4b981d1ebb7c556b7e8286be84891e}\label{group__field_ga4c4b981d1ebb7c556b7e8286be84891e}} 
+void {\bfseries field$<$ o\+T $>$\+::set\+\_\+size} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s)
+\item 
+\mbox{\Hypertarget{group__field_ga03fdf80019c201c8596ab1344bf29c12}\label{group__field_ga03fdf80019c201c8596ab1344bf29c12}} 
+void {\bfseries field$<$ o\+T $>$\+::set\+\_\+size} (const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s)
+\item 
+\mbox{\Hypertarget{group__field_ga850039f0eb54568408b2302079697c74}\label{group__field_ga850039f0eb54568408b2302079697c74}} 
+{\bfseries field$<$ o\+T $>$\+::field} (const std\+::vector$<$ oT $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_ga6d33614a7a5d0f30de71a7a1002f0aa3}\label{group__field_ga6d33614a7a5d0f30de71a7a1002f0aa3}} 
+\mbox{\hyperlink{classfield}{field}} \& {\bfseries field$<$ o\+T $>$\+::operator=} (const std\+::vector$<$ oT $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_ga0013dfb775b544b74b34a70ceb31d882}\label{group__field_ga0013dfb775b544b74b34a70ceb31d882}} 
+{\bfseries field$<$ o\+T $>$\+::field} (const std\+::initializer\+\_\+list$<$ oT $>$ \&list)
+\item 
+\mbox{\Hypertarget{group__field_gae822a03a7335fa80dd7ebf2842b5ccea}\label{group__field_gae822a03a7335fa80dd7ebf2842b5ccea}} 
+\mbox{\hyperlink{classfield}{field}} \& {\bfseries field$<$ o\+T $>$\+::operator=} (const std\+::initializer\+\_\+list$<$ oT $>$ \&list)
+\item 
+\mbox{\Hypertarget{group__field_ga22732b4411661b47b1c02e194e7f321d}\label{group__field_ga22732b4411661b47b1c02e194e7f321d}} 
+{\bfseries field$<$ o\+T $>$\+::field} (const std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ oT $>$ $>$ \&list)
+\item 
+\mbox{\Hypertarget{group__field_ga9ca9781b00048e10dbc5a42d36bcfb74}\label{group__field_ga9ca9781b00048e10dbc5a42d36bcfb74}} 
+\mbox{\hyperlink{classfield}{field}} \& {\bfseries field$<$ o\+T $>$\+::operator=} (const std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ oT $>$ $>$ \&list)
+\item 
+\mbox{\Hypertarget{group__field_ga2aeb321ba33f8d307d93902286252ff1}\label{group__field_ga2aeb321ba33f8d307d93902286252ff1}} 
+{\bfseries field$<$ o\+T $>$\+::field} (\mbox{\hyperlink{classfield}{field}} \&\&X)
+\item 
+\mbox{\Hypertarget{group__field_gaf4551cfd63e38fdf331f818f96ec5274}\label{group__field_gaf4551cfd63e38fdf331f818f96ec5274}} 
+\mbox{\hyperlink{classfield}{field}} \& {\bfseries field$<$ o\+T $>$\+::operator=} (\mbox{\hyperlink{classfield}{field}} \&\&X)
+\item 
+\mbox{\Hypertarget{group__field_ga1ca4c6404df4a026680bb6aa4e2759d0}\label{group__field_ga1ca4c6404df4a026680bb6aa4e2759d0}} 
+{\footnotesize template$<$typename o\+T2 $>$ }\\void \mbox{\hyperlink{group__field_ga1ca4c6404df4a026680bb6aa4e2759d0}{field$<$ o\+T $>$\+::copy\+\_\+size}} (const \mbox{\hyperlink{classfield}{field}}$<$ o\+T2 $>$ \&x)
+\begin{DoxyCompactList}\small\item\em change the field to have the specified dimensions (data is not preserved) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga4285ba9890adb12a95019df1d8ba954a}\label{group__field_ga4285ba9890adb12a95019df1d8ba954a}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_ga4285ba9890adb12a95019df1d8ba954a}{field$<$ o\+T $>$\+::operator\mbox{[}$\,$\mbox{]}}} (const uword i)
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gabead81c529808a5d5af1b3f91cca2bb0}\label{group__field_gabead81c529808a5d5af1b3f91cca2bb0}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_gabead81c529808a5d5af1b3f91cca2bb0}{field$<$ o\+T $>$\+::operator\mbox{[}$\,$\mbox{]}}} (const uword i) const
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gae0f733c8f687aeac8c8b15080cb995f1}\label{group__field_gae0f733c8f687aeac8c8b15080cb995f1}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_gae0f733c8f687aeac8c8b15080cb995f1}{field$<$ o\+T $>$\+::at}} (const uword i)
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gab91eb83f5abb124df1790ff34562269e}\label{group__field_gab91eb83f5abb124df1790ff34562269e}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_gab91eb83f5abb124df1790ff34562269e}{field$<$ o\+T $>$\+::at}} (const uword i) const
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga541eb8b87405ab959f02f539656b7a75}\label{group__field_ga541eb8b87405ab959f02f539656b7a75}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_ga541eb8b87405ab959f02f539656b7a75}{field$<$ o\+T $>$\+::operator()}} (const uword i)
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga55c29547b44ebc8fdc5c65818d572ade}\label{group__field_ga55c29547b44ebc8fdc5c65818d572ade}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_ga55c29547b44ebc8fdc5c65818d572ade}{field$<$ o\+T $>$\+::operator()}} (const uword i) const
+\begin{DoxyCompactList}\small\item\em linear element accessor (treats the field as a vector); bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaff65001c1029f058b67b3e7b53b5abb1}\label{group__field_gaff65001c1029f058b67b3e7b53b5abb1}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_gaff65001c1029f058b67b3e7b53b5abb1}{field$<$ o\+T $>$\+::operator()}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}})
+\begin{DoxyCompactList}\small\item\em element accessor; bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga2b224c6e0f980eba9946f7f65efebf99}\label{group__field_ga2b224c6e0f980eba9946f7f65efebf99}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_ga2b224c6e0f980eba9946f7f65efebf99}{field$<$ o\+T $>$\+::operator()}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}) const
+\begin{DoxyCompactList}\small\item\em element accessor; bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga59ca36ea1b096a48b62a5a3c93ab167e}\label{group__field_ga59ca36ea1b096a48b62a5a3c93ab167e}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_ga59ca36ea1b096a48b62a5a3c93ab167e}{field$<$ o\+T $>$\+::operator()}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}, const uword \mbox{\hyperlink{group__field_ga9cf318c64ee92633227605e788c0ede1}{slice}})
+\begin{DoxyCompactList}\small\item\em element accessor; bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaa0c01b6e17b8f1bfb79ba698e067719a}\label{group__field_gaa0c01b6e17b8f1bfb79ba698e067719a}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_gaa0c01b6e17b8f1bfb79ba698e067719a}{field$<$ o\+T $>$\+::operator()}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}, const uword \mbox{\hyperlink{group__field_ga9cf318c64ee92633227605e788c0ede1}{slice}}) const
+\begin{DoxyCompactList}\small\item\em element accessor; bounds checking not done when ARMA\+\_\+\+NO\+\_\+\+DEBUG is defined \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga5bb4350e3ec289c3d550e021806daea3}\label{group__field_ga5bb4350e3ec289c3d550e021806daea3}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_ga5bb4350e3ec289c3d550e021806daea3}{field$<$ o\+T $>$\+::at}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}})
+\begin{DoxyCompactList}\small\item\em element accessor; no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga651b7d766f4d46a503a11ae70790e628}\label{group__field_ga651b7d766f4d46a503a11ae70790e628}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_ga651b7d766f4d46a503a11ae70790e628}{field$<$ o\+T $>$\+::at}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}) const
+\begin{DoxyCompactList}\small\item\em element accessor; no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gade2267f6534f2e702b5c57e6a70438e1}\label{group__field_gade2267f6534f2e702b5c57e6a70438e1}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& \mbox{\hyperlink{group__field_gade2267f6534f2e702b5c57e6a70438e1}{field$<$ o\+T $>$\+::at}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}, const uword \mbox{\hyperlink{group__field_ga9cf318c64ee92633227605e788c0ede1}{slice}})
+\begin{DoxyCompactList}\small\item\em element accessor; no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga4a69f38d6f9a55b569bba450848294c7}\label{group__field_ga4a69f38d6f9a55b569bba450848294c7}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& \mbox{\hyperlink{group__field_ga4a69f38d6f9a55b569bba450848294c7}{field$<$ o\+T $>$\+::at}} (const uword \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{row}}, const uword \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{col}}, const uword \mbox{\hyperlink{group__field_ga9cf318c64ee92633227605e788c0ede1}{slice}}) const
+\begin{DoxyCompactList}\small\item\em element accessor; no bounds check \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga371230d88ad5e3e153ce4f0654c2df39}\label{group__field_ga371230d88ad5e3e153ce4f0654c2df39}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& {\bfseries field$<$ o\+T $>$\+::front} ()
+\item 
+\mbox{\Hypertarget{group__field_gac1ed73c1c2ac491115725f483a5adf40}\label{group__field_gac1ed73c1c2ac491115725f483a5adf40}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& {\bfseries field$<$ o\+T $>$\+::front} () const
+\item 
+\mbox{\Hypertarget{group__field_ga0e767ddb66a93ed8314078fe739f7389}\label{group__field_ga0e767ddb66a93ed8314078fe739f7389}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused oT \& {\bfseries field$<$ o\+T $>$\+::back} ()
+\item 
+\mbox{\Hypertarget{group__field_ga934a4026a3b70aee887c5e879518563d}\label{group__field_ga934a4026a3b70aee887c5e879518563d}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused const oT \& {\bfseries field$<$ o\+T $>$\+::back} () const
+\item 
+\mbox{\Hypertarget{group__field_ga8c93007890496f379f86bafc434133da}\label{group__field_ga8c93007890496f379f86bafc434133da}} 
+arma\+\_\+deprecated \mbox{\hyperlink{classfield__injector}{field\+\_\+injector}}$<$ \mbox{\hyperlink{classfield}{field}} $>$ {\bfseries field$<$ o\+T $>$\+::operator$<$$<$} (const oT \&val)
+\item 
+\mbox{\Hypertarget{group__field_ga2ed06748c7af676c0fe1eea4a23b3c82}\label{group__field_ga2ed06748c7af676c0fe1eea4a23b3c82}} 
+arma\+\_\+deprecated \mbox{\hyperlink{classfield__injector}{field\+\_\+injector}}$<$ \mbox{\hyperlink{classfield}{field}} $>$ {\bfseries field$<$ o\+T $>$\+::operator$<$$<$} (const \mbox{\hyperlink{structinjector__end__of__row}{injector\+\_\+end\+\_\+of\+\_\+row}}$<$$>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}\label{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gaffd7e1085d273f2549b9cf83ba1f9c5b}{field$<$ o\+T $>$\+::row}} (const uword row\+\_\+num)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (row of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga40f059a5b00879917fb998d61b3c1d27}\label{group__field_ga40f059a5b00879917fb998d61b3c1d27}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga40f059a5b00879917fb998d61b3c1d27}{field$<$ o\+T $>$\+::row}} (const uword row\+\_\+num) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (row of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga2fbd86e99bfbec1635b7845821988634}\label{group__field_ga2fbd86e99bfbec1635b7845821988634}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga2fbd86e99bfbec1635b7845821988634}{field$<$ o\+T $>$\+::col}} (const uword col\+\_\+num)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (column of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gae005a2d4294230762e0d1e19bc1f6464}\label{group__field_gae005a2d4294230762e0d1e19bc1f6464}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gae005a2d4294230762e0d1e19bc1f6464}{field$<$ o\+T $>$\+::col}} (const uword col\+\_\+num) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (column of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga9cf318c64ee92633227605e788c0ede1}\label{group__field_ga9cf318c64ee92633227605e788c0ede1}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga9cf318c64ee92633227605e788c0ede1}{field$<$ o\+T $>$\+::slice}} (const uword slice\+\_\+num)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (slice of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga1c24e6dd5916d0ec4e5486dea9790260}\label{group__field_ga1c24e6dd5916d0ec4e5486dea9790260}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga1c24e6dd5916d0ec4e5486dea9790260}{field$<$ o\+T $>$\+::slice}} (const uword slice\+\_\+num) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (slice of a field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaf5bce1249db850b4fe302f4d8a7c03e9}\label{group__field_gaf5bce1249db850b4fe302f4d8a7c03e9}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gaf5bce1249db850b4fe302f4d8a7c03e9}{field$<$ o\+T $>$\+::rows}} (const uword in\+\_\+row1, const uword in\+\_\+row2)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified rows) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga19233f44fa87109c7004fe38506f53a1}\label{group__field_ga19233f44fa87109c7004fe38506f53a1}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga19233f44fa87109c7004fe38506f53a1}{field$<$ o\+T $>$\+::rows}} (const uword in\+\_\+row1, const uword in\+\_\+row2) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified rows) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gacbc63ce4b04992f4773bc97a4c936447}\label{group__field_gacbc63ce4b04992f4773bc97a4c936447}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gacbc63ce4b04992f4773bc97a4c936447}{field$<$ o\+T $>$\+::cols}} (const uword in\+\_\+col1, const uword in\+\_\+col2)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified columns) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gab185e7a8776ba2c6cdd0b41b38f8a004}\label{group__field_gab185e7a8776ba2c6cdd0b41b38f8a004}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gab185e7a8776ba2c6cdd0b41b38f8a004}{field$<$ o\+T $>$\+::cols}} (const uword in\+\_\+col1, const uword in\+\_\+col2) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified columns) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gae75719150d1c4b05fcca657331e7232a}\label{group__field_gae75719150d1c4b05fcca657331e7232a}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gae75719150d1c4b05fcca657331e7232a}{field$<$ o\+T $>$\+::slices}} (const uword in\+\_\+slice1, const uword in\+\_\+slice2)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified slices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gacc949dd9e39203441d1886733c838dfc}\label{group__field_gacc949dd9e39203441d1886733c838dfc}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gacc949dd9e39203441d1886733c838dfc}{field$<$ o\+T $>$\+::slices}} (const uword in\+\_\+slice1, const uword in\+\_\+slice2) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield comprised of specified slices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga917f1bac2014f3e25945417628bccf6f}\label{group__field_ga917f1bac2014f3e25945417628bccf6f}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga917f1bac2014f3e25945417628bccf6f}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+row2, const uword in\+\_\+col2)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga671ac50d7cbfc23b048a2407bd2fd7c3}\label{group__field_ga671ac50d7cbfc23b048a2407bd2fd7c3}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga671ac50d7cbfc23b048a2407bd2fd7c3}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+row2, const uword in\+\_\+col2) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga045360c9788af1d11ab1c910530b67f7}\label{group__field_ga045360c9788af1d11ab1c910530b67f7}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga045360c9788af1d11ab1c910530b67f7}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const uword in\+\_\+row2, const uword in\+\_\+col2, const uword in\+\_\+slice2)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga0dc9653b3bbf7c387c7423b0d61e37eb}\label{group__field_ga0dc9653b3bbf7c387c7423b0d61e37eb}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga0dc9653b3bbf7c387c7423b0d61e37eb}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const uword in\+\_\+row2, const uword in\+\_\+col2, const uword in\+\_\+slice2) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga5fb130126394c2c757caccd8e733fb66}\label{group__field_ga5fb130126394c2c757caccd8e733fb66}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga5fb130126394c2c757caccd8e733fb66}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaa391d77abcf4c2006e21ffe099f8ce87}\label{group__field_gaa391d77abcf4c2006e21ffe099f8ce87}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_gaa391d77abcf4c2006e21ffe099f8ce87}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga6aeb67ef92aa9a078722dc630481f691}\label{group__field_ga6aeb67ef92aa9a078722dc630481f691}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga6aeb67ef92aa9a078722dc630481f691}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga569287449185e825ac7965f3800753e8}\label{group__field_ga569287449185e825ac7965f3800753e8}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga569287449185e825ac7965f3800753e8}{field$<$ o\+T $>$\+::subfield}} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga32bc376346b70975507664d584af6964}\label{group__field_ga32bc376346b70975507664d584af6964}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga32bc376346b70975507664d584af6964}{field$<$ o\+T $>$\+::subfield}} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga31d33d4a8ea99e2fc20ec9e6667dbaab}\label{group__field_ga31d33d4a8ea99e2fc20ec9e6667dbaab}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga31d33d4a8ea99e2fc20ec9e6667dbaab}{field$<$ o\+T $>$\+::subfield}} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga7633c2ae8b232a647dea6a7bdb272fed}\label{group__field_ga7633c2ae8b232a647dea6a7bdb272fed}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga7633c2ae8b232a647dea6a7bdb272fed}{field$<$ o\+T $>$\+::subfield}} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&slice\+\_\+span)
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga29d595646d70c84cbeddeb1b6fc0623c}\label{group__field_ga29d595646d70c84cbeddeb1b6fc0623c}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \mbox{\hyperlink{group__field_ga29d595646d70c84cbeddeb1b6fc0623c}{field$<$ o\+T $>$\+::subfield}} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&slice\+\_\+span) const
+\begin{DoxyCompactList}\small\item\em creation of \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}} (subfield with arbitrary dimensions) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga92c6894313980c47525babb8003535aa}\label{group__field_ga92c6894313980c47525babb8003535aa}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span)
+\item 
+\mbox{\Hypertarget{group__field_ga626160a7ed0d76dd4cf09c74af77ff85}\label{group__field_ga626160a7ed0d76dd4cf09c74af77ff85}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span) const
+\item 
+\mbox{\Hypertarget{group__field_ga4def7ec274e40029d96136350689869e}\label{group__field_ga4def7ec274e40029d96136350689869e}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&slice\+\_\+span)
+\item 
+\mbox{\Hypertarget{group__field_ga47e31612b93b7b254d9be53d013304d0}\label{group__field_ga47e31612b93b7b254d9be53d013304d0}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&slice\+\_\+span) const
+\item 
+\mbox{\Hypertarget{group__field_ga3681f5b82b309adea93dcc10fda8910f}\label{group__field_ga3681f5b82b309adea93dcc10fda8910f}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const uword in\+\_\+row1, const uword in\+\_\+col1, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s)
+\item 
+\mbox{\Hypertarget{group__field_gab6922b2161e46e8e30f163c7f28a07c4}\label{group__field_gab6922b2161e46e8e30f163c7f28a07c4}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const uword in\+\_\+row1, const uword in\+\_\+col1, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s) const
+\item 
+\mbox{\Hypertarget{group__field_ga0a6aa707b13b9bb3244c99e4d346efce}\label{group__field_ga0a6aa707b13b9bb3244c99e4d346efce}} 
+\mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s)
+\item 
+\mbox{\Hypertarget{group__field_ga995381d81bda16dcfc06d94e2911ad75}\label{group__field_ga995381d81bda16dcfc06d94e2911ad75}} 
+const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ {\bfseries field$<$ o\+T $>$\+::operator()} (const uword in\+\_\+row1, const uword in\+\_\+col1, const uword in\+\_\+slice1, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s) const
+\item 
+arma\+\_\+cold void \mbox{\hyperlink{group__field_ga507e2a83228032662c1340bb89b567e2}{field$<$ o\+T $>$\+::print}} (const std\+::string extra\+\_\+text=\char`\"{}\char`\"{}) const
+\item 
+arma\+\_\+cold void \mbox{\hyperlink{group__field_gaa3be825c54621f7b3f521ed8e43b5af1}{field$<$ o\+T $>$\+::print}} (std\+::ostream \&user\+\_\+stream, const std\+::string extra\+\_\+text=\char`\"{}\char`\"{}) const
+\item 
+\mbox{\Hypertarget{group__field_ga5cd960025bab1f3c7ea38f7ea704ce2f}\label{group__field_ga5cd960025bab1f3c7ea38f7ea704ce2f}} 
+const \mbox{\hyperlink{classfield}{field}} \& \mbox{\hyperlink{group__field_ga5cd960025bab1f3c7ea38f7ea704ce2f}{field$<$ o\+T $>$\+::for\+\_\+each}} (const std\+::function$<$ void(oT \&) $>$ \&F)
+\begin{DoxyCompactList}\small\item\em apply a lambda function to each object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gad4c250fc77bd0c85f237b27cf216f9aa}\label{group__field_gad4c250fc77bd0c85f237b27cf216f9aa}} 
+const \mbox{\hyperlink{classfield}{field}} \& {\bfseries field$<$ o\+T $>$\+::for\+\_\+each} (const std\+::function$<$ void(const oT \&) $>$ \&F) const
+\item 
+\mbox{\Hypertarget{group__field_ga138c6572dd151288e75b61451e6cd63b}\label{group__field_ga138c6572dd151288e75b61451e6cd63b}} 
+const \mbox{\hyperlink{classfield}{field}} \& \mbox{\hyperlink{group__field_ga138c6572dd151288e75b61451e6cd63b}{field$<$ o\+T $>$\+::fill}} (const oT \&x)
+\begin{DoxyCompactList}\small\item\em fill the field with an object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gac9dc9ea2b0eb588746b147e2e25d48db}\label{group__field_gac9dc9ea2b0eb588746b147e2e25d48db}} 
+void \mbox{\hyperlink{group__field_gac9dc9ea2b0eb588746b147e2e25d48db}{field$<$ o\+T $>$\+::reset}} ()
+\begin{DoxyCompactList}\small\item\em reset the field to an empty state (ie. the field will have no objects) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga48ed706bfd715ba335267b07cb656761}\label{group__field_ga48ed706bfd715ba335267b07cb656761}} 
+void \mbox{\hyperlink{group__field_ga48ed706bfd715ba335267b07cb656761}{field$<$ o\+T $>$\+::reset\+\_\+objects}} ()
+\begin{DoxyCompactList}\small\item\em reset each object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gaebb4a8f1d8041e813d1cdf967822254b}\label{group__field_gaebb4a8f1d8041e813d1cdf967822254b}} 
+arma\+\_\+inline bool \mbox{\hyperlink{group__field_gaebb4a8f1d8041e813d1cdf967822254b}{field$<$ o\+T $>$\+::is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em returns true if the field has no objects \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_gab36cad11aa2290fec7178a79e1fa4056}\label{group__field_gab36cad11aa2290fec7178a79e1fa4056}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool \mbox{\hyperlink{group__field_gab36cad11aa2290fec7178a79e1fa4056}{field$<$ o\+T $>$\+::in\+\_\+range}} (const uword i) const
+\begin{DoxyCompactList}\small\item\em returns true if the given index is currently in range \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga6d24663c7c7fbca602fea51145984679}\label{group__field_ga6d24663c7c7fbca602fea51145984679}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool \mbox{\hyperlink{group__field_ga6d24663c7c7fbca602fea51145984679}{field$<$ o\+T $>$\+::in\+\_\+range}} (const \mbox{\hyperlink{classspan}{span}} \&x) const
+\begin{DoxyCompactList}\small\item\em returns true if the given start and end indices are currently in range \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga38d545715f0e906a2e891ddf3b7a6985}\label{group__field_ga38d545715f0e906a2e891ddf3b7a6985}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool \mbox{\hyperlink{group__field_ga38d545715f0e906a2e891ddf3b7a6985}{field$<$ o\+T $>$\+::in\+\_\+range}} (const uword in\+\_\+row, const uword in\+\_\+col) const
+\begin{DoxyCompactList}\small\item\em returns true if the given location is currently in range \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__field_ga27ddac68b12b731532eae86f072d663b}\label{group__field_ga27ddac68b12b731532eae86f072d663b}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const uword in\+\_\+col) const
+\item 
+\mbox{\Hypertarget{group__field_ga8e0d906b461df08dafcd883a45d96224}\label{group__field_ga8e0d906b461df08dafcd883a45d96224}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const uword in\+\_\+row, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span) const
+\item 
+\mbox{\Hypertarget{group__field_ga45b1fcbd5384cd3732dd9ae3e0553caa}\label{group__field_ga45b1fcbd5384cd3732dd9ae3e0553caa}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span) const
+\item 
+\mbox{\Hypertarget{group__field_ga836ba627dbfb2da3ac49621a29a45503}\label{group__field_ga836ba627dbfb2da3ac49621a29a45503}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const uword in\+\_\+row, const uword in\+\_\+col, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s) const
+\item 
+\mbox{\Hypertarget{group__field_gaf4ee463b16e8cc19a7fb8d429e1b22ec}\label{group__field_gaf4ee463b16e8cc19a7fb8d429e1b22ec}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const uword in\+\_\+row, const uword in\+\_\+col, const uword in\+\_\+slice) const
+\item 
+\mbox{\Hypertarget{group__field_ga6aaac620c1fe77dccf9f56a883fe5dbc}\label{group__field_ga6aaac620c1fe77dccf9f56a883fe5dbc}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const \mbox{\hyperlink{classspan}{span}} \&row\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&col\+\_\+span, const \mbox{\hyperlink{classspan}{span}} \&slice\+\_\+span) const
+\item 
+\mbox{\Hypertarget{group__field_ga465798075af7b029edd5b32292fa589b}\label{group__field_ga465798075af7b029edd5b32292fa589b}} 
+arma\+\_\+inline arma\+\_\+warn\+\_\+unused bool {\bfseries field$<$ o\+T $>$\+::in\+\_\+range} (const uword in\+\_\+row, const uword in\+\_\+col, const uword in\+\_\+slice, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&s) const
+\item 
+\mbox{\Hypertarget{group__field_ga5f3becf780718e95dfa3de70f7f4842d}\label{group__field_ga5f3becf780718e95dfa3de70f7f4842d}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::save} (const std\+::string name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}{arma\+\_\+binary}}) const
+\item 
+\mbox{\Hypertarget{group__field_gac5942231c5a1dc7001390f2af357c5a6}\label{group__field_gac5942231c5a1dc7001390f2af357c5a6}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::save} (std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}{arma\+\_\+binary}}) const
+\item 
+\mbox{\Hypertarget{group__field_gad6e090310fc5a02ac33c59f96aeb8f52}\label{group__field_gad6e090310fc5a02ac33c59f96aeb8f52}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::load} (const std\+::string name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}{auto\+\_\+detect}})
+\item 
+\mbox{\Hypertarget{group__field_ga57159f0cd162ecab9059f6a17531f58a}\label{group__field_ga57159f0cd162ecab9059f6a17531f58a}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::load} (std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}{auto\+\_\+detect}})
+\item 
+\mbox{\Hypertarget{group__field_gafa99a1523557967a4da96fe06cd97534}\label{group__field_gafa99a1523557967a4da96fe06cd97534}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::quiet\+\_\+save} (const std\+::string name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}{arma\+\_\+binary}}) const
+\item 
+\mbox{\Hypertarget{group__field_gac67fb292a21d0e85f4bf3de572165489}\label{group__field_gac67fb292a21d0e85f4bf3de572165489}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::quiet\+\_\+save} (std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}{arma\+\_\+binary}}) const
+\item 
+\mbox{\Hypertarget{group__field_ga665db7d3218c88c38efc947926ebef22}\label{group__field_ga665db7d3218c88c38efc947926ebef22}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::quiet\+\_\+load} (const std\+::string name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}{auto\+\_\+detect}})
+\item 
+\mbox{\Hypertarget{group__field_gac8da3afdcb0c1ef0368acb8684f26316}\label{group__field_gac8da3afdcb0c1ef0368acb8684f26316}} 
+arma\+\_\+cold bool {\bfseries field$<$ o\+T $>$\+::quiet\+\_\+load} (std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type=\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}{auto\+\_\+detect}})
+\item 
+\mbox{\Hypertarget{group__field_ga6dabbc0ae002e24f2d94907e2897b385}\label{group__field_ga6dabbc0ae002e24f2d94907e2897b385}} 
+{\bfseries field$<$ o\+T $>$\+::iterator\+::iterator} (\mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&in\+\_\+M, const bool at\+\_\+end=false)
+\item 
+\mbox{\Hypertarget{group__field_gaf77618d50e0172a496e37c96038e2c82}\label{group__field_gaf77618d50e0172a496e37c96038e2c82}} 
+oT \& {\bfseries field$<$ o\+T $>$\+::iterator\+::operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{group__field_ga1ebff56b4cb05a7c817e9edb3c81c197}\label{group__field_ga1ebff56b4cb05a7c817e9edb3c81c197}} 
+\mbox{\hyperlink{classfield_1_1iterator}{iterator}} \& {\bfseries field$<$ o\+T $>$\+::iterator\+::operator++} ()
+\item 
+\mbox{\Hypertarget{group__field_ga1943d41423f7caae600fe4ae233281cb}\label{group__field_ga1943d41423f7caae600fe4ae233281cb}} 
+void {\bfseries field$<$ o\+T $>$\+::iterator\+::operator++} (int)
+\item 
+\mbox{\Hypertarget{group__field_gaad0ffd5a94b18a83fb5a64674e638b71}\label{group__field_gaad0ffd5a94b18a83fb5a64674e638b71}} 
+\mbox{\hyperlink{classfield_1_1iterator}{iterator}} \& {\bfseries field$<$ o\+T $>$\+::iterator\+::operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{group__field_ga0bfc448504459365595c0736d0f3f407}\label{group__field_ga0bfc448504459365595c0736d0f3f407}} 
+void {\bfseries field$<$ o\+T $>$\+::iterator\+::operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{group__field_ga6308f53ada9d6702d650e511f111ab7f}\label{group__field_ga6308f53ada9d6702d650e511f111ab7f}} 
+bool {\bfseries field$<$ o\+T $>$\+::iterator\+::operator!=} (const \mbox{\hyperlink{classfield_1_1iterator}{iterator}} \&X) const
+\item 
+\mbox{\Hypertarget{group__field_ga9ae46e179c0dd3a06426aca4d12728c9}\label{group__field_ga9ae46e179c0dd3a06426aca4d12728c9}} 
+bool {\bfseries field$<$ o\+T $>$\+::iterator\+::operator==} (const \mbox{\hyperlink{classfield_1_1iterator}{iterator}} \&X) const
+\item 
+\mbox{\Hypertarget{group__field_ga41057151c22c638e27a1d324abf7db31}\label{group__field_ga41057151c22c638e27a1d324abf7db31}} 
+{\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::const\+\_\+iterator} (const \mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&in\+\_\+M, const bool at\+\_\+end=false)
+\item 
+\mbox{\Hypertarget{group__field_gaf45d0c015a3c892e96e7df08dc0674b3}\label{group__field_gaf45d0c015a3c892e96e7df08dc0674b3}} 
+const oT \& {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{group__field_gaa12fe81db397a09d7f803a74ae99ab9b}\label{group__field_gaa12fe81db397a09d7f803a74ae99ab9b}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} \& {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator++} ()
+\item 
+\mbox{\Hypertarget{group__field_ga97fb5766611ece558f9f488efd243f16}\label{group__field_ga97fb5766611ece558f9f488efd243f16}} 
+void {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator++} (int)
+\item 
+\mbox{\Hypertarget{group__field_ga45dd5ce87f30b215f7eddb35883a64cd}\label{group__field_ga45dd5ce87f30b215f7eddb35883a64cd}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} \& {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator-\/-\/} ()
+\item 
+\mbox{\Hypertarget{group__field_ga83432a99290da7d878cdea502d948e91}\label{group__field_ga83432a99290da7d878cdea502d948e91}} 
+void {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator-\/-\/} (int)
+\item 
+\mbox{\Hypertarget{group__field_gae3f44560a82b51301b9dd5e05a4131f9}\label{group__field_gae3f44560a82b51301b9dd5e05a4131f9}} 
+bool {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator!=} (const \mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} \&X) const
+\item 
+\mbox{\Hypertarget{group__field_ga75a2285024b0062221613cfdaca8de19}\label{group__field_ga75a2285024b0062221613cfdaca8de19}} 
+bool {\bfseries field$<$ o\+T $>$\+::const\+\_\+iterator\+::operator==} (const \mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} \&X) const
+\item 
+\mbox{\Hypertarget{group__field_ga79137d025b4a7a630b6a611faaf58c34}\label{group__field_ga79137d025b4a7a630b6a611faaf58c34}} 
+\mbox{\hyperlink{classfield_1_1iterator}{iterator}} {\bfseries field$<$ o\+T $>$\+::begin} ()
+\item 
+\mbox{\Hypertarget{group__field_ga799e70073dead5baa7d929c95775d3f7}\label{group__field_ga799e70073dead5baa7d929c95775d3f7}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} {\bfseries field$<$ o\+T $>$\+::begin} () const
+\item 
+\mbox{\Hypertarget{group__field_ga5d19cf33fd23a95f3451351264277b8b}\label{group__field_ga5d19cf33fd23a95f3451351264277b8b}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} {\bfseries field$<$ o\+T $>$\+::cbegin} () const
+\item 
+\mbox{\Hypertarget{group__field_ga97e8f9ab608b76ee164d541c79bcd03d}\label{group__field_ga97e8f9ab608b76ee164d541c79bcd03d}} 
+\mbox{\hyperlink{classfield_1_1iterator}{iterator}} {\bfseries field$<$ o\+T $>$\+::end} ()
+\item 
+\mbox{\Hypertarget{group__field_ga961e7771f00e422ffc092b536ede8273}\label{group__field_ga961e7771f00e422ffc092b536ede8273}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} {\bfseries field$<$ o\+T $>$\+::end} () const
+\item 
+\mbox{\Hypertarget{group__field_gaa2dd7224b0af892c54315c39fbbf6a71}\label{group__field_gaa2dd7224b0af892c54315c39fbbf6a71}} 
+\mbox{\hyperlink{classfield_1_1const__iterator}{const\+\_\+iterator}} {\bfseries field$<$ o\+T $>$\+::cend} () const
+\item 
+\mbox{\Hypertarget{group__field_ga2f9f111d6b3eff992cfbfe7e1adeb887}\label{group__field_ga2f9f111d6b3eff992cfbfe7e1adeb887}} 
+void {\bfseries field$<$ o\+T $>$\+::clear} ()
+\item 
+\mbox{\Hypertarget{group__field_ga9e4af82d6fbfc55e11dd76c9b275d2c0}\label{group__field_ga9e4af82d6fbfc55e11dd76c9b275d2c0}} 
+bool {\bfseries field$<$ o\+T $>$\+::empty} () const
+\item 
+\mbox{\Hypertarget{group__field_ga46504de320dc6eb7889d9fb623efb7c1}\label{group__field_ga46504de320dc6eb7889d9fb623efb7c1}} 
+uword {\bfseries field$<$ o\+T $>$\+::size} () const
+\item 
+\mbox{\Hypertarget{group__field_ga6567ad3ed1fc896564cdf41bb4c3d034}\label{group__field_ga6567ad3ed1fc896564cdf41bb4c3d034}} 
+{\footnotesize template$<$typename oT $>$ }\\static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_ga4553a926f2e4bd5cee1ee1ea419f4a59}\label{group__field_ga4553a926f2e4bd5cee1ee1ea419f4a59}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_gaa99266962e4dff46511c75cdb22d76fd}\label{group__field_gaa99266962e4dff46511c75cdb22d76fd}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_gaf43acb5e9b4872797ed9e1d6e630d429}\label{group__field_gaf43acb5e9b4872797ed9e1d6e630d429}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_row}{Row}}$<$ eT $>$ $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_gacec32a49a680edb4a81ef6a567b97a66}\label{group__field_gacec32a49a680edb4a81ef6a567b97a66}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_ga84e902200837f78fba517651bc7c667e}\label{group__field_ga84e902200837f78fba517651bc7c667e}} 
+static void {\bfseries field\+\_\+aux\+::reset\+\_\+objects} (\mbox{\hyperlink{classfield}{field}}$<$ std\+::string $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__field_ga7ba6a35fefd27814c45f47aae2a2e1c1}\label{group__field_ga7ba6a35fefd27814c45f47aae2a2e1c1}} 
+{\footnotesize template$<$typename oT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga8c8614e53fab3f49601b1a8aa237ca21}\label{group__field_ga8c8614e53fab3f49601b1a8aa237ca21}} 
+{\footnotesize template$<$typename oT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga19035ebd8ef583fa146184fcfa49f6f0}\label{group__field_ga19035ebd8ef583fa146184fcfa49f6f0}} 
+{\footnotesize template$<$typename oT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga277b6abeb947d240a8968012125bce75}\label{group__field_ga277b6abeb947d240a8968012125bce75}} 
+{\footnotesize template$<$typename oT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga06af612e1991afac49813d116c060c37}\label{group__field_ga06af612e1991afac49813d116c060c37}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gab75fac211bda7b52d635c9dfbc3ba7c5}\label{group__field_gab75fac211bda7b52d635c9dfbc3ba7c5}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga480a94f0a979cf007b8a53b82c47846f}\label{group__field_ga480a94f0a979cf007b8a53b82c47846f}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga4081c8648375f5b7756762023325d800}\label{group__field_ga4081c8648375f5b7756762023325d800}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga1a51b9e63a062c99ef0465deb2eef2b0}\label{group__field_ga1a51b9e63a062c99ef0465deb2eef2b0}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gac4900ac76ba36f8cd3798840c9e60411}\label{group__field_gac4900ac76ba36f8cd3798840c9e60411}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga8c7bfd9f7671ec9c1262b0611ee41aa0}\label{group__field_ga8c7bfd9f7671ec9c1262b0611ee41aa0}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gaf589e4ab802865d02ebda0a475e05bb1}\label{group__field_gaf589e4ab802865d02ebda0a475e05bb1}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga9882e7cf090fd735c54bdd824e36277c}\label{group__field_ga9882e7cf090fd735c54bdd824e36277c}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_row}{Row}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga54fb72b3adb72111ff43cdb277617557}\label{group__field_ga54fb72b3adb72111ff43cdb277617557}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_row}{Row}}$<$ eT $>$ $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga761b459bd2fd8e31d5390fe6d93d5253}\label{group__field_ga761b459bd2fd8e31d5390fe6d93d5253}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_row}{Row}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gaf16b7e81bad827a2eb38099451eaf402}\label{group__field_gaf16b7e81bad827a2eb38099451eaf402}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_row}{Row}}$<$ eT $>$ $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga33e9ef53642863bb47baefa270297d06}\label{group__field_ga33e9ef53642863bb47baefa270297d06}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gacd9647bfbe483696b7506bf51401f4db}\label{group__field_gacd9647bfbe483696b7506bf51401f4db}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga8ad92109a4e3bfae20d3f59df3054bf9}\label{group__field_ga8ad92109a4e3bfae20d3f59df3054bf9}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga3aa384a97a94d37ee795435dcb298170}\label{group__field_ga3aa384a97a94d37ee795435dcb298170}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga47840b8b687032adb6597b6a898b7bff}\label{group__field_ga47840b8b687032adb6597b6a898b7bff}} 
+static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ std\+::string $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga875dedcc50e71463689555af68dce7f0}\label{group__field_ga875dedcc50e71463689555af68dce7f0}} 
+static bool {\bfseries field\+\_\+aux\+::save} (const \mbox{\hyperlink{classfield}{field}}$<$ std\+::string $>$ \&x, std\+::ostream \&os, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_ga6a37229e97e2bf2cc08790d367db70f2}\label{group__field_ga6a37229e97e2bf2cc08790d367db70f2}} 
+static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ std\+::string $>$ \&x, const std\+::string \&name, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__field_gadaa6f5e03996ded77f58bd230ac151fd}\label{group__field_gadaa6f5e03996ded77f58bd230ac151fd}} 
+static bool {\bfseries field\+\_\+aux\+::load} (\mbox{\hyperlink{classfield}{field}}$<$ std\+::string $>$ \&x, std\+::istream \&is, const \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} type, std\+::string \&err\+\_\+msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__field_ga2187fdf2060a6208ed73e25bbdfe9585}\label{group__field_ga2187fdf2060a6208ed73e25bbdfe9585}} 
+\index{Field@{Field}!field@{field}}
+\index{field@{field}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{field()}{field()}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+\mbox{\hyperlink{classfield}{field}}$<$ oT $>$\+::\mbox{\hyperlink{classfield}{field}} (\begin{DoxyParamCaption}\item[{const uword}]{n\+\_\+elem\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+construct the field with the specified number of elements, assuming a column-\/major layout \mbox{\Hypertarget{group__field_ga507e2a83228032662c1340bb89b567e2}\label{group__field_ga507e2a83228032662c1340bb89b567e2}} 
+\index{Field@{Field}!print@{print}}
+\index{print@{print}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+arma\+\_\+cold void \mbox{\hyperlink{classfield}{field}}$<$ oT $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::string}]{extra\+\_\+text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+print contents of the field (to the cout stream), optionally preceding with a user specified line of text. the field class preserves the stream\textquotesingle{}s flags but the associated operator$<$$<$ function for type oT may still modify the stream\textquotesingle{}s parameters. NOTE\+: this function assumes that type oT can be printed, ie. the function \char`\"{}std\+::ostream\& operator$<$$<$ (std\+::ostream\&, const o\+T\&)\char`\"{} has been defined. \mbox{\Hypertarget{group__field_gaa3be825c54621f7b3f521ed8e43b5af1}\label{group__field_gaa3be825c54621f7b3f521ed8e43b5af1}} 
+\index{Field@{Field}!print@{print}}
+\index{print@{print}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+arma\+\_\+cold void \mbox{\hyperlink{classfield}{field}}$<$ oT $>$\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{user\+\_\+stream,  }\item[{const std\+::string}]{extra\+\_\+text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+print contents of the field to a user specified stream, optionally preceding with a user specified line of text. the field class preserves the stream\textquotesingle{}s flags but the associated operator$<$$<$ function for type oT may still modify the stream\textquotesingle{}s parameters. NOTE\+: this function assumes that type oT can be printed, ie. the function \char`\"{}std\+::ostream\& operator$<$$<$ (std\+::ostream\&, const o\+T\&)\char`\"{} has been defined. \mbox{\Hypertarget{group__field_ga0d8cc9b33d72bd17c62f4492f0459ec8}\label{group__field_ga0d8cc9b33d72bd17c62f4492f0459ec8}} 
+\index{Field@{Field}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!Field@{Field}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+void \mbox{\hyperlink{classfield}{field}}$<$ oT $>$\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{const uword}]{n\+\_\+elem\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+change the field to have the specified number of elements, assuming a column-\/major layout (data is not preserved) 

@@ -1,0 +1,67 @@
+\hypertarget{group__op__max}{}\doxysection{Op\+\_\+max}
+\label{group__op__max}\index{Op\_max@{Op\_max}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classop__max}{op\+\_\+max}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__op__max_ga08052d51d01b486939c76be362bd1bee}\label{group__op__max_ga08052d51d01b486939c76be362bd1bee}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+max\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__max}{op\+\_\+max}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__max_ga2a9db51d8d944fbca616ac597e38b61d}\label{group__op__max_ga2a9db51d8d944fbca616ac597e38b61d}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+max\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__max_gabd5285795f693b1c8d6c1039e2707499}\label{group__op__max_gabd5285795f693b1c8d6c1039e2707499}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+max\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__cx__only}{arma\+\_\+cx\+\_\+only}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__max_ga0a22e2d75bf737ba616fff67436fbf50}\label{group__op__max_ga0a22e2d75bf737ba616fff67436fbf50}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+max\+::apply} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op_cube}{Op\+Cube}}$<$ T1, \mbox{\hyperlink{classop__max}{op\+\_\+max}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__max_gac6dcd9e8b963655530dad70f72a007de}\label{group__op__max_gac6dcd9e8b963655530dad70f72a007de}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+max\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__max_ga6bb5816dae49c4655bcfbcb0ef5f90fe}\label{group__op__max_ga6bb5816dae49c4655bcfbcb0ef5f90fe}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+max\+::apply\+\_\+noalias} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&X, const uword dim, const typename \mbox{\hyperlink{structarma__cx__only}{arma\+\_\+cx\+\_\+only}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__op__max_ga6322a4445924e4e855747510861bc8d0}\label{group__op__max_ga6322a4445924e4e855747510861bc8d0}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+max\+::direct\+\_\+max} (const eT $\ast$const X, const uword N)
+\item 
+\mbox{\Hypertarget{group__op__max_gaaed0c49d078a0d0bcbf83b909eab9216}\label{group__op__max_gaaed0c49d078a0d0bcbf83b909eab9216}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+max\+::direct\+\_\+max} (const eT $\ast$const X, const uword N, uword \&index\+\_\+of\+\_\+max\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__max_ga390d8ae92a21df3197e7f9ae5fe6296c}\label{group__op__max_ga390d8ae92a21df3197e7f9ae5fe6296c}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+max\+::direct\+\_\+max} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword row)
+\item 
+\mbox{\Hypertarget{group__op__max_ga39d98555f1859b36b8b232b97101cad9}\label{group__op__max_ga39d98555f1859b36b8b232b97101cad9}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries op\+\_\+max\+::max} (const \mbox{\hyperlink{classsubview}{subview}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__max_ga56d0e6b72d118d1c520090e742d16f53}\label{group__op__max_ga56d0e6b72d118d1c520090e742d16f53}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+max\+::max} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__max_ga191622fa947d24bce95efc8744a087a9}\label{group__op__max_ga191622fa947d24bce95efc8744a087a9}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+max\+::max} (const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__max_ga2be725c13e5953089544ed1de8c360e2}\label{group__op__max_ga2be725c13e5953089544ed1de8c360e2}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+max\+::max\+\_\+with\+\_\+index} (const \mbox{\hyperlink{struct_proxy}{Proxy}}$<$ T1 $>$ \&P, uword \&index\+\_\+of\+\_\+max\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__max_ga67948981678912bd52aa151162ab0e1d}\label{group__op__max_ga67948981678912bd52aa151162ab0e1d}} 
+{\footnotesize template$<$typename T1 $>$ }\\static \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ typename T1\+::elem\+\_\+type $>$\+::result {\bfseries op\+\_\+max\+::max\+\_\+with\+\_\+index} (const \mbox{\hyperlink{struct_proxy_cube}{Proxy\+Cube}}$<$ T1 $>$ \&P, uword \&index\+\_\+of\+\_\+max\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__max_ga45ceb667e3e14c91494c9fd5909e4e9f}\label{group__op__max_ga45ceb667e3e14c91494c9fd5909e4e9f}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+max\+::direct\+\_\+max} (const std\+::complex$<$ T $>$ $\ast$const X, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__op__max_ga43bd0a88b6daf596174934f7d41a086d}\label{group__op__max_ga43bd0a88b6daf596174934f7d41a086d}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+max\+::direct\+\_\+max} (const std\+::complex$<$ T $>$ $\ast$const X, const uword n\+\_\+elem, uword \&index\+\_\+of\+\_\+max\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__op__max_ga7345680860e221ecf7d00a6f778eea25}\label{group__op__max_ga7345680860e221ecf7d00a6f778eea25}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+max\+::direct\+\_\+max} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X, const uword row)
+\item 
+\mbox{\Hypertarget{group__op__max_gaa2dc60082c31d880140bcfdb13541a76}\label{group__op__max_gaa2dc60082c31d880140bcfdb13541a76}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::complex$<$ T $>$ {\bfseries op\+\_\+max\+::max} (const \mbox{\hyperlink{classsubview}{subview}}$<$ std\+::complex$<$ T $>$ $>$ \&X)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

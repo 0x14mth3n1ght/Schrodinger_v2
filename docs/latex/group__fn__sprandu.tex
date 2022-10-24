@@ -1,0 +1,39 @@
+\hypertarget{group__fn__sprandu}{}\doxysection{Fn\+\_\+sprandu}
+\label{group__fn__sprandu}\index{Fn\_sprandu@{Fn\_sprandu}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\arma\+\_\+warn\+\_\+unused obj\+\_\+type \mbox{\hyperlink{group__fn__sprandu_gaefc651d166fe5244b42515b75d8eda72}{sprandu}} (const uword n\+\_\+rows, const uword n\+\_\+cols, const double density, const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__sprandu_ga0e06b1c5898b6dc733c98630fdf9b89d}\label{group__fn__sprandu_ga0e06b1c5898b6dc733c98630fdf9b89d}} 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\arma\+\_\+warn\+\_\+unused obj\+\_\+type {\bfseries sprandu} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s, const double density, const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__sprandu_ga58f1e45f42cc7e60e1d2ca382d5d15fc}\label{group__fn__sprandu_ga58f1e45f42cc7e60e1d2ca382d5d15fc}} 
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{sp\+\_\+mat}} {\bfseries sprandu} (const uword n\+\_\+rows, const uword n\+\_\+cols, const double density)
+\item 
+\mbox{\Hypertarget{group__fn__sprandu_ga6ea39731e29c942d933cd50cc2d859e2}\label{group__fn__sprandu_ga6ea39731e29c942d933cd50cc2d859e2}} 
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{sp\+\_\+mat}} {\bfseries sprandu} (const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&s, const double density)
+\item 
+{\footnotesize template$<$typename T1 $>$ }\\arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \mbox{\hyperlink{group__fn__sprandu_gaeb212f8b5d2a64a9f6a6cff555edfe81}{sprandu}} (const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__fn__sprandu_gaeb212f8b5d2a64a9f6a6cff555edfe81}\label{group__fn__sprandu_gaeb212f8b5d2a64a9f6a6cff555edfe81}} 
+\index{Fn\_sprandu@{Fn\_sprandu}!sprandu@{sprandu}}
+\index{sprandu@{sprandu}!Fn\_sprandu@{Fn\_sprandu}}
+\doxysubsubsection{\texorpdfstring{sprandu()}{sprandu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T1 $>$ \\
+arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$typename T1\+::elem\+\_\+type$>$ sprandu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&}]{X }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a sparse matrix with the non-\/zero values in the same locations as in the given sparse matrix X, with the non-\/zero values set to random values in the \mbox{[}0,1\mbox{]} interval (uniform distribution) \mbox{\Hypertarget{group__fn__sprandu_gaefc651d166fe5244b42515b75d8eda72}\label{group__fn__sprandu_gaefc651d166fe5244b42515b75d8eda72}} 
+\index{Fn\_sprandu@{Fn\_sprandu}!sprandu@{sprandu}}
+\index{sprandu@{sprandu}!Fn\_sprandu@{Fn\_sprandu}}
+\doxysubsubsection{\texorpdfstring{sprandu()}{sprandu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename obj\+\_\+type $>$ \\
+arma\+\_\+warn\+\_\+unused obj\+\_\+type sprandu (\begin{DoxyParamCaption}\item[{const uword}]{n\+\_\+rows,  }\item[{const uword}]{n\+\_\+cols,  }\item[{const double}]{density,  }\item[{const typename \mbox{\hyperlink{structarma___sp_mat___sp_col___sp_row__only}{arma\+\_\+\+Sp\+Mat\+\_\+\+Sp\+Col\+\_\+\+Sp\+Row\+\_\+only}}$<$ obj\+\_\+type $>$\+::result $\ast$}]{junk = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a sparse matrix with a randomly selected subset of the elements set to random values in the \mbox{[}0,1\mbox{]} interval (uniform distribution) 

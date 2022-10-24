@@ -1,0 +1,44 @@
+\hypertarget{group__fn__approx__equal}{}\doxysection{Fn\+\_\+approx\+\_\+equal}
+\label{group__fn__approx__equal}\index{Fn\_approx\_equal@{Fn\_approx\_equal}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga6b97a48a278e2ddc460fa5e688f3f7af}\label{group__fn__approx__equal_ga6b97a48a278e2ddc460fa5e688f3f7af}} 
+{\footnotesize template$<$typename eT $>$ }\\arma\+\_\+inline bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+abs\+\_\+diff} (const eT \&x, const eT \&y, const typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga937a1a9186637f458d560777e036b17a}\label{group__fn__approx__equal_ga937a1a9186637f458d560777e036b17a}} 
+{\footnotesize template$<$typename eT $>$ }\\arma\+\_\+inline bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+rel\+\_\+diff} (const eT \&a, const eT \&b, const typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_gacd66ba2dd9f8aefd5da972ce29d0f739}\label{group__fn__approx__equal_gacd66ba2dd9f8aefd5da972ce29d0f739}} 
+{\footnotesize template$<$bool use\+\_\+abs\+\_\+diff, bool use\+\_\+rel\+\_\+diff, typename T1 , typename T2 $>$ }\\bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+worker} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_gae39e2ed03119d506a0268bfbf235283e}\label{group__fn__approx__equal_gae39e2ed03119d506a0268bfbf235283e}} 
+{\footnotesize template$<$bool use\+\_\+abs\+\_\+diff, bool use\+\_\+rel\+\_\+diff, typename T1 , typename T2 $>$ }\\bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+worker} (const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga8723c7e6c6999c779284238e9c68c4be}\label{group__fn__approx__equal_ga8723c7e6c6999c779284238e9c68c4be}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+handler} (const T1 \&A, const T2 \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_gacd17286b013ae73963246ff5ac8a2f37}\label{group__fn__approx__equal_gacd17286b013ae73963246ff5ac8a2f37}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool {\bfseries internal\+\_\+approx\+\_\+equal\+\_\+handler} (const T1 \&A, const T2 \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga957ec1b4586865e4783881a0ba2562b8}\label{group__fn__approx__equal_ga957ec1b4586865e4783881a0ba2562b8}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga9204cfc7cb0ec05f77c9495a95c412e1}\label{group__fn__approx__equal_ga9204cfc7cb0ec05f77c9495a95c412e1}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga4b78d51654376e33bd3ea7f6eb39e7e7}\label{group__fn__approx__equal_ga4b78d51654376e33bd3ea7f6eb39e7e7}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_gaa02bf0365d58453c87e5737420f80154}\label{group__fn__approx__equal_gaa02bf0365d58453c87e5737420f80154}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base_cube}{Base\+Cube}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_ga3c9aa0f52644877a8dd8c53d7ba54755}\label{group__fn__approx__equal_ga3c9aa0f52644877a8dd8c53d7ba54755}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type tol)
+\item 
+\mbox{\Hypertarget{group__fn__approx__equal_gabeba55a237554f6611784b9266760d72}\label{group__fn__approx__equal_gabeba55a237554f6611784b9266760d72}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused bool {\bfseries approx\+\_\+equal} (const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$method, const typename T1\+::pod\+\_\+type abs\+\_\+tol, const typename T1\+::pod\+\_\+type rel\+\_\+tol)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

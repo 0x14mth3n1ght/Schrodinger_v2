@@ -1,0 +1,99 @@
+\hypertarget{group__arma__ostream}{}\doxysection{Arma\+\_\+ostream}
+\label{group__arma__ostream}\index{Arma\_ostream@{Arma\_ostream}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classarma__ostream__state}{arma\+\_\+ostream\+\_\+state}}
+\item 
+class \mbox{\hyperlink{classarma__ostream}{arma\+\_\+ostream}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga8b91fb823ae840302fdda6b35cd18f3e}\label{group__arma__ostream_ga8b91fb823ae840302fdda6b35cd18f3e}} 
+{\bfseries arma\+\_\+ostream\+\_\+state\+::arma\+\_\+ostream\+\_\+state} (const std\+::ostream \&o)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga35167a959cd831fec6c2bbbd3664a111}\label{group__arma__ostream_ga35167a959cd831fec6c2bbbd3664a111}} 
+void {\bfseries arma\+\_\+ostream\+\_\+state\+::restore} (std\+::ostream \&o) const
+\item 
+\mbox{\Hypertarget{group__arma__ostream_gaea5b7e64254c649a2acf7e6d3ca4307d}\label{group__arma__ostream_gaea5b7e64254c649a2acf7e6d3ca4307d}} 
+{\footnotesize template$<$typename eT $>$ }\\static std\+::streamsize {\bfseries arma\+\_\+ostream\+::modify\+\_\+stream} (std\+::ostream \&o, const eT $\ast$data, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga01fa79dd778a735b9708580b768c308d}\label{group__arma__ostream_ga01fa79dd778a735b9708580b768c308d}} 
+{\footnotesize template$<$typename T $>$ }\\static std\+::streamsize \mbox{\hyperlink{group__arma__ostream_ga01fa79dd778a735b9708580b768c308d}{arma\+\_\+ostream\+::modify\+\_\+stream}} (std\+::ostream \&o, const std\+::complex$<$ T $>$ $\ast$data, const uword n\+\_\+elem)
+\begin{DoxyCompactList}\small\item\em \char`\"{}better than nothing\char`\"{} settings for complex numbers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__arma__ostream_ga6b0a92566edd7576f76f8c64b0d9df8d}\label{group__arma__ostream_ga6b0a92566edd7576f76f8c64b0d9df8d}} 
+{\footnotesize template$<$typename eT $>$ }\\static std\+::streamsize {\bfseries arma\+\_\+ostream\+::modify\+\_\+stream} (std\+::ostream \&o, typename \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ eT $>$\+::const\+\_\+iterator begin, const uword n\+\_\+elem, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga23485907d9b39a685e1e716b1d491097}\label{group__arma__ostream_ga23485907d9b39a685e1e716b1d491097}} 
+{\footnotesize template$<$typename eT $>$ }\\static std\+::streamsize \mbox{\hyperlink{group__arma__ostream_ga23485907d9b39a685e1e716b1d491097}{arma\+\_\+ostream\+::modify\+\_\+stream}} (std\+::ostream \&o, typename \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ eT $>$\+::const\+\_\+iterator begin, const uword n\+\_\+elem, const typename \mbox{\hyperlink{structarma__cx__only}{arma\+\_\+cx\+\_\+only}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\begin{DoxyCompactList}\small\item\em \char`\"{}better than nothing\char`\"{} settings for complex numbers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__arma__ostream_ga7425d22b57ca8eba2012c7bf8cf9efba}\label{group__arma__ostream_ga7425d22b57ca8eba2012c7bf8cf9efba}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries arma\+\_\+ostream\+::print\+\_\+elem\+\_\+zero} (std\+::ostream \&o, const bool modify)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga6b4976eff5e8e9932579a2d5f54a8dfb}\label{group__arma__ostream_ga6b4976eff5e8e9932579a2d5f54a8dfb}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries arma\+\_\+ostream\+::print\+\_\+elem} (std\+::ostream \&o, const eT \&x, const bool modify)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga159522158bad76820d07558055cf4e9b}\label{group__arma__ostream_ga159522158bad76820d07558055cf4e9b}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries arma\+\_\+ostream\+::raw\+\_\+print\+\_\+elem} (std\+::ostream \&o, const eT \&x)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga20d047323116f17aea576aca22f0653b}\label{group__arma__ostream_ga20d047323116f17aea576aca22f0653b}} 
+{\footnotesize template$<$typename T $>$ }\\static void {\bfseries arma\+\_\+ostream\+::print\+\_\+elem} (std\+::ostream \&o, const std\+::complex$<$ T $>$ \&x, const bool modify)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga0465d1454abdbc13d341311a6c0b4d49}\label{group__arma__ostream_ga0465d1454abdbc13d341311a6c0b4d49}} 
+{\footnotesize template$<$typename T $>$ }\\static void {\bfseries arma\+\_\+ostream\+::raw\+\_\+print\+\_\+elem} (std\+::ostream \&o, const std\+::complex$<$ T $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga070548567bee392b998b21d9cce67326}\label{group__arma__ostream_ga070548567bee392b998b21d9cce67326}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void \mbox{\hyperlink{group__arma__ostream_ga070548567bee392b998b21d9cce67326}{arma\+\_\+ostream\+::print}} (std\+::ostream \&o, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}}, const bool modify)
+\begin{DoxyCompactList}\small\item\em Print a matrix to the specified stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__arma__ostream_ga123840ae75d328d4bcb83474d94c8987}\label{group__arma__ostream_ga123840ae75d328d4bcb83474d94c8987}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void \mbox{\hyperlink{group__arma__ostream_ga123840ae75d328d4bcb83474d94c8987}{arma\+\_\+ostream\+::print}} (std\+::ostream \&o, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}}, const bool modify)
+\begin{DoxyCompactList}\small\item\em Print a cube to the specified stream. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename oT $>$ }\\static arma\+\_\+cold void \mbox{\hyperlink{group__arma__ostream_ga96db677bc27b24b529ffa671353a9aa1}{arma\+\_\+ostream\+::print}} (std\+::ostream \&o, const \mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}})
+\item 
+{\footnotesize template$<$typename oT $>$ }\\static arma\+\_\+cold void \mbox{\hyperlink{group__arma__ostream_ga63bce470b2836936d146d9a97d4e9b5d}{arma\+\_\+ostream\+::print}} (std\+::ostream \&o, const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}})
+\item 
+\mbox{\Hypertarget{group__arma__ostream_gac5dab52b4cf384c2a8cb90f8dd72535f}\label{group__arma__ostream_gac5dab52b4cf384c2a8cb90f8dd72535f}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::print\+\_\+dense} (std\+::ostream \&o, const \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}}, const bool modify)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga107080908c9645bd1321ead34f4d20d5}\label{group__arma__ostream_ga107080908c9645bd1321ead34f4d20d5}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::print} (std\+::ostream \&o, const \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}}, const bool modify)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_gacff4a24a1e000987bd283a436e4734f5}\label{group__arma__ostream_gacff4a24a1e000987bd283a436e4734f5}} 
+static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::print} (std\+::ostream \&o, const \mbox{\hyperlink{class_size_mat}{Size\+Mat}} \&S)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga5664bff3b0f282c194366395536aa966}\label{group__arma__ostream_ga5664bff3b0f282c194366395536aa966}} 
+static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::print} (std\+::ostream \&o, const \mbox{\hyperlink{class_size_cube}{Size\+Cube}} \&S)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_gabe2f28dbb72ff6f264d53f7157b1dbea}\label{group__arma__ostream_gabe2f28dbb72ff6f264d53f7157b1dbea}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::brief\+\_\+print} (std\+::ostream \&o, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}}, const bool print\+\_\+size=true)
+\item 
+\mbox{\Hypertarget{group__arma__ostream_ga50b5cdbe238eb60544632428562f50bd}\label{group__arma__ostream_ga50b5cdbe238eb60544632428562f50bd}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::brief\+\_\+print} (std\+::ostream \&o, const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}})
+\item 
+\mbox{\Hypertarget{group__arma__ostream_gaa12fbe046ecf32f921628acc9899a8cc}\label{group__arma__ostream_gaa12fbe046ecf32f921628acc9899a8cc}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+cold void {\bfseries arma\+\_\+ostream\+::brief\+\_\+print} (std\+::ostream \&o, const \mbox{\hyperlink{class_sp_mat}{Sp\+Mat}}$<$ eT $>$ \&\mbox{\hyperlink{constantes_8h_a5175b356eac1d83a42608b42a25d00b9}{m}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__arma__ostream_ga96db677bc27b24b529ffa671353a9aa1}\label{group__arma__ostream_ga96db677bc27b24b529ffa671353a9aa1}} 
+\index{Arma\_ostream@{Arma\_ostream}!print@{print}}
+\index{print@{print}!Arma\_ostream@{Arma\_ostream}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+arma\+\_\+cold void arma\+\_\+ostream\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \mbox{\hyperlink{classfield}{field}}$<$ oT $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Print a field to the specified stream Assumes type oT can be printed, ie. oT has std\+::ostream\& operator$<$$<$ (std\+::ostream\&, const oT\&) ~\newline
+ \mbox{\Hypertarget{group__arma__ostream_ga63bce470b2836936d146d9a97d4e9b5d}\label{group__arma__ostream_ga63bce470b2836936d146d9a97d4e9b5d}} 
+\index{Arma\_ostream@{Arma\_ostream}!print@{print}}
+\index{print@{print}!Arma\_ostream@{Arma\_ostream}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename oT $>$ \\
+arma\+\_\+cold void arma\+\_\+ostream\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \mbox{\hyperlink{classsubview__field}{subview\+\_\+field}}$<$ oT $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Print a subfield to the specified stream Assumes type oT can be printed, ie. oT has std\+::ostream\& operator$<$$<$ (std\+::ostream\&, const oT\&) ~\newline
+ 

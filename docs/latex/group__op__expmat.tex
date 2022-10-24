@@ -1,0 +1,37 @@
+\hypertarget{group__op__expmat}{}\doxysection{Op\+\_\+expmat}
+\label{group__op__expmat}\index{Op\_expmat@{Op\_expmat}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classop__expmat}{op\+\_\+expmat}}
+\item 
+class \mbox{\hyperlink{classop__expmat__sym}{op\+\_\+expmat\+\_\+sym}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 $>$ }\\static void \mbox{\hyperlink{group__op__expmat_gaea6692731949a079d902ef1e95d97cb9}{op\+\_\+expmat\+::apply}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__expmat}{op\+\_\+expmat}} $>$ \&expr)
+\item 
+\mbox{\Hypertarget{group__op__expmat_ga3d145b9db49bf4046edf4ed4bfba2df8}\label{group__op__expmat_ga3d145b9db49bf4046edf4ed4bfba2df8}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries op\+\_\+expmat\+::apply\+\_\+direct} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__op__expmat_ga58b71a940fdf03f6bdcc43845dd81df7}\label{group__op__expmat_ga58b71a940fdf03f6bdcc43845dd81df7}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+expmat\+\_\+sym\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__expmat__sym}{op\+\_\+expmat\+\_\+sym}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__expmat_gaefe111ef5e31b984faa8caab57fb4ea8}\label{group__op__expmat_gaefe111ef5e31b984faa8caab57fb4ea8}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries op\+\_\+expmat\+\_\+sym\+::apply\+\_\+direct} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&expr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__op__expmat_gaea6692731949a079d902ef1e95d97cb9}\label{group__op__expmat_gaea6692731949a079d902ef1e95d97cb9}} 
+\index{Op\_expmat@{Op\_expmat}!apply@{apply}}
+\index{apply@{apply}!Op\_expmat@{Op\_expmat}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily template$<$typename T1 $>$ \\
+void op\+\_\+expmat\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&}]{out,  }\item[{const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__expmat}{op\+\_\+expmat}} $>$ \&}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+implementation based on\+: Cleve Moler, Charles Van Loan. Nineteen Dubious Ways to Compute the Exponential of a Matrix, Twenty-\/\+Five Years Later. SIAM Review, Vol. 45, No. 1, 2003, pp. 3-\/49. \href{http://dx.doi.org/10.1137/S00361445024180}{\texttt{ http\+://dx.\+doi.\+org/10.\+1137/\+S00361445024180}} 

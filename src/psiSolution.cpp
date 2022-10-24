@@ -40,7 +40,7 @@ double fact(double n)
  * d'Hermite
  * @return arma::mat
  */
-arma::mat calculeSolution(const arma::vec &vecteurZ)
+arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
 {
     //Récupération de la matrice Hermite
     arma::mat hermiteMatrix = hermiteMat(n_max, vecteurZ);

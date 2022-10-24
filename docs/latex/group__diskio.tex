@@ -1,0 +1,113 @@
+\hypertarget{group__diskio}{}\doxysection{Diskio}
+\label{group__diskio}\index{Diskio@{Diskio}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcsv__name}{csv\+\_\+name}}
+\item 
+class \mbox{\hyperlink{classdiskio}{diskio}}
+\begin{DoxyCompactList}\small\item\em class for saving and loading matrices and fields -\/ INTERNAL USE ONLY! \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhdf5__name}{hdf5\+\_\+name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} \+: unsigned int \{ \newline
+{\bfseries file\+\_\+type\+\_\+unknown}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}{auto\+\_\+detect}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea7963e321f4e9acbc17ee7bb89759c726}{raw\+\_\+ascii}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa1e6f37c8f92117ed8475ce676fc6f56}{arma\+\_\+ascii}}
+, \newline
+\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4d2490e1c12932d1332e7ce8af72736}{csv\+\_\+ascii}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eac7c03701d8a6949bd83abea1ecce583d}{raw\+\_\+binary}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}{arma\+\_\+binary}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea64b6057b15875d5a09770206569c8c22}{pgm\+\_\+binary}}
+, \newline
+\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa274d505a1e81e9d595983bc45130739}{ppm\+\_\+binary}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaaac409c9c25281935ad4f193584bd303}{hdf5\+\_\+binary}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea92fd2e60009e48db51f0b4bd73577141}{hdf5\+\_\+binary\+\_\+trans}}
+, \mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea67a6756d1c8129e995add5b88f557db0}{coord\+\_\+ascii}}
+, \newline
+\mbox{\hyperlink{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea41666ac05f276bbd141f46f51509b89d}{ssv\+\_\+ascii}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__diskio_ga42880fa8b1be2607102ab4b18a5137de}\label{group__diskio_ga42880fa8b1be2607102ab4b18a5137de}} 
+static arma\+\_\+deprecated \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} {\bfseries diskio\+::guess\+\_\+file\+\_\+type} (std\+::istream \&f)
+\item 
+\mbox{\Hypertarget{group__diskio_ga303c278ca895186e413aaf2b0eb3b9a8}\label{group__diskio_ga303c278ca895186e413aaf2b0eb3b9a8}} 
+{\footnotesize template$<$typename eT $>$ }\\bool {\bfseries diskio\+::load\+\_\+ppm\+\_\+binary} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&x, const std\+::string \&name, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__diskio_ga58c79abfe92523177a49dc73a76e5492}\label{group__diskio_ga58c79abfe92523177a49dc73a76e5492}} 
+{\footnotesize template$<$typename eT $>$ }\\bool {\bfseries diskio\+::load\+\_\+ppm\+\_\+binary} (\mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&x, std\+::istream \&f, std\+::string \&err\+\_\+msg)
+\item 
+\mbox{\Hypertarget{group__diskio_ga6c5c582f5e9bdd8cce779f419b33dc32}\label{group__diskio_ga6c5c582f5e9bdd8cce779f419b33dc32}} 
+{\footnotesize template$<$typename eT $>$ }\\bool {\bfseries diskio\+::save\+\_\+ppm\+\_\+binary} (const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&x, const std\+::string \&final\+\_\+name)
+\item 
+\mbox{\Hypertarget{group__diskio_gaf6c24421138616799332e31fe96d38f7}\label{group__diskio_gaf6c24421138616799332e31fe96d38f7}} 
+{\footnotesize template$<$typename eT $>$ }\\bool {\bfseries diskio\+::save\+\_\+ppm\+\_\+binary} (const \mbox{\hyperlink{class_cube}{Cube}}$<$ eT $>$ \&x, std\+::ostream \&f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}\label{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}} 
+\index{Diskio@{Diskio}!file\_type@{file\_type}}
+\index{file\_type@{file\_type}!Diskio@{Diskio}}
+\doxysubsubsection{\texorpdfstring{file\_type}{file\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__diskio_ga0de594dadb1bc493ecc618520a2d260e}{file\+\_\+type}} \+: unsigned int\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{auto\_detect@{auto\_detect}!Diskio@{Diskio}}\index{Diskio@{Diskio}!auto\_detect@{auto\_detect}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea60db33599fbe80f2d536ce9ffb5f2377}} 
+auto\+\_\+detect&attempt to automatically detect the file type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{raw\_ascii@{raw\_ascii}!Diskio@{Diskio}}\index{Diskio@{Diskio}!raw\_ascii@{raw\_ascii}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea7963e321f4e9acbc17ee7bb89759c726}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea7963e321f4e9acbc17ee7bb89759c726}} 
+raw\+\_\+ascii&raw text (ASCII), without a header \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{arma\_ascii@{arma\_ascii}!Diskio@{Diskio}}\index{Diskio@{Diskio}!arma\_ascii@{arma\_ascii}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa1e6f37c8f92117ed8475ce676fc6f56}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa1e6f37c8f92117ed8475ce676fc6f56}} 
+arma\+\_\+ascii&Armadillo text format, with a header specifying matrix type and size. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{csv\_ascii@{csv\_ascii}!Diskio@{Diskio}}\index{Diskio@{Diskio}!csv\_ascii@{csv\_ascii}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4d2490e1c12932d1332e7ce8af72736}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4d2490e1c12932d1332e7ce8af72736}} 
+csv\+\_\+ascii&comma separated values (CSV), without a header \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{raw\_binary@{raw\_binary}!Diskio@{Diskio}}\index{Diskio@{Diskio}!raw\_binary@{raw\_binary}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eac7c03701d8a6949bd83abea1ecce583d}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eac7c03701d8a6949bd83abea1ecce583d}} 
+raw\+\_\+binary&raw binary format (machine dependent), without a header \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{arma\_binary@{arma\_binary}!Diskio@{Diskio}}\index{Diskio@{Diskio}!arma\_binary@{arma\_binary}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eab4ea3228fa70b58ac40bc995f57431b9}} 
+arma\+\_\+binary&Armadillo binary format (machine dependent), with a header specifying matrix type and size. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pgm\_binary@{pgm\_binary}!Diskio@{Diskio}}\index{Diskio@{Diskio}!pgm\_binary@{pgm\_binary}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea64b6057b15875d5a09770206569c8c22}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea64b6057b15875d5a09770206569c8c22}} 
+pgm\+\_\+binary&Portable Grey Map (greyscale image) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ppm\_binary@{ppm\_binary}!Diskio@{Diskio}}\index{Diskio@{Diskio}!ppm\_binary@{ppm\_binary}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa274d505a1e81e9d595983bc45130739}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaa274d505a1e81e9d595983bc45130739}} 
+ppm\+\_\+binary&Portable Pixel Map (colour image), used by the field and cube classes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hdf5\_binary@{hdf5\_binary}!Diskio@{Diskio}}\index{Diskio@{Diskio}!hdf5\_binary@{hdf5\_binary}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaaac409c9c25281935ad4f193584bd303}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260eaaac409c9c25281935ad4f193584bd303}} 
+hdf5\+\_\+binary&HDF5\+: open binary format, not specific to Armadillo, which can store arbitrary data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hdf5\_binary\_trans@{hdf5\_binary\_trans}!Diskio@{Diskio}}\index{Diskio@{Diskio}!hdf5\_binary\_trans@{hdf5\_binary\_trans}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea92fd2e60009e48db51f0b4bd73577141}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea92fd2e60009e48db51f0b4bd73577141}} 
+hdf5\+\_\+binary\+\_\+trans&\mbox{[}NOTE\+: DO NOT USE -\/ deprecated\mbox{]} as per hdf5\+\_\+binary, but save/load the data with columns transposed to rows \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{coord\_ascii@{coord\_ascii}!Diskio@{Diskio}}\index{Diskio@{Diskio}!coord\_ascii@{coord\_ascii}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea67a6756d1c8129e995add5b88f557db0}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea67a6756d1c8129e995add5b88f557db0}} 
+coord\+\_\+ascii&simple co-\/ordinate format for sparse matrices (indices start at zero) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ssv\_ascii@{ssv\_ascii}!Diskio@{Diskio}}\index{Diskio@{Diskio}!ssv\_ascii@{ssv\_ascii}}}\mbox{\Hypertarget{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea41666ac05f276bbd141f46f51509b89d}\label{group__diskio_gga0de594dadb1bc493ecc618520a2d260ea41666ac05f276bbd141f46f51509b89d}} 
+ssv\+\_\+ascii&similar to csv\+\_\+ascii; uses semicolon (;) instead of comma (,) as the separator \\
+\hline
+
+\end{DoxyEnumFields}

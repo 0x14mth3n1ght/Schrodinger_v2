@@ -1,0 +1,36 @@
+\hypertarget{group__fn__spsolve}{}\doxysection{Fn\+\_\+spsolve}
+\label{group__fn__spsolve}\index{Fn\_spsolve@{Fn\_spsolve}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspsolve__opts__base}{spsolve\+\_\+opts\+\_\+base}}
+\item 
+struct \mbox{\hyperlink{structspsolve__opts__none}{spsolve\+\_\+opts\+\_\+none}}
+\item 
+struct \mbox{\hyperlink{structsuperlu__opts}{superlu\+\_\+opts}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \mbox{\hyperlink{group__fn__spsolve_ga30c88fd439aa8500194eac3ff359a1bf}{spsolve\+\_\+helper}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$solver, const \mbox{\hyperlink{structspsolve__opts__base}{spsolve\+\_\+opts\+\_\+base}} \&settings, const typename \mbox{\hyperlink{structarma__blas__type__only}{arma\+\_\+blas\+\_\+type\+\_\+only}}$<$ typename T1\+::elem\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__spsolve_ga7b733c76509a618d14fc89acc44a31bd}\label{group__fn__spsolve_ga7b733c76509a618d14fc89acc44a31bd}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool {\bfseries spsolve} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$solver=\char`\"{}superlu\char`\"{}, const \mbox{\hyperlink{structspsolve__opts__base}{spsolve\+\_\+opts\+\_\+base}} \&settings=\mbox{\hyperlink{structspsolve__opts__none}{spsolve\+\_\+opts\+\_\+none}}(), const typename \mbox{\hyperlink{structarma__blas__type__only}{arma\+\_\+blas\+\_\+type\+\_\+only}}$<$ typename T1\+::elem\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__fn__spsolve_gab86d27bbdf4c5044e27828519cc994fc}\label{group__fn__spsolve_gab86d27bbdf4c5044e27828519cc994fc}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ {\bfseries spsolve} (const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&B, const char $\ast$solver=\char`\"{}superlu\char`\"{}, const \mbox{\hyperlink{structspsolve__opts__base}{spsolve\+\_\+opts\+\_\+base}} \&settings=\mbox{\hyperlink{structspsolve__opts__none}{spsolve\+\_\+opts\+\_\+none}}(), const typename \mbox{\hyperlink{structarma__blas__type__only}{arma\+\_\+blas\+\_\+type\+\_\+only}}$<$ typename T1\+::elem\+\_\+type $>$\+::result $\ast$junk=nullptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__fn__spsolve_ga30c88fd439aa8500194eac3ff359a1bf}\label{group__fn__spsolve_ga30c88fd439aa8500194eac3ff359a1bf}} 
+\index{Fn\_spsolve@{Fn\_spsolve}!spsolve\_helper@{spsolve\_helper}}
+\index{spsolve\_helper@{spsolve\_helper}!Fn\_spsolve@{Fn\_spsolve}}
+\doxysubsubsection{\texorpdfstring{spsolve\_helper()}{spsolve\_helper()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+bool spsolve\+\_\+helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&}]{out,  }\item[{const \mbox{\hyperlink{struct_sp_base}{Sp\+Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&}]{A,  }\item[{const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T2 $>$ \&}]{B,  }\item[{const char $\ast$}]{solver,  }\item[{const \mbox{\hyperlink{structspsolve__opts__base}{spsolve\+\_\+opts\+\_\+base}} \&}]{settings,  }\item[{const typename \mbox{\hyperlink{structarma__blas__type__only}{arma\+\_\+blas\+\_\+type\+\_\+only}}$<$ typename T1\+::elem\+\_\+type $>$\+::result $\ast$}]{junk = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Solve a system of linear equations, A$\ast$X = B, where X is unknown, A is sparse, and B is dense. X will be dense too. 

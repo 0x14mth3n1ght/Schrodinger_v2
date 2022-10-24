@@ -1,0 +1,17 @@
+\hypertarget{group__fn__prod}{}\doxysection{Fn\+\_\+prod}
+\label{group__fn__prod}\index{Fn\_prod@{Fn\_prod}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__fn__prod_ga762336a31436e881007b8dc6bf172a7d}\label{group__fn__prod_ga762336a31436e881007b8dc6bf172a7d}} 
+{\footnotesize template$<$typename T1 $>$ }\\arma\+\_\+warn\+\_\+unused \mbox{\hyperlink{structenable__if2}{enable\+\_\+if2}}$<$ \mbox{\hyperlink{structis__arma__type}{is\+\_\+arma\+\_\+type}}$<$ T1 $>$\+::value \&\&\mbox{\hyperlink{structresolves__to__vector}{resolves\+\_\+to\+\_\+vector}}$<$ T1 $>$\+::yes, typename T1\+::elem\+\_\+type $>$\+::result \mbox{\hyperlink{group__fn__prod_ga762336a31436e881007b8dc6bf172a7d}{prod}} (const T1 \&X)
+\begin{DoxyCompactList}\small\item\em Delayed product of elements of a matrix along a specified dimension (either rows or columns). The result is stored in a dense matrix that has either one column or one row. For dim = 0, find the sum of each column (ie. traverse across rows) For dim = 1, find the sum of each row (ie. traverse across columns) The default is dim = 0. NOTE\+: this function works differently than in Matlab/\+Octave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__fn__prod_ga4d704bea435a6f291771a3cab6b55689}\label{group__fn__prod_ga4d704bea435a6f291771a3cab6b55689}} 
+{\footnotesize template$<$typename T1 $>$ }\\arma\+\_\+warn\+\_\+unused arma\+\_\+inline \mbox{\hyperlink{structenable__if2}{enable\+\_\+if2}}$<$ \mbox{\hyperlink{structis__arma__type}{is\+\_\+arma\+\_\+type}}$<$ T1 $>$\+::value, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__prod}{op\+\_\+prod}} $>$ $>$\+::result {\bfseries prod} (const T1 \&X, const uword dim)
+\item 
+\mbox{\Hypertarget{group__fn__prod_ga4aadeacecfa0eeaca6dd9277ed8bf359}\label{group__fn__prod_ga4aadeacecfa0eeaca6dd9277ed8bf359}} 
+{\footnotesize template$<$typename T $>$ }\\arma\+\_\+warn\+\_\+unused arma\+\_\+inline \mbox{\hyperlink{structarma__scalar__only}{arma\+\_\+scalar\+\_\+only}}$<$ T $>$\+::result {\bfseries prod} (const T \&x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

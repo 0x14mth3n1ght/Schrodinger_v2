@@ -1,0 +1,55 @@
+\hypertarget{group__op__vectorise}{}\doxysection{Op\+\_\+vectorise}
+\label{group__op__vectorise}\index{Op\_vectorise@{Op\_vectorise}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classop__vectorise__col}{op\+\_\+vectorise\+\_\+col}}
+\item 
+class \mbox{\hyperlink{classop__vectorise__row}{op\+\_\+vectorise\+\_\+row}}
+\item 
+class \mbox{\hyperlink{classop__vectorise__all}{op\+\_\+vectorise\+\_\+all}}
+\item 
+class \mbox{\hyperlink{classop__vectorise__cube__col}{op\+\_\+vectorise\+\_\+cube\+\_\+col}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__op__vectorise_gaf0ad395305700bdf7ed21518eeedf65b}\label{group__op__vectorise_gaf0ad395305700bdf7ed21518eeedf65b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+col\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__vectorise__col}{op\+\_\+vectorise\+\_\+col}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_gaa0074533250b0b532d7d706e81fa88f1}\label{group__op__vectorise_gaa0074533250b0b532d7d706e81fa88f1}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+col\+::apply\+\_\+direct} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const T1 \&expr)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga2f77dcc0d40b47d342fc74f1f66da82f}\label{group__op__vectorise_ga2f77dcc0d40b47d342fc74f1f66da82f}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+col\+::apply\+\_\+subview} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{classsubview}{subview}}$<$ eT $>$ \&sv)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_gaef4df575589defb96c37a4827794ece0}\label{group__op__vectorise_gaef4df575589defb96c37a4827794ece0}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+col\+::apply\+\_\+proxy} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_proxy}{Proxy}}$<$ T1 $>$ \&P)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_gaff1ae53a4127b0ad713fff2bad773791}\label{group__op__vectorise_gaff1ae53a4127b0ad713fff2bad773791}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+row\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__vectorise__row}{op\+\_\+vectorise\+\_\+row}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga86c32b2dcd4a3382c537bd08f0b259f0}\label{group__op__vectorise_ga86c32b2dcd4a3382c537bd08f0b259f0}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+row\+::apply\+\_\+direct} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const T1 \&expr)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga47eafbf6f949e99e00cd98bf21aed594}\label{group__op__vectorise_ga47eafbf6f949e99e00cd98bf21aed594}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+row\+::apply\+\_\+proxy} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{struct_proxy}{Proxy}}$<$ T1 $>$ \&P)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga84d258ac08b9d08139856734d693df80}\label{group__op__vectorise_ga84d258ac08b9d08139856734d693df80}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+all\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_op}{Op}}$<$ T1, \mbox{\hyperlink{classop__vectorise__all}{op\+\_\+vectorise\+\_\+all}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga20ef64087d622ec5be995a76fc3969a3}\label{group__op__vectorise_ga20ef64087d622ec5be995a76fc3969a3}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+cube\+\_\+col\+::apply} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_cube_to_mat_op}{Cube\+To\+Mat\+Op}}$<$ T1, \mbox{\hyperlink{classop__vectorise__cube__col}{op\+\_\+vectorise\+\_\+cube\+\_\+col}} $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga710cf7b6d1f40a3f31ff701477d0333b}\label{group__op__vectorise_ga710cf7b6d1f40a3f31ff701477d0333b}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+cube\+\_\+col\+::apply\+\_\+subview} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{classsubview__cube}{subview\+\_\+cube}}$<$ eT $>$ \&sv)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_gaee9f75249733c16b4a79416f18bbca23}\label{group__op__vectorise_gaee9f75249733c16b4a79416f18bbca23}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+cube\+\_\+col\+::apply\+\_\+unwrap} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const T1 \&expr)
+\item 
+\mbox{\Hypertarget{group__op__vectorise_ga067f458ee857ad6f764cfcc5e955b837}\label{group__op__vectorise_ga067f458ee857ad6f764cfcc5e955b837}} 
+{\footnotesize template$<$typename T1 $>$ }\\static void {\bfseries op\+\_\+vectorise\+\_\+cube\+\_\+col\+::apply\+\_\+proxy} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const T1 \&expr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

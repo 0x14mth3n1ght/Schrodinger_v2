@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I "./armadillo/include"
+CFLAGS=-I "./armadillo/include" -Wall -Wextra -O3 -std=c++11
 TARGET=target/main
 HEADERS=$(wildcard headers/*.h)
 HEADERS_ASTYLE=$(wildcard headers/*.h.orig)
@@ -7,7 +7,7 @@ SOURCES=$(wildcard src/*.cpp)
 SOURCES_ASTYLE=$(wildcard src/*.cpp.orig)
 OBJ=$(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 
-all: format clean compile_main
+all: compile_main
 
 ## Edition de liens et compilation exécutable ##
 
@@ -33,5 +33,14 @@ clean:
 ## Compile seulement les fichiers sources ##
 compile_source: $(OBJ)
 
+## Astyle ##
 format: $(SOURCES) $(HEADERS)
 	./astyle --style=allman $^
+
+## Documentation ##
+doc:
+	doxygen Doxygen
+
+## Tests ##
+runtests:
+	$(MAKE) -C tests/

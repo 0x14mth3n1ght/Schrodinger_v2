@@ -15,7 +15,7 @@ public :
     int n_max;
 
     //
-    arma::mat calculeSolution(const arma::vec);
+    arma::mat calculeSolution(const arma::vec&);
 
 };
 

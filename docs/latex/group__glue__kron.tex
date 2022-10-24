@@ -1,0 +1,25 @@
+\hypertarget{group__glue__kron}{}\doxysection{Glue\+\_\+kron}
+\label{group__glue__kron}\index{Glue\_kron@{Glue\_kron}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classglue__kron}{glue\+\_\+kron}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__glue__kron_ga7a5559045edf7ee358fece2655e7532a}\label{group__glue__kron_ga7a5559045edf7ee358fece2655e7532a}} 
+{\footnotesize template$<$typename eT $>$ }\\static void \mbox{\hyperlink{group__glue__kron_ga7a5559045edf7ee358fece2655e7532a}{glue\+\_\+kron\+::direct\+\_\+kron}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&B)
+\begin{DoxyCompactList}\small\item\em both input matrices have the same element type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__glue__kron_ga8e1bacaab85f86c6d71e4784875a15ba}\label{group__glue__kron_ga8e1bacaab85f86c6d71e4784875a15ba}} 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{group__glue__kron_ga8e1bacaab85f86c6d71e4784875a15ba}{glue\+\_\+kron\+::direct\+\_\+kron}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, const \mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&B)
+\begin{DoxyCompactList}\small\item\em different types of input matrices A -\/$>$ complex, B -\/$>$ basic element type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__glue__kron_ga48620ea90f8bedd52a4655dc22151d40}\label{group__glue__kron_ga48620ea90f8bedd52a4655dc22151d40}} 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{group__glue__kron_ga48620ea90f8bedd52a4655dc22151d40}{glue\+\_\+kron\+::direct\+\_\+kron}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&A, const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&B)
+\begin{DoxyCompactList}\small\item\em different types of input matrices A -\/$>$ basic element type, B -\/$>$ complex \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__glue__kron_ga06849a8397fc479ead80fa2a9dbf5d4a}\label{group__glue__kron_ga06849a8397fc479ead80fa2a9dbf5d4a}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static void \mbox{\hyperlink{group__glue__kron_ga06849a8397fc479ead80fa2a9dbf5d4a}{glue\+\_\+kron\+::apply}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_glue}{Glue}}$<$ T1, T2, \mbox{\hyperlink{classglue__kron}{glue\+\_\+kron}} $>$ \&X)
+\begin{DoxyCompactList}\small\item\em apply Kronecker product for two objects with same element type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

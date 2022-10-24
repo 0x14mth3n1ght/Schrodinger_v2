@@ -1,0 +1,325 @@
+\hypertarget{group__auxlib}{}\doxysection{Auxlib}
+\label{group__auxlib}\index{Auxlib@{Auxlib}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classauxlib}{auxlib}}
+\begin{DoxyCompactList}\small\item\em low-\/level interface functions for accessing LAPACK \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__auxlib_ga9b5da0f68b2b9c1354888a6dcbeed8b8}\label{group__auxlib_ga9b5da0f68b2b9c1354888a6dcbeed8b8}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga07a06fd0c86ca12099700505a353b013}\label{group__auxlib_ga07a06fd0c86ca12099700505a353b013}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_gada1bbe7b7efd8cac0618eec1638329ae}\label{group__auxlib_gada1bbe7b7efd8cac0618eec1638329ae}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result \&out\+\_\+rcond)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaaf3bda56e812712fb1691e695fbdf29a}\label{group__auxlib_gaaf3bda56e812712fb1691e695fbdf29a}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+tr} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga206a64fdd23912a735850a992ff35725}\label{group__auxlib_ga206a64fdd23912a735850a992ff35725}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+tr\+\_\+rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result \&out\+\_\+rcond, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga57231d7f61065050b87bd45bcb73b17a}\label{group__auxlib_ga57231d7f61065050b87bd45bcb73b17a}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+sympd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, bool \&out\+\_\+sympd\+\_\+state)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga13d788c3c7e10939bd5b18442112a872}\label{group__auxlib_ga13d788c3c7e10939bd5b18442112a872}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+sympd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7e42adac55f066607c0ce3d1934bae07}\label{group__auxlib_ga7e42adac55f066607c0ce3d1934bae07}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+sympd\+\_\+rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, bool \&out\+\_\+sympd\+\_\+state, eT \&out\+\_\+rcond, const eT rcond\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaa963482bf476effa2a1961e7a8b357a4}\label{group__auxlib_gaa963482bf476effa2a1961e7a8b357a4}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::inv\+\_\+sympd\+\_\+rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, bool \&out\+\_\+sympd\+\_\+state, T \&out\+\_\+rcond, const T rcond\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{group__auxlib_gadbec9e2bf7e46544c38212f619228391}\label{group__auxlib_gadbec9e2bf7e46544c38212f619228391}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gadbec9e2bf7e46544c38212f619228391}{auxlib\+::det}} (eT \&out\+\_\+val, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\begin{DoxyCompactList}\small\item\em determinant of a matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga74d8fc5c3a1eb344df9c1053f90e1005}\label{group__auxlib_ga74d8fc5c3a1eb344df9c1053f90e1005}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga74d8fc5c3a1eb344df9c1053f90e1005}{auxlib\+::log\+\_\+det}} (eT \&out\+\_\+val, typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result \&out\+\_\+sign, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\begin{DoxyCompactList}\small\item\em log determinant of a matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gac722e5825d01b02ec852102cd085f3e2}\label{group__auxlib_gac722e5825d01b02ec852102cd085f3e2}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::log\+\_\+det\+\_\+sympd} (typename \mbox{\hyperlink{structget__pod__type}{get\+\_\+pod\+\_\+type}}$<$ eT $>$\+::result \&out\+\_\+val, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga414bdef119dfc44395d8a5e54426b080}\label{group__auxlib_ga414bdef119dfc44395d8a5e54426b080}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga414bdef119dfc44395d8a5e54426b080}{auxlib\+::lu}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&L, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{classpodarray}{podarray}}$<$ blas\+\_\+int $>$ \&ipiv, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\begin{DoxyCompactList}\small\item\em LU decomposition of a matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gae31342b222e1dddba37845019dfa017d}\label{group__auxlib_gae31342b222e1dddba37845019dfa017d}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::lu} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&L, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&P, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga8b07c0f266873a4060504e8abd8e9465}\label{group__auxlib_ga8b07c0f266873a4060504e8abd8e9465}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::lu} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&L, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga329f7be399a3f9e90086d5e263691345}\label{group__auxlib_ga329f7be399a3f9e90086d5e263691345}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga329f7be399a3f9e90086d5e263691345}{auxlib\+::eig\+\_\+gen}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em eigen decomposition of general square matrix (real) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga98e1fb303ff00457c258799e728c97a4}\label{group__auxlib_ga98e1fb303ff00457c258799e728c97a4}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga98e1fb303ff00457c258799e728c97a4}{auxlib\+::eig\+\_\+gen}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em eigen decomposition of general square matrix (complex) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga12c3ce0efe508ad84db233210514a98b}\label{group__auxlib_ga12c3ce0efe508ad84db233210514a98b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga12c3ce0efe508ad84db233210514a98b}{auxlib\+::eig\+\_\+gen\+\_\+balance}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em eigen decomposition of general square matrix (real, balance given matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gabb06b1611e8a7ebfa48a9a751bc958e6}\label{group__auxlib_gabb06b1611e8a7ebfa48a9a751bc958e6}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gabb06b1611e8a7ebfa48a9a751bc958e6}{auxlib\+::eig\+\_\+gen\+\_\+balance}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em eigen decomposition of general square matrix (complex, balance given matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gae5bd0855889e8d1b1296de4e47b7414b}\label{group__auxlib_gae5bd0855889e8d1b1296de4e47b7414b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gae5bd0855889e8d1b1296de4e47b7414b}{auxlib\+::eig\+\_\+gen\+\_\+twosided}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigen decomposition of general square matrix (real) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gadbf34a83c6b6a957401c9c71a9979488}\label{group__auxlib_gadbf34a83c6b6a957401c9c71a9979488}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gadbf34a83c6b6a957401c9c71a9979488}{auxlib\+::eig\+\_\+gen\+\_\+twosided}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigen decomposition of general square matrix (complex) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaded3d1a9ddab4aab2da0a0d8bd7cadff}\label{group__auxlib_gaded3d1a9ddab4aab2da0a0d8bd7cadff}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaded3d1a9ddab4aab2da0a0d8bd7cadff}{auxlib\+::eig\+\_\+gen\+\_\+twosided\+\_\+balance}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigen decomposition of general square matrix (real, balance given matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga86e6f103674c81c73920adec5f960fcc}\label{group__auxlib_ga86e6f103674c81c73920adec5f960fcc}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga86e6f103674c81c73920adec5f960fcc}{auxlib\+::eig\+\_\+gen\+\_\+twosided\+\_\+balance}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigen decomposition of general square matrix (complex, balance given matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga3f0adca5448bb1f9f444d468067d67a8}\label{group__auxlib_ga3f0adca5448bb1f9f444d468067d67a8}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga3f0adca5448bb1f9f444d468067d67a8}{auxlib\+::eig\+\_\+pair}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&A\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T2 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em eigendecomposition of general square matrix pair (real) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga53891bbe85fd341017e6a48857c4991f}\label{group__auxlib_ga53891bbe85fd341017e6a48857c4991f}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga53891bbe85fd341017e6a48857c4991f}{auxlib\+::eig\+\_\+pair}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vecs, const bool vecs\+\_\+on, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&A\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T2 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em eigendecomposition of general square matrix pair (complex) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga01e77782db942d53c334d0a8cca7242c}\label{group__auxlib_ga01e77782db942d53c334d0a8cca7242c}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga01e77782db942d53c334d0a8cca7242c}{auxlib\+::eig\+\_\+pair\+\_\+twosided}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&A\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T2 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigendecomposition of general square matrix pair (real) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga481bb4ace98283ff6031bfe8d7705518}\label{group__auxlib_ga481bb4ace98283ff6031bfe8d7705518}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga481bb4ace98283ff6031bfe8d7705518}{auxlib\+::eig\+\_\+pair\+\_\+twosided}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&vals, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&lvecs, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&rvecs, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&A\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T2 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em two-\/sided eigendecomposition of general square matrix pair (complex) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga311128d65e041d00ef701b5ddf2eeb8e}\label{group__auxlib_ga311128d65e041d00ef701b5ddf2eeb8e}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga311128d65e041d00ef701b5ddf2eeb8e}{auxlib\+::eig\+\_\+sym}} (\mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\begin{DoxyCompactList}\small\item\em eigenvalues of a symmetric real matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga2eca00205c65206af575b1fcc7a15214}\label{group__auxlib_ga2eca00205c65206af575b1fcc7a15214}} 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga2eca00205c65206af575b1fcc7a15214}{auxlib\+::eig\+\_\+sym}} (\mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\begin{DoxyCompactList}\small\item\em eigenvalues of a hermitian complex matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga435da13981f6fd5609336e869290398d}\label{group__auxlib_ga435da13981f6fd5609336e869290398d}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga435da13981f6fd5609336e869290398d}{auxlib\+::eig\+\_\+sym}} (\mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&eigvec, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\begin{DoxyCompactList}\small\item\em eigenvalues and eigenvectors of a symmetric real matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gabdfd57607e30f07d2b97687a6cd85e45}\label{group__auxlib_gabdfd57607e30f07d2b97687a6cd85e45}} 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gabdfd57607e30f07d2b97687a6cd85e45}{auxlib\+::eig\+\_\+sym}} (\mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&eigvec, const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X)
+\begin{DoxyCompactList}\small\item\em eigenvalues and eigenvectors of a hermitian complex matrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaa1d75898809ba17eaff0143e6ca8ae88}\label{group__auxlib_gaa1d75898809ba17eaff0143e6ca8ae88}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaa1d75898809ba17eaff0143e6ca8ae88}{auxlib\+::eig\+\_\+sym\+\_\+dc}} (\mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&eigvec, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\begin{DoxyCompactList}\small\item\em eigenvalues and eigenvectors of a symmetric real matrix (divide and conquer algorithm) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gae0218e2c2b94df3f4dd9104a998cb4d8}\label{group__auxlib_gae0218e2c2b94df3f4dd9104a998cb4d8}} 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gae0218e2c2b94df3f4dd9104a998cb4d8}{auxlib\+::eig\+\_\+sym\+\_\+dc}} (\mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&eigval, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&eigvec, const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X)
+\begin{DoxyCompactList}\small\item\em eigenvalues and eigenvectors of a hermitian complex matrix (divide and conquer algorithm) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga129a3062c2d731444c3239e434b82ce6}\label{group__auxlib_ga129a3062c2d731444c3239e434b82ce6}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::chol\+\_\+simple} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_gace560639948b770dabf12678cfd772f4}\label{group__auxlib_gace560639948b770dabf12678cfd772f4}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::chol} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaab9db92c22f22077253a35732ba3fa74}\label{group__auxlib_gaab9db92c22f22077253a35732ba3fa74}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::chol\+\_\+band} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword KD, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7623d92fa209e4fc3671157f2cc30026}\label{group__auxlib_ga7623d92fa209e4fc3671157f2cc30026}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::chol\+\_\+band} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X, const uword KD, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga2c563948054f1814ade551dc766bafb5}\label{group__auxlib_ga2c563948054f1814ade551dc766bafb5}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::chol\+\_\+band\+\_\+common} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const uword KD, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga9ed88fa097096b877b54c840f1a379c6}\label{group__auxlib_ga9ed88fa097096b877b54c840f1a379c6}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::chol\+\_\+pivot} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, \mbox{\hyperlink{class_mat}{Mat}}$<$ uword $>$ \&P, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga9a8c8cead91a2a0ea60f1db87712d90c}\label{group__auxlib_ga9a8c8cead91a2a0ea60f1db87712d90c}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::hess} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&H, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X, \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&tao)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga2cc6bf62708c0b908485f54c2ce58149}\label{group__auxlib_ga2cc6bf62708c0b908485f54c2ce58149}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::qr} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&Q, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&R, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga3e5da32b3263c655a86d403196588ffe}\label{group__auxlib_ga3e5da32b3263c655a86d403196588ffe}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::qr\+\_\+econ} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&Q, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&R, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_gadcddcf6a83a670e5f19e6f7ff5c0105b}\label{group__auxlib_gadcddcf6a83a670e5f19e6f7ff5c0105b}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::qr\+\_\+pivot} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&Q, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&R, \mbox{\hyperlink{class_mat}{Mat}}$<$ uword $>$ \&P, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7748791c4bb023d06d8bfd28aec2630e}\label{group__auxlib_ga7748791c4bb023d06d8bfd28aec2630e}} 
+{\footnotesize template$<$typename T , typename T1 $>$ }\\static bool {\bfseries auxlib\+::qr\+\_\+pivot} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&Q, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&R, \mbox{\hyperlink{class_mat}{Mat}}$<$ uword $>$ \&P, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ T $>$, T1 $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga47a73324ffb7c126df802cf63eb7fe14}\label{group__auxlib_ga47a73324ffb7c126df802cf63eb7fe14}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd} (\mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga93a02bf5afc539af43f4ef5001cf2c03}\label{group__auxlib_ga93a02bf5afc539af43f4ef5001cf2c03}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd} (\mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga98c120ab45c36ec5d9444db7cff4d974}\label{group__auxlib_ga98c120ab45c36ec5d9444db7cff4d974}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga1887c23c5d5ad8e11324972148241c48}\label{group__auxlib_ga1887c23c5d5ad8e11324972148241c48}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7f1c2fdf9ccb299b99f57538a8373236}\label{group__auxlib_ga7f1c2fdf9ccb299b99f57538a8373236}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+econ} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const char mode)
+\item 
+\mbox{\Hypertarget{group__auxlib_gabc496b4230abba556df3531026650e3c}\label{group__auxlib_gabc496b4230abba556df3531026650e3c}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+econ} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, const char mode)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga96546dc11704dc53cc7ff0eceb59a903}\label{group__auxlib_ga96546dc11704dc53cc7ff0eceb59a903}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc} (\mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_gad3b5bd58243a118d417d4336563b5799}\label{group__auxlib_gad3b5bd58243a118d417d4336563b5799}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc} (\mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga1480f36f399aba5852c4a9b2e08934c5}\label{group__auxlib_ga1480f36f399aba5852c4a9b2e08934c5}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga8258aa45b885a4a0b9b939e9afa56a75}\label{group__auxlib_ga8258aa45b885a4a0b9b939e9afa56a75}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7e1085caec552e16dc570fa6314975cb}\label{group__auxlib_ga7e1085caec552e16dc570fa6314975cb}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc\+\_\+econ} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ eT $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga9227d1791f34b2522af0fdf2086e4c6f}\label{group__auxlib_ga9227d1791f34b2522af0fdf2086e4c6f}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::svd\+\_\+dc\+\_\+econ} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_col}{Col}}$<$ T $>$ \&S, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&V, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga530089e89e43155f3bf6e709bbe775dd}\label{group__auxlib_ga530089e89e43155f3bf6e709bbe775dd}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga530089e89e43155f3bf6e709bbe775dd}{auxlib\+::solve\+\_\+square\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaff674b532446ccdf9771da2730893cd9}\label{group__auxlib_gaff674b532446ccdf9771da2730893cd9}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaff674b532446ccdf9771da2730893cd9}{auxlib\+::solve\+\_\+square\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition with rcond estimate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga8a48b34e9613e81ad448dce97c23832b}\label{group__auxlib_ga8a48b34e9613e81ad448dce97c23832b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga8a48b34e9613e81ad448dce97c23832b}{auxlib\+::solve\+\_\+square\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition with refinement (real matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga9c41d28173fd82ef17560f34f1ba819b}\label{group__auxlib_ga9c41d28173fd82ef17560f34f1ba819b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga9c41d28173fd82ef17560f34f1ba819b}{auxlib\+::solve\+\_\+square\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition with refinement (complex matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga5f79a4442c792f6516483d38d586fb27}\label{group__auxlib_ga5f79a4442c792f6516483d38d586fb27}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+sympd\+\_\+fast} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga668cf16881368adab663726a71dadb3f}\label{group__auxlib_ga668cf16881368adab663726a71dadb3f}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+sympd\+\_\+fast\+\_\+common} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaef6e15395836de42640dfde21cb61d3b}\label{group__auxlib_gaef6e15395836de42640dfde21cb61d3b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaef6e15395836de42640dfde21cb61d3b}{auxlib\+::solve\+\_\+sympd\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, bool \&out\+\_\+sympd\+\_\+state, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Cholesky decomposition with rcond estimate (real matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga8249ca7aefcf2c0e3dd0540e051c9171}\label{group__auxlib_ga8249ca7aefcf2c0e3dd0540e051c9171}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga8249ca7aefcf2c0e3dd0540e051c9171}{auxlib\+::solve\+\_\+sympd\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, bool \&out\+\_\+sympd\+\_\+state, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Cholesky decomposition with rcond estimate (complex matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gadefcb5162130e8d2ba453bc43e0d8c01}\label{group__auxlib_gadefcb5162130e8d2ba453bc43e0d8c01}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gadefcb5162130e8d2ba453bc43e0d8c01}{auxlib\+::solve\+\_\+sympd\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Cholesky decomposition with refinement (real matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaa51f7d033063d78173723968d41b7068}\label{group__auxlib_gaa51f7d033063d78173723968d41b7068}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaa51f7d033063d78173723968d41b7068}{auxlib\+::solve\+\_\+sympd\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Cholesky decomposition with refinement (complex matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga05e7ac9cd99f556f2fb38f5edfece9e0}\label{group__auxlib_ga05e7ac9cd99f556f2fb38f5edfece9e0}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga05e7ac9cd99f556f2fb38f5edfece9e0}{auxlib\+::solve\+\_\+rect\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a non-\/square full-\/rank system via QR or LQ decomposition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga5216751d3d9e51d4e79848b3d6a21034}\label{group__auxlib_ga5216751d3d9e51d4e79848b3d6a21034}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga5216751d3d9e51d4e79848b3d6a21034}{auxlib\+::solve\+\_\+rect\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a non-\/square full-\/rank system via QR or LQ decomposition with rcond estimate (experimental) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga0085e6c3bcdfe281c3b73010b0de4573}\label{group__auxlib_ga0085e6c3bcdfe281c3b73010b0de4573}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+approx\+\_\+svd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga18f03105a1e807152fb3f96eb3a11eee}\label{group__auxlib_ga18f03105a1e807152fb3f96eb3a11eee}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+approx\+\_\+svd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr)
+\item 
+\mbox{\Hypertarget{group__auxlib_gac08464f15b8fac338baf62d52b9d0a26}\label{group__auxlib_gac08464f15b8fac338baf62d52b9d0a26}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+trimat\+\_\+fast} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga1966d1b6b8aa8f9628060ddd4ef150ad}\label{group__auxlib_ga1966d1b6b8aa8f9628060ddd4ef150ad}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::solve\+\_\+trimat\+\_\+rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, const \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_gab6113ebff3bb4633d77d574813c981e6}\label{group__auxlib_gab6113ebff3bb4633d77d574813c981e6}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gab6113ebff3bb4633d77d574813c981e6}{auxlib\+::solve\+\_\+band\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (real band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gab0df36ca552b8770e6f5ae6bfb3b8e5b}\label{group__auxlib_gab0df36ca552b8770e6f5ae6bfb3b8e5b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gab0df36ca552b8770e6f5ae6bfb3b8e5b}{auxlib\+::solve\+\_\+band\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (complex band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga285eb5be770a4d4ec1159070d1e9487b}\label{group__auxlib_ga285eb5be770a4d4ec1159070d1e9487b}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga285eb5be770a4d4ec1159070d1e9487b}{auxlib\+::solve\+\_\+band\+\_\+fast\+\_\+common}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga938707a2880a0c0044e246f997c91149}\label{group__auxlib_ga938707a2880a0c0044e246f997c91149}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga938707a2880a0c0044e246f997c91149}{auxlib\+::solve\+\_\+band\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (real band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gacfa8dda059be7c9e20d0aa4e08ae3962}\label{group__auxlib_gacfa8dda059be7c9e20d0aa4e08ae3962}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gacfa8dda059be7c9e20d0aa4e08ae3962}{auxlib\+::solve\+\_\+band\+\_\+rcond}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (complex band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga6ed359a9beb0708d0832bf7f33038fb5}\label{group__auxlib_ga6ed359a9beb0708d0832bf7f33038fb5}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga6ed359a9beb0708d0832bf7f33038fb5}{auxlib\+::solve\+\_\+band\+\_\+rcond\+\_\+common}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, const \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition (band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gac49d4f225ef45fb1aa9152c2111e49d9}\label{group__auxlib_gac49d4f225ef45fb1aa9152c2111e49d9}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gac49d4f225ef45fb1aa9152c2111e49d9}{auxlib\+::solve\+\_\+band\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition with refinement (real band matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaa1bc577a522382de7f75d86048d8aeb6}\label{group__auxlib_gaa1bc577a522382de7f75d86048d8aeb6}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaa1bc577a522382de7f75d86048d8aeb6}{auxlib\+::solve\+\_\+band\+\_\+refine}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, typename T1\+::pod\+\_\+type \&out\+\_\+rcond, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const uword KL, const uword KU, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr, const bool equilibrate)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via LU decomposition with refinement (complex band matrices) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga463326aa06a967b1dab4c17bc0a350b5}\label{group__auxlib_ga463326aa06a967b1dab4c17bc0a350b5}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga463326aa06a967b1dab4c17bc0a350b5}{auxlib\+::solve\+\_\+tridiag\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::pod\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::pod\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Gaussian elimination with partial pivoting (real tridiagonal band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_ga3f7a8b79013ac67ac41aadbd38eaeaf3}\label{group__auxlib_ga3f7a8b79013ac67ac41aadbd38eaeaf3}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_ga3f7a8b79013ac67ac41aadbd38eaeaf3}{auxlib\+::solve\+\_\+tridiag\+\_\+fast}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&out, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$ $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ typename T1\+::pod\+\_\+type $>$, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Gaussian elimination with partial pivoting (complex tridiagonal band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaf2c6a0acba990cccadd740118f7855c9}\label{group__auxlib_gaf2c6a0acba990cccadd740118f7855c9}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool \mbox{\hyperlink{group__auxlib_gaf2c6a0acba990cccadd740118f7855c9}{auxlib\+::solve\+\_\+tridiag\+\_\+fast\+\_\+common}} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&A, const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&B\+\_\+expr)
+\begin{DoxyCompactList}\small\item\em solve a system of linear equations via Gaussian elimination with partial pivoting (tridiagonal band matrix) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__auxlib_gaed5c5950ba5b1b8e3f6687e3d5cc69cc}\label{group__auxlib_gaed5c5950ba5b1b8e3f6687e3d5cc69cc}} 
+{\footnotesize template$<$typename eT , typename T1 $>$ }\\static bool {\bfseries auxlib\+::schur} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&U, \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&S, const \mbox{\hyperlink{struct_base}{Base}}$<$ eT, T1 $>$ \&X, const bool calc\+\_\+U=true)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga8d0a4431d2406b767639bcc72125f22d}\label{group__auxlib_ga8d0a4431d2406b767639bcc72125f22d}} 
+{\footnotesize template$<$typename T , typename T1 $>$ }\\static bool {\bfseries auxlib\+::schur} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&S, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ T $>$, T1 $>$ \&X, const bool calc\+\_\+U=true)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga4cb02eb0bd5d51b81c4b3d65ef717746}\label{group__auxlib_ga4cb02eb0bd5d51b81c4b3d65ef717746}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::schur} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&U, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&S, const bool calc\+\_\+U=true)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga1beca8da7611b1307b205bbe0611d113}\label{group__auxlib_ga1beca8da7611b1307b205bbe0611d113}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::syl} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&B, const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&C)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga34bdd1a3b4b62aba63983883a6439285}\label{group__auxlib_ga34bdd1a3b4b62aba63983883a6439285}} 
+{\footnotesize template$<$typename T , typename T1 , typename T2 $>$ }\\static bool {\bfseries auxlib\+::qz} (\mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&A, \mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&B, \mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&vsl, \mbox{\hyperlink{class_mat}{Mat}}$<$ T $>$ \&vsr, const \mbox{\hyperlink{struct_base}{Base}}$<$ T, T1 $>$ \&X\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ T, T2 $>$ \&Y\+\_\+expr, const char mode)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga3023962a6f98fe678c30e66515f02bbe}\label{group__auxlib_ga3023962a6f98fe678c30e66515f02bbe}} 
+{\footnotesize template$<$typename T , typename T1 , typename T2 $>$ }\\static bool {\bfseries auxlib\+::qz} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&B, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&vsl, \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&vsr, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ T $>$, T1 $>$ \&X\+\_\+expr, const \mbox{\hyperlink{struct_base}{Base}}$<$ std\+::complex$<$ T $>$, T2 $>$ \&Y\+\_\+expr, const char mode)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga3d9b98a0bc6c06245f3e274d00bb7b04}\label{group__auxlib_ga3d9b98a0bc6c06245f3e274d00bb7b04}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_gae1552aef2ddf705c1918274caed7477c}\label{group__auxlib_gae1552aef2ddf705c1918274caed7477c}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::rcond} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga3ce220b199fb77394124c5c9b2232efd}\label{group__auxlib_ga3ce220b199fb77394124c5c9b2232efd}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::rcond\+\_\+sympd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, bool \&calc\+\_\+ok)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga3c0ffca1e450d6c29f55773fb258769e}\label{group__auxlib_ga3c0ffca1e450d6c29f55773fb258769e}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::rcond\+\_\+sympd} (\mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, bool \&calc\+\_\+ok)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga6e26510e29b82f306296265a70ac662b}\label{group__auxlib_ga6e26510e29b82f306296265a70ac662b}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::rcond\+\_\+trimat} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga9ab4409b92b5d6ef10d3a44461c08c90}\label{group__auxlib_ga9ab4409b92b5d6ef10d3a44461c08c90}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::rcond\+\_\+trimat} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, const uword layout)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga7be8282775e1158e148df794fdb5b0d6}\label{group__auxlib_ga7be8282775e1158e148df794fdb5b0d6}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::lu\+\_\+rcond} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const eT norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_gac3801ca50e5a6098e16f385050efc3f0}\label{group__auxlib_gac3801ca50e5a6098e16f385050efc3f0}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::lu\+\_\+rcond} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, const T norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_gacc01b9247d74b65f9e66f0fc507ec179}\label{group__auxlib_gacc01b9247d74b65f9e66f0fc507ec179}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::lu\+\_\+rcond\+\_\+sympd} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&A, const eT norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaf282d5cb2bf65056c863fb303b816ce9}\label{group__auxlib_gaf282d5cb2bf65056c863fb303b816ce9}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::lu\+\_\+rcond\+\_\+sympd} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&A, const T norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga929c6458de51a9699005d9ec4ea4f751}\label{group__auxlib_ga929c6458de51a9699005d9ec4ea4f751}} 
+{\footnotesize template$<$typename eT $>$ }\\static eT {\bfseries auxlib\+::lu\+\_\+rcond\+\_\+band} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&AB, const uword KL, const uword KU, const \mbox{\hyperlink{classpodarray}{podarray}}$<$ blas\+\_\+int $>$ \&ipiv, const eT norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_gabcc73a5f48f795e0ab822127b3d0f25a}\label{group__auxlib_gabcc73a5f48f795e0ab822127b3d0f25a}} 
+{\footnotesize template$<$typename T $>$ }\\static T {\bfseries auxlib\+::lu\+\_\+rcond\+\_\+band} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&AB, const uword KL, const uword KU, const \mbox{\hyperlink{classpodarray}{podarray}}$<$ blas\+\_\+int $>$ \&ipiv, const T norm\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__auxlib_gad0a7141cc2edaa66fbd8e2bf314b1a1a}\label{group__auxlib_gad0a7141cc2edaa66fbd8e2bf314b1a1a}} 
+{\footnotesize template$<$typename T1 $>$ }\\static bool {\bfseries auxlib\+::crippled\+\_\+lapack} (const \mbox{\hyperlink{struct_base}{Base}}$<$ typename T1\+::elem\+\_\+type, T1 $>$ \&)
+\item 
+\mbox{\Hypertarget{group__auxlib_gaa6147bf707af8fc877758cef4e5206a1}\label{group__auxlib_gaa6147bf707af8fc877758cef4e5206a1}} 
+{\footnotesize template$<$typename eT $>$ }\\static bool {\bfseries auxlib\+::rudimentary\+\_\+sym\+\_\+check} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ eT $>$ \&X)
+\item 
+\mbox{\Hypertarget{group__auxlib_ga0afd75fe496531c6f9b01fd90a009330}\label{group__auxlib_ga0afd75fe496531c6f9b01fd90a009330}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries auxlib\+::rudimentary\+\_\+sym\+\_\+check} (const \mbox{\hyperlink{class_mat}{Mat}}$<$ std\+::complex$<$ T $>$ $>$ \&X)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

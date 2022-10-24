@@ -3,9 +3,9 @@
 #include <armadillo>
 
 /**
- * @brief Renvoie les résultats du polynome d'Hermite de i=0 à un entier donné
- *  appliqué à un vecteur colonne, sous forme d'une matrice.
+ * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné n_max
+ *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
  *
- * @return arma::mat
+ * @return arma::mat La matrice avec les résultats du polynome d'Hermite
  */
 arma::mat hermiteMat(int, arma::vec);

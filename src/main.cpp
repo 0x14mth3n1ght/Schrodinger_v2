@@ -8,6 +8,6 @@ int main()
     //std::cout << "Hello world\n";
     //arma::mat A={{1,2},{3,4}};
     //A.print("Matrice");
-    hermiteMat(5, {{1}, {5}}).print("Matrice Hermite n=5, z=(1 5)");
+    hermiteMat(1, {{1}, {5}}).print("Matrice Hermite n_max=1, z=(1 5)");
     return 0;
 }

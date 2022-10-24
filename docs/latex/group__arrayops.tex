@@ -1,0 +1,130 @@
+\hypertarget{group__arrayops}{}\doxysection{Arrayops}
+\label{group__arrayops}\index{Arrayops@{Arrayops}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classarrayops}{arrayops}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__arrayops_ga732f91ebbf87f20d9ceb18ee9a5f24a2}\label{group__arrayops_ga732f91ebbf87f20d9ceb18ee9a5f24a2}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+inline void {\bfseries arrayops\+::copy} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga7209144e9a6a0ed1dde50e259b51b690}\label{group__arrayops_ga7209144e9a6a0ed1dde50e259b51b690}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries arrayops\+::fill\+\_\+zeros} (eT $\ast$dest, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga8d85dec22ef9e4d1ab96c0c12462486e}\label{group__arrayops_ga8d85dec22ef9e4d1ab96c0c12462486e}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::replace} (eT $\ast$mem, const uword n\+\_\+elem, const eT old\+\_\+val, const eT new\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__arrayops_gaa32a176a97aac02070e1e3e75999ee76}\label{group__arrayops_gaa32a176a97aac02070e1e3e75999ee76}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::clean} (eT $\ast$mem, const uword n\+\_\+elem, const eT abs\+\_\+limit, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga4a36a78039f995d80719e97879b89fff}\label{group__arrayops_ga4a36a78039f995d80719e97879b89fff}} 
+{\footnotesize template$<$typename T $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::clean} (std\+::complex$<$ T $>$ $\ast$mem, const uword n\+\_\+elem, const T abs\+\_\+limit)
+\item 
+\mbox{\Hypertarget{group__arrayops_gad0d021ee5f74f40c927325f32f79129b}\label{group__arrayops_gad0d021ee5f74f40c927325f32f79129b}} 
+{\footnotesize template$<$typename eT $>$ }\\static void {\bfseries arrayops\+::clamp} (eT $\ast$mem, const uword n\+\_\+elem, const eT min\+\_\+val, const eT max\+\_\+val, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__arrayops_gad6fa92ffec2fd8b538c2bc97437fdba4}\label{group__arrayops_gad6fa92ffec2fd8b538c2bc97437fdba4}} 
+{\footnotesize template$<$typename T $>$ }\\static void {\bfseries arrayops\+::clamp} (std\+::complex$<$ T $>$ $\ast$mem, const uword n\+\_\+elem, const std\+::complex$<$ T $>$ \&min\+\_\+val, const std\+::complex$<$ T $>$ \&max\+\_\+val)
+\item 
+\mbox{\Hypertarget{group__arrayops_gab5996b17ae80f2997baebd56ea6af8bd}\label{group__arrayops_gab5996b17ae80f2997baebd56ea6af8bd}} 
+{\footnotesize template$<$typename out\+\_\+eT , typename in\+\_\+eT $>$ }\\static arma\+\_\+inline void {\bfseries arrayops\+::convert\+\_\+cx\+\_\+scalar} (out\+\_\+eT \&out, const in\+\_\+eT \&in, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ out\+\_\+eT $>$\+::result $\ast$junk1=nullptr, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ in\+\_\+eT $>$\+::result $\ast$junk2=nullptr)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga47fec9d76d12596c0296fb6e2b80e9f2}\label{group__arrayops_ga47fec9d76d12596c0296fb6e2b80e9f2}} 
+{\footnotesize template$<$typename out\+\_\+eT , typename in\+\_\+T $>$ }\\static arma\+\_\+inline void {\bfseries arrayops\+::convert\+\_\+cx\+\_\+scalar} (out\+\_\+eT \&out, const std\+::complex$<$ in\+\_\+T $>$ \&in, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ out\+\_\+eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__arrayops_gac7ebe7a68df8c38bae57b0132fb47133}\label{group__arrayops_gac7ebe7a68df8c38bae57b0132fb47133}} 
+{\footnotesize template$<$typename out\+\_\+T , typename in\+\_\+T $>$ }\\static arma\+\_\+inline void {\bfseries arrayops\+::convert\+\_\+cx\+\_\+scalar} (std\+::complex$<$ out\+\_\+T $>$ \&out, const std\+::complex$<$ in\+\_\+T $>$ \&in)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga999d37e61753553bb1cafc3214fa34da}\label{group__arrayops_ga999d37e61753553bb1cafc3214fa34da}} 
+{\footnotesize template$<$typename out\+\_\+eT , typename in\+\_\+eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::convert} (out\+\_\+eT $\ast$dest, const in\+\_\+eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga5db1eeaa61a0855f750e2b9d65968256}\label{group__arrayops_ga5db1eeaa61a0855f750e2b9d65968256}} 
+{\footnotesize template$<$typename out\+\_\+eT , typename in\+\_\+eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::convert\+\_\+cx} (out\+\_\+eT $\ast$dest, const in\+\_\+eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga08b9fa079a3a8cbd4a46eeedb0dc3763}\label{group__arrayops_ga08b9fa079a3a8cbd4a46eeedb0dc3763}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+plus} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga20c4a0a2df28d399f725efee348b6b77}\label{group__arrayops_ga20c4a0a2df28d399f725efee348b6b77}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+minus} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga24c9d79018482fb90871ffc537254702}\label{group__arrayops_ga24c9d79018482fb90871ffc537254702}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+mul} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_gad8bee7d811afa2ebb74b859982e0c01b}\label{group__arrayops_gad8bee7d811afa2ebb74b859982e0c01b}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+div} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga2a04e7edd8ad0bc16c24df4b103d9cf6}\label{group__arrayops_ga2a04e7edd8ad0bc16c24df4b103d9cf6}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+plus\+\_\+base} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_gaa129004cba5575cb0c5675a50e4ac9b4}\label{group__arrayops_gaa129004cba5575cb0c5675a50e4ac9b4}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+minus\+\_\+base} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga255af2c6d1c070c41f9774fafbd6dba7}\label{group__arrayops_ga255af2c6d1c070c41f9774fafbd6dba7}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+mul\+\_\+base} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga24dbfaeaabe1f07978f0addc7b9ded3b}\label{group__arrayops_ga24dbfaeaabe1f07978f0addc7b9ded3b}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+div\+\_\+base} (eT $\ast$dest, const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga8c88a07553bae8e2bad86c2a0632c566}\label{group__arrayops_ga8c88a07553bae8e2bad86c2a0632c566}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+set} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga629b9c48ae8f8cb9545e322aec32e690}\label{group__arrayops_ga629b9c48ae8f8cb9545e322aec32e690}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+set\+\_\+simple} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga00a073f2d47ba63e12787f3903cdc6f3}\label{group__arrayops_ga00a073f2d47ba63e12787f3903cdc6f3}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+set\+\_\+base} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga27e44130a811ef247ca76a20f1275999}\label{group__arrayops_ga27e44130a811ef247ca76a20f1275999}} 
+{\footnotesize template$<$typename eT , const uword n\+\_\+elem$>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+set\+\_\+fixed} (eT $\ast$dest, const eT val)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga38853768d7478dd41c3a12466d1894fd}\label{group__arrayops_ga38853768d7478dd41c3a12466d1894fd}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+plus} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga7dd8becef06ffa66f331261c75d1cf3d}\label{group__arrayops_ga7dd8becef06ffa66f331261c75d1cf3d}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+minus} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga652365960ccadc8abc60d163c93d9670}\label{group__arrayops_ga652365960ccadc8abc60d163c93d9670}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+mul} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga391dac531d3891715e2a2ecbd9c1623b}\label{group__arrayops_ga391dac531d3891715e2a2ecbd9c1623b}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+div} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga1ed48d5a59a8f009abf82ef08682bfaa}\label{group__arrayops_ga1ed48d5a59a8f009abf82ef08682bfaa}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+plus\+\_\+base} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga6aba1a0298d5218b1581554edd37946f}\label{group__arrayops_ga6aba1a0298d5218b1581554edd37946f}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+minus\+\_\+base} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_gafd4ba8402f4e139898ac474c4a2637df}\label{group__arrayops_gafd4ba8402f4e139898ac474c4a2637df}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+mul\+\_\+base} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga841601149a25cfaeb22e17271f5de30b}\label{group__arrayops_ga841601149a25cfaeb22e17271f5de30b}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot void {\bfseries arrayops\+::inplace\+\_\+div\+\_\+base} (eT $\ast$dest, const eT val, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga61078135c063e8b30cc7618f558c0a4c}\label{group__arrayops_ga61078135c063e8b30cc7618f558c0a4c}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot eT {\bfseries arrayops\+::accumulate} (const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga7d7bf133f58e599670fe4c90335ad11e}\label{group__arrayops_ga7d7bf133f58e599670fe4c90335ad11e}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot eT {\bfseries arrayops\+::product} (const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga27ff8fffcf415ef0187e1d3f5a967a69}\label{group__arrayops_ga27ff8fffcf415ef0187e1d3f5a967a69}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot bool {\bfseries arrayops\+::is\+\_\+zero} (const eT $\ast$mem, const uword n\+\_\+elem, const eT abs\+\_\+limit, const typename \mbox{\hyperlink{structarma__not__cx}{arma\+\_\+not\+\_\+cx}}$<$ eT $>$\+::result $\ast$junk=nullptr)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga1081beb2dd2222ba7132f137cf8507ee}\label{group__arrayops_ga1081beb2dd2222ba7132f137cf8507ee}} 
+{\footnotesize template$<$typename T $>$ }\\static arma\+\_\+hot bool {\bfseries arrayops\+::is\+\_\+zero} (const std\+::complex$<$ T $>$ $\ast$mem, const uword n\+\_\+elem, const T abs\+\_\+limit)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga1f1444268ed587d90b829b2d2499aea6}\label{group__arrayops_ga1f1444268ed587d90b829b2d2499aea6}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot bool {\bfseries arrayops\+::is\+\_\+finite} (const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_gaf9cc9242314fea1af63a76507b2d0a01}\label{group__arrayops_gaf9cc9242314fea1af63a76507b2d0a01}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot bool {\bfseries arrayops\+::has\+\_\+inf} (const eT $\ast$src, const uword n\+\_\+elem)
+\item 
+\mbox{\Hypertarget{group__arrayops_ga5bd210308f6318fb3d87dc59e800297b}\label{group__arrayops_ga5bd210308f6318fb3d87dc59e800297b}} 
+{\footnotesize template$<$typename eT $>$ }\\static arma\+\_\+hot bool {\bfseries arrayops\+::has\+\_\+nan} (const eT $\ast$src, const uword n\+\_\+elem)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

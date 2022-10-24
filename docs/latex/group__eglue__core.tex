@@ -1,0 +1,171 @@
+\hypertarget{group__eglue__core}{}\doxysection{Eglue\+\_\+core}
+\label{group__eglue__core}\index{Eglue\_core@{Eglue\_core}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeglue__core}{eglue\+\_\+core$<$ eglue\+\_\+type $>$}}
+\item 
+class \mbox{\hyperlink{classeglue__plus}{eglue\+\_\+plus}}
+\item 
+class \mbox{\hyperlink{classeglue__minus}{eglue\+\_\+minus}}
+\item 
+class \mbox{\hyperlink{classeglue__div}{eglue\+\_\+div}}
+\item 
+class \mbox{\hyperlink{classeglue__schur}{eglue\+\_\+schur}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries arma\+\_\+applier\+\_\+1u}(operatorA, operatorB)
+\item 
+\#define {\bfseries arma\+\_\+applier\+\_\+1a}(operatorA, operatorB)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gabf1762fe272f343124631b74242c8c40}\label{group__eglue__core_gabf1762fe272f343124631b74242c8c40}} 
+\#define {\bfseries arma\+\_\+applier\+\_\+2}(operatorA, operatorB)
+\item 
+\#define {\bfseries arma\+\_\+applier\+\_\+3}(operatorA, operatorB)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gafd8b252ac7f884d7bd8533ced78350da}\label{group__eglue__core_gafd8b252ac7f884d7bd8533ced78350da}} 
+\#define {\bfseries arma\+\_\+applier\+\_\+1\+\_\+mp}(operatorA, operatorB)~arma\+\_\+applier\+\_\+1u(operatorA, operatorB)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gabd64a62d9564851a60f974aa54fef4c7}\label{group__eglue__core_gabd64a62d9564851a60f974aa54fef4c7}} 
+\#define {\bfseries arma\+\_\+applier\+\_\+2\+\_\+mp}(operatorA, operatorB)~arma\+\_\+applier\+\_\+2(operatorA, operatorB)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga09f68b7ada02d58363341c1027cd4bb6}\label{group__eglue__core_ga09f68b7ada02d58363341c1027cd4bb6}} 
+\#define {\bfseries arma\+\_\+applier\+\_\+3\+\_\+mp}(operatorA, operatorB)~arma\+\_\+applier\+\_\+3(operatorA, operatorB)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__eglue__core_gaf01de5010ee46d6596b6e02467b18886}\label{group__eglue__core_gaf01de5010ee46d6596b6e02467b18886}} 
+{\footnotesize template$<$typename outT , typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply} (outT \&out, const \mbox{\hyperlink{classe_glue}{e\+Glue}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga1a0504f7bd8d4c606cf6ac578a4f0d98}\label{group__eglue__core_ga1a0504f7bd8d4c606cf6ac578a4f0d98}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+plus} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue}{e\+Glue}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gafaae1d6678e6053aa24c1cb2109c5054}\label{group__eglue__core_gafaae1d6678e6053aa24c1cb2109c5054}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+minus} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue}{e\+Glue}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga59ae7b18d79eafbc6d6311eb8d27a038}\label{group__eglue__core_ga59ae7b18d79eafbc6d6311eb8d27a038}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+schur} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue}{e\+Glue}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gadf3b757dac3c98d88ca6771c7a36ec62}\label{group__eglue__core_gadf3b757dac3c98d88ca6771c7a36ec62}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+div} (\mbox{\hyperlink{class_mat}{Mat}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue}{e\+Glue}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gac402f9e439181ebfd1eda0d480aa089b}\label{group__eglue__core_gac402f9e439181ebfd1eda0d480aa089b}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue_cube}{e\+Glue\+Cube}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_gaeb4f8c568cd1be4df6d57cc902dc6450}\label{group__eglue__core_gaeb4f8c568cd1be4df6d57cc902dc6450}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+plus} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue_cube}{e\+Glue\+Cube}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga2585ff095e5e0d782b0c949af28ddd24}\label{group__eglue__core_ga2585ff095e5e0d782b0c949af28ddd24}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+minus} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue_cube}{e\+Glue\+Cube}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga285b6dca55b1af8491b1d7c704012058}\label{group__eglue__core_ga285b6dca55b1af8491b1d7c704012058}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+schur} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue_cube}{e\+Glue\+Cube}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\item 
+\mbox{\Hypertarget{group__eglue__core_ga9e5532214f4feffcfe3c5d426da60e20}\label{group__eglue__core_ga9e5532214f4feffcfe3c5d426da60e20}} 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static arma\+\_\+hot void {\bfseries eglue\+\_\+core$<$ eglue\+\_\+type $>$\+::apply\+\_\+inplace\+\_\+div} (\mbox{\hyperlink{class_cube}{Cube}}$<$ typename T1\+::elem\+\_\+type $>$ \&out, const \mbox{\hyperlink{classe_glue_cube}{e\+Glue\+Cube}}$<$ T1, T2, eglue\+\_\+type $>$ \&x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__eglue__core_ga6470a3acca479aa7b1b7e801d17fdf60}\label{group__eglue__core_ga6470a3acca479aa7b1b7e801d17fdf60}} 
+\index{Eglue\_core@{Eglue\_core}!arma\_applier\_1a@{arma\_applier\_1a}}
+\index{arma\_applier\_1a@{arma\_applier\_1a}!Eglue\_core@{Eglue\_core}}
+\doxysubsubsection{\texorpdfstring{arma\_applier\_1a}{arma\_applier\_1a}}
+{\footnotesize\ttfamily \#define arma\+\_\+applier\+\_\+1a(\begin{DoxyParamCaption}\item[{}]{operatorA,  }\item[{}]{operatorB }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{\(\backslash\)}
+\DoxyCodeLine{    uword i,j;\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    for(i=0, j=1; j<n\_elem; i+=2, j+=2)\(\backslash\)}
+\DoxyCodeLine{      \{\(\backslash\)}
+\DoxyCodeLine{      eT tmp\_i = P1.at\_alt(i);\(\backslash\)}
+\DoxyCodeLine{      eT tmp\_j = P1.at\_alt(j);\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      tmp\_i operatorB\#\#= P2.at\_alt(i);\(\backslash\)}
+\DoxyCodeLine{      tmp\_j operatorB\#\#= P2.at\_alt(j);\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      out\_mem[i] operatorA tmp\_i;\(\backslash\)}
+\DoxyCodeLine{      out\_mem[j] operatorA tmp\_j;\(\backslash\)}
+\DoxyCodeLine{      \}\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    if(i < n\_elem)\(\backslash\)}
+\DoxyCodeLine{      \{\(\backslash\)}
+\DoxyCodeLine{      out\_mem[i] operatorA P1.at\_alt(i) operatorB P2.at\_alt(i);\(\backslash\)}
+\DoxyCodeLine{      \}\(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__eglue__core_gabebc4acf8444fe386b0a78ecacae439e}\label{group__eglue__core_gabebc4acf8444fe386b0a78ecacae439e}} 
+\index{Eglue\_core@{Eglue\_core}!arma\_applier\_1u@{arma\_applier\_1u}}
+\index{arma\_applier\_1u@{arma\_applier\_1u}!Eglue\_core@{Eglue\_core}}
+\doxysubsubsection{\texorpdfstring{arma\_applier\_1u}{arma\_applier\_1u}}
+{\footnotesize\ttfamily \#define arma\+\_\+applier\+\_\+1u(\begin{DoxyParamCaption}\item[{}]{operatorA,  }\item[{}]{operatorB }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{\(\backslash\)}
+\DoxyCodeLine{    uword i,j;\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    for(i=0, j=1; j<n\_elem; i+=2, j+=2)\(\backslash\)}
+\DoxyCodeLine{      \{\(\backslash\)}
+\DoxyCodeLine{      eT tmp\_i = P1[i];\(\backslash\)}
+\DoxyCodeLine{      eT tmp\_j = P1[j];\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      tmp\_i operatorB\#\#= P2[i];\(\backslash\)}
+\DoxyCodeLine{      tmp\_j operatorB\#\#= P2[j];\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      out\_mem[i] operatorA tmp\_i;\(\backslash\)}
+\DoxyCodeLine{      out\_mem[j] operatorA tmp\_j;\(\backslash\)}
+\DoxyCodeLine{      \}\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    if(i < n\_elem)\(\backslash\)}
+\DoxyCodeLine{      \{\(\backslash\)}
+\DoxyCodeLine{      out\_mem[i] operatorA P1[i] operatorB P2[i];\(\backslash\)}
+\DoxyCodeLine{      \}\(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__eglue__core_ga20442743443dfdf573a526be88f112c7}\label{group__eglue__core_ga20442743443dfdf573a526be88f112c7}} 
+\index{Eglue\_core@{Eglue\_core}!arma\_applier\_3@{arma\_applier\_3}}
+\index{arma\_applier\_3@{arma\_applier\_3}!Eglue\_core@{Eglue\_core}}
+\doxysubsubsection{\texorpdfstring{arma\_applier\_3}{arma\_applier\_3}}
+{\footnotesize\ttfamily \#define arma\+\_\+applier\+\_\+3(\begin{DoxyParamCaption}\item[{}]{operatorA,  }\item[{}]{operatorB }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \{\(\backslash\)}
+\DoxyCodeLine{  for(uword slice=0; slice<n\_slices; ++slice)\(\backslash\)}
+\DoxyCodeLine{    \{\(\backslash\)}
+\DoxyCodeLine{    for(uword col=0; col<n\_cols; ++col)\(\backslash\)}
+\DoxyCodeLine{      \{\(\backslash\)}
+\DoxyCodeLine{      uword i,j;\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      for(i=0, j=1; j<n\_rows; i+=2, j+=2)\(\backslash\)}
+\DoxyCodeLine{        \{\(\backslash\)}
+\DoxyCodeLine{        eT tmp\_i = P1.at(i,col,slice);\(\backslash\)}
+\DoxyCodeLine{        eT tmp\_j = P1.at(j,col,slice);\(\backslash\)}
+\DoxyCodeLine{        \(\backslash\)}
+\DoxyCodeLine{        tmp\_i operatorB\#\#= P2.at(i,col,slice);\(\backslash\)}
+\DoxyCodeLine{        tmp\_j operatorB\#\#= P2.at(j,col,slice);\(\backslash\)}
+\DoxyCodeLine{        \(\backslash\)}
+\DoxyCodeLine{        *out\_mem operatorA tmp\_i; out\_mem++; \(\backslash\)}
+\DoxyCodeLine{        *out\_mem operatorA tmp\_j; out\_mem++; \(\backslash\)}
+\DoxyCodeLine{        \}\(\backslash\)}
+\DoxyCodeLine{      \(\backslash\)}
+\DoxyCodeLine{      if(i < n\_rows)\(\backslash\)}
+\DoxyCodeLine{        \{\(\backslash\)}
+\DoxyCodeLine{        *out\_mem operatorA P1.at(i,col,slice) operatorB P2.at(i,col,slice); out\_mem++; \(\backslash\)}
+\DoxyCodeLine{        \}\(\backslash\)}
+\DoxyCodeLine{      \}\(\backslash\)}
+\DoxyCodeLine{    \}\(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
