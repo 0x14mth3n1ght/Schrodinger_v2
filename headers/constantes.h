@@ -34,14 +34,14 @@ double pi = 3.141592653589793;
  * @brief Degré utilisé pour la quadrature
  *
  */
-int deg = 10;
+int degQuadrature = 50;
 
 /**
- * @brief Tableau contenant les valeurs des z_i pour un degré de 10
+ * @brief Tableau contenant les valeurs des z_i pour un degré de 50
  * zi[i] = z_i
  *
  * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
- * via la fonction : numpy.polynomial.hermite.hermgauss(10)
+ * via la fonction : numpy.polynomial.hermite.hermgauss(50)
  *
  */
 double zi[50] = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,
@@ -57,11 +57,11 @@ double zi[50] = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351
                  };
 
 /**
- * @brief Tableau contenant la valeurs des w_i pour un degré de 10
+ * @brief Tableau contenant la valeurs des w_i pour un degré de 50
  * wi[i] = w_i
  *
  * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
- * via la fonction : numpy.polynomial.hermite.hermgauss(10)
+ * via la fonction : numpy.polynomial.hermite.hermgauss(50)
  */
 double wi[50] = {1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
                  1.41709360e-22, 4.47098437e-20, 7.74238296e-18, 8.09426189e-16,
@@ -80,26 +80,3 @@ double wi[50] = {1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
 
 
 #endif
-/**
- * @brief Tableau contenant les valeurs des z_i pour un degré de 10
- * zi[i] = z_i
- *
- * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
- * via la fonction : numpy.polynomial.hermite.hermgauss(10)
- *
- */
-//double zi_old[10] = {-3.43615912, -2.53273167, -1.75668365, -1.03661083, -0.34290133,
-//                 0.34290133,  1.03661083,  1.75668365,  2.53273167,  3.43615912
-//                };
-
-/**
- * @brief Tableau contenant la valeurs des w_i pour un degré de 10
- * wi[i] = w_i
- *
- * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
- * via la fonction : numpy.polynomial.hermite.hermgauss(10)
- */
-//double wi_old[10] = {7.64043286e-06, 1.34364575e-03, 3.38743945e-02, 2.40138611e-01,
-//                 6.10862634e-01, 6.10862634e-01, 2.40138611e-01, 3.38743945e-02,
-//                 1.34364575e-03, 7.64043286e-06
-//                };
