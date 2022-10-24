@@ -53,9 +53,9 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
     {
         for(int n=0; n<n_max; n++)
         {
-            e=exp(-m*omega*z_i*z_i/(2*hbar));
-            c=pow(m*omega/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
-            res(z_i,n) = hermiteMatrix(z_i,n) * c*e;
+            e=exp(-(m*omega*vecteurZ[z_i]*vecteurZ[z_i])/(2*hbar));
+            c=pow((m*omega)/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
+            res(z_i,n) = hermiteMatrix(z_i,n) * c * e;
         }
     }
     return res;
