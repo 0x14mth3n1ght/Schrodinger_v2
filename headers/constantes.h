@@ -31,6 +31,12 @@ double m = 1.0;
 double pi = 3.141592653589793;
 
 /**
+ * @brief Degré utilisé pour la quadrature
+ *
+ */
+int degQuadrature = 50;
+
+/**
  * @brief Tableau contenant les valeurs des z_i pour un degré de 50
  * zi[i] = z_i
  *

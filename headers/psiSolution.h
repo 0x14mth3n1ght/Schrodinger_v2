@@ -14,8 +14,11 @@ public :
     //Valeur de n_max
     int n_max;
 
-    //
+    //Calcule les psi-solutions
     arma::mat calculeSolution(const arma::vec&);
+
+    //Vérifie l'orthonormalité des psi-solutions
+    arma::mat orthoMat();   
 
 };
 
