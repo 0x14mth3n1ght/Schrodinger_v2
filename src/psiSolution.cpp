@@ -52,21 +52,21 @@ double fact(double n)
 arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
 {
     //Récupération de la matrice Hermite
-    arma::mat hermiteMatrix = hermiteMat(n_max, vecteurZ);
+    arma::mat hermiteMatrix = hermiteMat(n_max, pow(m*omega/hbar,0.5)*vecteurZ);
     int tailleZ = vecteurZ.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n_max, arma::fill::zeros);
-    //Variables
-    double e,c;
-    for(int z_i=0; z_i<tailleZ; z_i++)
+    
+    double c;
+    for(int n=0; n<n_max; n++)
     {
-        for(int n=0; n<n_max; n++)
-        {
-            e=exp(-(m*omega*vecteurZ[z_i]*vecteurZ[z_i])/(2*hbar));
-            c=pow((m*omega)/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
-            res(z_i,n) = hermiteMatrix(z_i,n) * c * e;
-        }
+        c=pow((m*omega)/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
+
+        res.col(n) = c * hermiteMatrix.col(n) 
+        % (exp(-m*omega*square(vecteurZ)/(2*hbar)));
+        // '%' est la multiplication termes à termes
     }
+    
     return res;
 };
 
@@ -124,6 +124,11 @@ arma::mat psiSolution::orthoMat()
     return res;
 };
 
+/**
+ * @brief 
+ * 
+ * @return arma::vec 
+ */
 arma::vec psiSolution::energyMat()
 {    
     arma::vec energy(n_max, arma::fill::zeros);
