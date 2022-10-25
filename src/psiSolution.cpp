@@ -135,7 +135,7 @@ arma::mat psiSolution::energyMat()
         for (l=0; l<=n ; l++)
         {
             // On stock le résultat à la case correspondante dans la matrice
-            energy(n,l)=(hbar**2)*(n**2)*(pi**2)/(2*(l**2)*m); //l=longueur = z
+            energy(n,l)=pow(hbar, 2)*pow(n, 2)*pow(pi, 2)/(2*pow(l, 2)*m); //l=longueur = z
         }
     }
     return energy;

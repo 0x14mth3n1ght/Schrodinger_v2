@@ -24,6 +24,7 @@ int main()
     vec.print("voici le vecteur des valeurs de z");
     res = testpsi.calculeSolution(vec);
     res.print("matrice test psisolution");
+    exportToCsv(vec, res, "psiSolutions");
     testpsi.orthoMat().print("ortho");
     testpsi.energyMat().print("energie");
     return 0;

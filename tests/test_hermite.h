@@ -46,7 +46,7 @@ public:
         \f]
         Ce calcul normalement donne le résultat suivant :
         \f[
-          Z=\begin{bmatrix}
+          \begin{bmatrix}
             1 & 2\\
             1 & 10\\
             1 & 4\\
