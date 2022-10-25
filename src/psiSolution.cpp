@@ -77,8 +77,9 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
  */
 arma::vec psiSolution::derivee_seconde(const arma::vec& Z)
 {
-    int tailleZ = Z.size();
-    arma::vec numerator=calculeSolution(Z + pas_der) + calculeSolution(Z - pas_der) - 2*calculeSolution(Z);
+    //En fait on travaille avec des vecteurs colonnes, sauf que les résultats de psiSolution ici sont dans des vecteurs lignes, peut être on ferait
+    //mieux d'utiliser des vecteurs lignes dans le futur uniquement
+    arma::vec numerator=calculeSolution(Z + pas_der).row(0).as_col() + calculeSolution(Z - pas_der).row(0).as_col() - 2*calculeSolution(Z).row(0).as_col();
     arma::vec res=numerator/pow(pas_der, 2);
     return res;
 };
@@ -144,7 +145,7 @@ arma::vec psiSolution::energyMat()
     arma::vec derivee_2nde=derivee_seconde(Z);
 
     arma::vec numerator=derivee_2nde / (2*m);
-    arma::vec denominator=calculeSolution(Z);
+    arma::vec denominator=calculeSolution(Z).row(0).as_col();
 
     return numerator / denominator;
 }
