@@ -10,7 +10,7 @@ private:
      * @brief Variable tolérance globale
      *
      */
-    const double tolerance=1e-10;
+    const double tolerance=1e-3;
 public:
     /**
      * @brief Test de l'orthonormalité des solutions de l'équation.
@@ -23,7 +23,7 @@ public:
     {
         psiSolution solutions(10);
         const arma::mat mat_prod_scalaires=solutions.orthoMat();
-        const arma::mat res= arma::eye(arma::size(Z));
+        const arma::mat res= arma::eye(arma::size(mat_prod_scalaires));
         //On teste si ||hermiteMat - res||_infinie <= tolerance
         TS_TRACE("Début du test : calcul matrice hermite");
         TS_ASSERT(arma::norm(mat_prod_scalaires - res, "inf") <= tolerance);
