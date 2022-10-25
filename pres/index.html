@@ -250,6 +250,34 @@ void testEnergies( void )
 ```
 ---
 
+# Organisation
+
+.alert.tree.hcenter[
+.
+* src
+    * **dataExporter.cpp**
+    * **hermite.cpp**
+    * **main.cpp**
+    * **psiSolution.cpp**
+* headers
+  * **dataExporter.h**
+  * **hermite.h**
+  * **constantes.h**
+  * **psiSolution.h**
+* tests
+  * **test_hermite.h**
+  * **test_proprietes.h**
+  * **Makefile**
+* docs
+  * ...
+* target
+  * ...
+* Makefile
+* ...
+]
+
+---
+
 # Utilitaires makefile
 
 ```Makefile
@@ -289,33 +317,16 @@ obj:
 target:
 	mkdir -p $@
 ```
-
 ---
 
-# Organisation
+#Documentation
 
-.alert.tree.hcenter[
-.
-* src
-    * **dataExporter.cpp**
-    * **hermite.cpp**
-    * **main.cpp**
-    * **psiSolution.cpp**
-* headers
-  * **dataExporter.h**
-  * **hermite.h**
-  * **constantes.h**
-  * **psiSolution.h**
-* tests
-  * **test_hermite.h**
-  * **test_proprietes.h**
-  * **Makefile**
-* docs
-  * ...
-* target
-  * ...
-* Makefile
-* ...
+.rightf.w100[
+ ![](images/doc1.png)
+]
+
+.rightf.w100[
+ ![](images/doc2.png)
 ]
 
 ---
