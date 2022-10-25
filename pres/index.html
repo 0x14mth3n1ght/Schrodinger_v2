@@ -270,6 +270,55 @@ runtests:
 ```
 
 ---
+# Chaîne de compilation
+
+```Makefile
+all: compile_main
+
+## Edition de liens et compilation exécutable ##
+
+compile_main: $(OBJ) | target #Créer le dossier target s'il n'existe pas
+	$(CC) $(CFLAGS) -o $(TARGET) $^
+
+obj/%.o: src/%.cpp $(HEADERS) | obj #Créer le dossier obj s'il n'existe pas
+	$(CC) $(CFLAGS) $< -c -o $@
+
+## Création des dossiers obj et target ##
+obj:
+	mkdir -p $@
+target:
+	mkdir -p $@
+```
+
+---
+
+# Organisation
+
+.alert.tree.hcenter[
+.
+* src
+    * **dataExporter.cpp**
+    * **hermite.cpp**
+    * **main.cpp**
+    * **psiSolution.cpp**
+* headers
+  * **dataExporter.h**
+  * **hermite.h**
+  * **constantes.h**
+  * **psiSolution.h**
+* tests
+  * **test_hermite.h**
+  * **test_proprietes.h**
+  * **Makefile**
+* docs
+  * ...
+* target
+  * ...
+* Makefile
+* ...
+]
+
+---
 
 #Résultats
 
