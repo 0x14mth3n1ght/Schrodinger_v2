@@ -13,6 +13,7 @@ int main()
 
     psiSolution testpsi(5);
     arma::mat res;
+    arma::mat energy;
     arma::vec vec(100, arma::fill::zeros);
     double step= 10./100.;
     vec[0] = -5.;
@@ -24,5 +25,6 @@ int main()
     res = testpsi.calculeSolution(vec);
     res.print("matrice test psisolution");
     testpsi.orthoMat().print("ortho");
+    testpsi.energyMat().print("energie");
     return 0;
 }
