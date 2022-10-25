@@ -10,7 +10,7 @@
  * @brief Constante utilisée comme pas pour la dérivée seconde
  * 
  */
-double pas_der=1e-10;
+double pas_der=1e-7;
 
 /**
  * @brief Constante hbar

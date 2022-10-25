@@ -140,12 +140,15 @@ arma::mat psiSolution::orthoMat()
 
 arma::vec psiSolution::energyMat()
 {    
-    //On va calculer l'énergie à partir du point Z=0 pour tous les niveaux d'énergie
+    //On va calculer l'énergie à partir du point Z=0.1 pour tous les niveaux d'énergie
     arma::vec Z(n_max, arma::fill::zeros);
+    double z_calcul=0.17;
+    Z.fill(z_calcul);
     arma::vec derivee_2nde=derivee_seconde(Z);
+    arma::vec calculPsi=calculeSolution(Z).row(0).as_col();
 
-    arma::vec numerator=derivee_2nde / (2*m);
-    arma::vec denominator=calculeSolution(Z).row(0).as_col();
+    arma::vec numerator=-pow(hbar, 2)*derivee_2nde / (2*m) + 1/2*m*pow(omega, 2)*pow(z_calcul, 2) * calculPsi;
+    arma::vec denominator=calculPsi;
 
     return numerator / denominator;
 }
