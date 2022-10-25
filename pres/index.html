@@ -35,6 +35,7 @@ N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022
 [:book:](../index.html)
 ]
 
+
 ---
 layout: true
 class: animated fadeIn middle numbers
@@ -48,14 +49,38 @@ Oscillateur harmonique 1D quantique - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT -
 
 
 ---
+# Travail
 
-# Calculer le résultat des polynomes d'Hermites
+## Équation de Schrödinger 1D étudiée : `$\hat{H}_{(z)}\psi_n(z) = E_n\psi_n(z)$`
+<br/><br/><br/>
+avec
+`$\hat{H}_{(z)}\equiv \frac{\hat{p}_{(z)}^2}{2m} + \frac{1}{2}m\omega^2\hat{z}^2, \hspace{5mm}\hat{p}_{(z)}\equiv -i\hbar\frac{\partial}{\partial z}.$`
+<br/><br/>
+## Forme des solutions :
 
+<<<<<<< HEAD
 `$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx =\sqrt{\frac{\pi \hbar}{2^{n+l}n!l!mw}} \int_0^\infty e^{\frac{-(l+n)wx^2}{2*\hbar}} H_{n}(\sqrt{\frac{mw}{\hbar}}*x)*H_{l}(\sqrt{\frac{mw}{\hbar}}*x) dx$$`
 
 `$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx \simeq \sum_{i=0}^{n-1}w_if(x_i)$$`
+=======
+`$$\psi_n(z) = \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega z^2}{2\hbar}}H_n\left(\sqrt{\frac{m\omega}{\hbar}} . z\right).$$`
 
+## Objectifs :
 
+* Calculer `$\psi_n(z)$`
+
+* Vérifier ces propriétés : Énergies, orthonormalité
+
+* Représenter les résultats
+
+---
+
+# Calculer le résultat des polynomes d'Hermite
+>>>>>>> 60e2a84cdeafac4e65ae331b419a4dc853f44ec4
+
+* A l'aide de la formule de récurrence.
+
+<<<<<<< HEAD
 Après changement de variable on se ramène à la forme de Gauss Laguerre
 `$$\frac{\frac{\pi \hbar}{m*\omega}^4}{\sqrt{2^{n}n!}} \int_0^\infty e^{\frac{-m\omega z^2}{2*\hbar}} H_{n}(z) dx$$`
 
@@ -94,8 +119,206 @@ print(np.polynomial.hermite.hermgauss(50));
        4.47098437e-20, 1.41709360e-22, 2.13765831e-25, 1.21524412e-28,
        1.67380167e-32, 1.83379405e-37]))
 ```
+=======
+`$$H_0(z) = 1$$`
+`$$H_1(z) = 2z$$`
+`$$\forall n\ge 1, H_{n+1}(z) = 2zH_n(z)-2nH_{n-1}(z).$$`
+
+* Avec les colonnes
+
+`$$\forall n\ge 1, \begin{bmatrix} \\(C_{n+1})\\ \\ \end{bmatrix} = 2* \begin{bmatrix} \\(Z)\\ \\ \end{bmatrix} * \begin{bmatrix} \\(C_{n})\\ \\ \end{bmatrix} - 2 * n * \begin{bmatrix} \\(C_{n-1})\\ \\ \end{bmatrix}$$`
+<br/><br/>
+* `$n_{max} \in \mathbb{N}$` et `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}, \text{on a }
+H=
+\begin{bmatrix} 
+H_0(z_0) & H_1(z_0) & .. & H_{n_{max}}(z_0) \\
+.. & .. & .. \\
+H_0(z_m) & H_1(z_m) & .. & H_{n_{max}}(z_m)
+\end{bmatrix}$`
+
 ---
 
+# Énergie
+
+## De l'équation
+
+`$$E_n=\frac{\left(\frac{\hat{p}_{(z)}^2}{2m} + \frac{1}{2}m\omega^2\hat{z}^2\right)\psi_n(z)}{\psi_n(z)}$$`
+
+## Dérivée seconde
+
+`$$\psi_n^{(2)}(Z)=\frac{\psi_n(Z+ \delta)+\psi_n(Z - \delta) - 2*\psi_n(Z)}{\delta^2}$$`
+
+* Il suffit ensuite d'évaluer l'équation en un z bien choisis.
+
+`$$Z=\begin{bmatrix} 0.17 \\ 0.17 \end{bmatrix} \rightarrow E=\begin{bmatrix} E_0 \\ E_1 \end{bmatrix}=\begin{bmatrix} 0.475 \\ 1.475 \end{bmatrix}$$`
+
+---
+
+#Tests
+
+## Polynomes d'Hermite
+
+* Paramètres
+
+`$$
+Z=
+\begin{bmatrix}
+1 \\ 5
+\end{bmatrix}, n_{max}=5
+$$`
+
+* Normalement on a ça
+
+`$$H=
+\begin{bmatrix}
+1 &  2 &  2 & -4 & -20 \\
+1 &  10 & 98 & 940 & 8812
+\end{bmatrix}
+$$`
+
+```C++
+void testHermite1( void )
+{
+    const arma::vec Z= {{1}, {5}};
+    const arma::mat res= {{1, 2, 2, -4, -20}, {1, 10, 98, 940, 8812}};
+    //On teste si ||hermiteMat - res||_infinie <= tolerance
+    TS_TRACE("Début du test : calcul matrice hermite");
+    TS_ASSERT(arma::norm(hermiteMat(4, Z) - res, "inf") <= tolerance);
+    TS_TRACE("Fin du test : calcul matrice hermite");
+}
+```
+
+---
+
+#Tests unitaires
+
+## Orthonormalité
+
+```C++
+void testOrthonormalite( void )
+{
+    psiSolution solutions(10);
+    const arma::mat mat_prod_scalaires=solutions.orthoMat();
+    const arma::mat res= arma::eye(arma::size(mat_prod_scalaires));
+    //On teste si ||mat_prod_scalaires - res||_infinie <= tolerance
+    TS_TRACE("Début du test : calcul matrice orthonormal");
+    TS_ASSERT(arma::norm(mat_prod_scalaires - res, "inf") <= tolerance);
+    TS_TRACE("Fin du test : calcul matrice orthonormal");
+}
+```
+
+## Énergies
+```C++
+void testEnergies( void )
+{
+    psiSolution solutions(10);
+    const arma::vec energies=solutions.energyMat();
+    const arma::vec res(size(energies));
+    
+    res(0)=hbar * omega /2;
+    for(int i=1; i < size(res);i++)
+        res(i)=res(0) + hbar * omega * i;
+    
+    TS_TRACE("Début du test : énergies");
+    TS_ASSERT(arma::norm(energies - res, "inf") <= tolerance);
+    TS_TRACE("Fin du test : énergies");
+}
+```
+
+---
+
+# Utilitaires makefile
+
+```Makefile
+## Astyle ##
+.PHONY: format
+format: $(SOURCES) $(HEADERS) $(TESTS)
+	./astyle --style=allman $^
+
+## Documentation ##
+.PHONY: docs
+docs:
+	doxygen Doxygen
+
+## Tests ##
+.PHONY: runtests
+runtests:
+	$(MAKE) -C tests/
+```
+
+---
+
+#Résultats
+
+##Les données obtenues sont stockées dans des fichiers **.csv**
+```
+X-1;Y0;Y1;Y2;Y3;Y4
+-5.000000;0.000003;-0.000020;0.000097;-0.000380;0.001259
+-4.900000;0.000005;-0.000032;0.000153;-0.000585;0.001894
+-4.800000;0.000007;-0.000051;0.000238;-0.000890;0.002816
+-4.700000;0.000012;-0.000080;0.000366;-0.001340;0.004137
+-4.600000;0.000019;-0.000124;0.000558;-0.001994;0.006002
+-4.500000;0.000030;-0.000192;0.000841;-0.002932;0.008602
+-4.400000;0.000047;-0.000292;0.001253;-0.004261;0.012173
+-4.300000;0.000073;-0.000441;0.001846;-0.006121;0.017011
+-4.200000;0.000111;-0.000659;0.002690;-0.008687;0.023469
+-4.100000;0.000168;-0.000974;0.003876;-0.012181;0.031958
+-4.000000;0.000252;-0.001425;0.005523;-0.016875;0.042947
+-3.900000;0.000374;-0.002063;0.007781;-0.023093;0.056945
+-3.800000;0.000550;-0.002954;0.010836;-0.031210;0.074477
+-3.700000;0.000800;-0.004185;0.014919;-0.041653;0.096056
+```
+---
+
+#Résultats
+
+
+
+.rightf.w100[
+ ![](images/graph_5_niveaux.png)
+]
+
+---
+
+#Résultats
+
+##Vérification de l'orthonormalité :
+
+.hcenter[
+| Niveaux d'énergie | 0           | 1           | 2          | 3           | 4           | 
+|:------------------|:-----------:|:-----------:|:----------:|:-----------:|:-----------:|
+| 0                 | 1.0000e+00  | -3.8781e-17 | 2.1452e-09 | 1.7514e-17  | -3.6632e-09 |
+| 1                 | -3.8781e-17 | 1.0000e+00  | 3.6693e-17 | -3.6106e-09 | -1.1585e-17 |
+| 2                 | 2.1452e-09  | 3.6693e-17  | 1.0000e+00 | 1.6593e-17  | 8.2366e-10  |
+| 3                 | 1.7514e-17  | -3.6106e-09 | 1.6593e-17 | 1.0000e+00  | 3.6745e-18  |
+| 4                 | -3.6632e-09 | -1.1585e-17 | 8.2366e-10 | 3.6745e-18  | 1.0000e+00  |
+]
+
+
+>>>>>>> 60e2a84cdeafac4e65ae331b419a4dc853f44ec4
+---
+#Résultats
+
+<<<<<<< HEAD
+=======
+##Valeurs des énergies `$E_n$` obtenues :
+
+`$E_0 = 0.4799 \\$`
+`$E_1 = 1.4814 \\$`
+`$E_2 = 2.4984 \\$`
+`$E_3 = 3.4793 \\$`
+`$E_4 = 4.4662$`
+
+
+---
+
+class: hcenter, middle
+# Conclusion
+
+**That's all folks !**
+
+
+>>>>>>> 60e2a84cdeafac4e65ae331b419a4dc853f44ec4
     </textarea>
 
     <script src="core/javascript/remark.js"></script>
