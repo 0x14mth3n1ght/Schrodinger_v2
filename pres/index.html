@@ -87,6 +87,29 @@ H_0(z_m) & H_1(z_m) & .. & H_{n_{max}}(z_m)
 \end{bmatrix}$`
 
 ---
+# Calculer les solutions
+
+## Formes des solutions
+
+`$$\psi_n(z) = \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega z^2}{2\hbar}}H_n\left(\sqrt{\frac{m\omega}{\hbar}} . z\right)$$`
+
+## Passage par des matrices
+
+* `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$`, nos points où seront calculés les solutions
+
+1. `$ \psi(Z) \leftarrow H\left(\sqrt{\frac{m\omega}{\hbar}} . Z\right)$`
+2. `$ \psi(Z) \leftarrow \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}*H\left(\sqrt{\frac{m\omega}{\hbar}} . Z\right)$`
+3. `$\psi(Z) = \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega Z^2}{2\hbar}}H\left(\sqrt{\frac{m\omega}{\hbar}} . Z\right)$`
+<br/><br/>
+`$$
+\psi=
+\begin{bmatrix} 
+\psi_0(z_0) & \psi_1(z_0) & .. & \psi_{n_{max}}(z_0) \\
+.. & .. & .. \\
+\psi_0(z_m) & \psi_1(z_m) & .. & \psi_{n_{max}}(z_m)
+\end{bmatrix}$$`
+
+---
 
 # Énergie
 
@@ -102,6 +125,57 @@ H_0(z_m) & H_1(z_m) & .. & H_{n_{max}}(z_m)
 
 `$$Z=\begin{bmatrix} 0.17 \\ 0.17 \end{bmatrix} \rightarrow E=\begin{bmatrix} E_0 \\ E_1 \end{bmatrix}=\begin{bmatrix} 0.475 \\ 1.475 \end{bmatrix}$$`
 
+---
+
+# Vérification de l'orthonormalité par quadrature
+
+##Calcul
+
+`$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx =\sqrt{\frac{\pi \hbar}{2^{n+l}n!l!mw}} \int_0^\infty e^{\frac{-(l+n)wz^2}{2*\hbar}} H_{n}(\sqrt{\frac{mw}{\hbar}}*z)*H_{l}(\sqrt{\frac{mw}{\hbar}}*z) dx$$`
+
+##Gauss Laguerre - Changement de variable
+
+`$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx \simeq \sum_{i=0}^{n-1}w_if(x_i)$$`
+
+On se ramène à:
+
+`$$\frac{\frac{\pi \hbar}{m*\omega}^4}{\sqrt{2^{n}n!}} \sum_{i=1}^{50} e^{\frac{-m\omega z^2}{2*\hbar}} H_{l}(i) H_{n}(i)$$`
+
+---
+
+##Approximation `$$z_{i}, \omega_{i}$$`
+
+```python
+
+import numpy as np
+
+print(np.polynomial.hermite.hermgauss(50));
+```
+
+```
+(array([-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,
+       -6.60864797, -6.20295252, -5.81299468, -5.43578609, -5.06911758,
+       -4.71129367, -4.36097316, -4.01706817, -3.67867706, -3.34503831,
+       -3.01549777, -2.6894847 , -2.3664939 , -2.04607197, -1.72780655,
+       -1.41131775, -1.09625113, -0.78227173, -0.46905906, -0.15630255,
+        0.15630255,  0.46905906,  0.78227173,  1.09625113,  1.41131775,
+        1.72780655,  2.04607197,  2.3664939 ,  2.6894847 ,  3.01549777,
+        3.34503831,  3.67867706,  4.01706817,  4.36097316,  4.71129367,
+        5.06911758,  5.43578609,  5.81299468,  6.20295252,  6.60864797,
+        7.03432351,  7.48640943,  7.97562237,  8.52277103,  9.18240696]), array([1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
+       1.41709360e-22, 4.47098437e-20, 7.74238296e-18, 8.09426189e-16,
+       5.46594403e-14, 2.50665552e-12, 8.11187736e-11, 1.90904054e-09,
+       3.34679340e-08, 4.45702997e-07, 4.58168271e-06, 3.68401905e-05,
+       2.34269892e-04, 1.18901178e-03, 4.85326383e-03, 1.60319411e-02,
+       4.30791592e-02, 9.45489355e-02, 1.70032456e-01, 2.51130856e-01,
+       3.05085129e-01, 3.05085129e-01, 2.51130856e-01, 1.70032456e-01,
+       9.45489355e-02, 4.30791592e-02, 1.60319411e-02, 4.85326383e-03,
+       1.18901178e-03, 2.34269892e-04, 3.68401905e-05, 4.58168271e-06,
+       4.45702997e-07, 3.34679340e-08, 1.90904054e-09, 8.11187736e-11,
+       2.50665552e-12, 5.46594403e-14, 8.09426189e-16, 7.74238296e-18,
+       4.47098437e-20, 1.41709360e-22, 2.13765831e-25, 1.21524412e-28,
+       1.67380167e-32, 1.83379405e-37]))
+```
 ---
 
 #Tests
@@ -174,7 +248,6 @@ void testEnergies( void )
     TS_TRACE("Fin du test : énergies");
 }
 ```
-
 ---
 
 # Utilitaires makefile
