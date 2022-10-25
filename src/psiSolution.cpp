@@ -14,9 +14,9 @@ psiSolution::psiSolution(int n) : n_max(n)
 
 /**
  * @brief fonction factoriel
- * 
+ *
  * @param n un entier
- * @return double, n! 
+ * @return double, n!
  * @warning retourne 1 si n<0
  */
 double fact(double n)
@@ -41,11 +41,11 @@ double fact(double n)
  * d'Hermite
  * @return arma::mat Retourne une matrice de la forme suivante : exemple n_max=2
     \f[
-    \begin{matrix}
+    \begin{bmatrix}
     psi_0(z_0) & psi_1(z_0) & psi_2(z_0) \\
     psi_0(z_1) & psi_1(z_1) & psi_2(z_1) \\
     psi_0(z_2) & psi_1(z_2) & psi_2(z_2)
-    \end{matrix}
+    \end{bmatrix}
     \f]
  */
 
@@ -71,26 +71,26 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
 };
 
 /**
- * @brief Verifie l'orthonormalité des psi-solutions. On vérifie pour tous les 
+ * @brief Verifie l'orthonormalité des psi-solutions. On vérifie pour tous les
  * couples n,m <= n_max. On retourne les résultats dans une matrice dont les
  * numéros de lignes et les colonnes correspondent aux valeurs de n et m.
- * 
+ *
  * @return arma::mat Retourne une matrice de la forme suivante : exemple n_max=1
     \f[
-    \begin{matrix}
+    \begin{bmatrix}
     \int \psi^*_0(z)\psi_0(z) dz & \int \psi^*_0(z)\psi_1(z) dz \\
     \int \psi^*_1(z)\psi_0(z) dz & \int \psi^*_1(z)\psi_1(z) dz \\
-    \end{matrix}
+    \end{bmatrix}
     \f]
  */
 arma::mat psiSolution::orthoMat()
-{    
+{
     //Récupération de la matrice Hermite avec les valeurs de zi
     arma::mat hermiteMatrix = hermiteMat(n_max, zi);
-    
+
     //On crée une matrice contenant les valeurs d'orthonormalité
     arma::mat res(n_max, n_max, arma::fill::zeros);
-    
+
     int i,n,l;
     double sum,c;
 
@@ -101,7 +101,7 @@ arma::mat psiSolution::orthoMat()
             c = 1/sqrt(pi*pow(2,n+l)*fact(n)*fact(l));
             sum=0;
             // Calcul de la somme approximant l'intégrale
-            for(i=0;i<degQuadrature;i++)
+            for(i=0; i<degQuadrature; i++)
             {
                 sum+=wi[i]*hermiteMatrix(i,n)*hermiteMatrix(i,l);
             }

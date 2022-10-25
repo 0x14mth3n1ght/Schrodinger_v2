@@ -5,6 +5,8 @@ HEADERS=$(wildcard headers/*.h)
 HEADERS_ASTYLE=$(wildcard headers/*.h.orig)
 SOURCES=$(wildcard src/*.cpp)
 SOURCES_ASTYLE=$(wildcard src/*.cpp.orig)
+TESTS=$(wildcard tests/*.h)
+TESTS_ASTYLE=$(wildcard tests/*.h.orig)
 OBJ=$(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 
 all: compile_main
@@ -28,14 +30,14 @@ target:
 clean:
 	rm -f $(OBJ)
 	rm -f $(TARGET)
-	rm -f $(SOURCES_ASTYLE) $(HEADERS_ASTYLE)
+	rm -f $(SOURCES_ASTYLE) $(HEADERS_ASTYLE) $(TESTS_ASTYLE)
 
 ## Compile seulement les fichiers sources ##
 compile_source: $(OBJ)
 
 ## Astyle ##
 .PHONY: format
-format: $(SOURCES) $(HEADERS)
+format: $(SOURCES) $(HEADERS) $(TESTS)
 	./astyle --style=allman $^
 
 ## Documentation ##

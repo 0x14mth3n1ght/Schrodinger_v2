@@ -1,6 +1,7 @@
 TESTHEADERS=$(wildcard *.h)
 TESTSOURCES=$(patsubst %.h, %.cpp, $(TESTHEADERS))
 TESTOBJ=obj/tests.o
+TESTCPP=tests.cpp
 TARGET=target/test
 
 PROJECTOBJ_A_TEST=../obj/hermite.o ../obj/psiSolution.o ../obj/dataExporter.o
@@ -23,12 +24,12 @@ run_test:
 compile_test: $(TESTOBJ) $(PROJECTOBJ_A_TEST)| target #Créer le dossier target s'il n'existe pas
 	$(CC) $(CFLAGS) -o $(TARGET) $^
 
-obj/tests.o: tests.cpp | obj #Créer le dossier obj s'il n'existe pas
+$(TESTOBJ): $(TESTCPP) | obj #Créer le dossier obj s'il n'existe pas
 	$(CC) $(CFLAGS) $< -c -o $@
 
 ## CXXtest ##
 CXX: $(TESTHEADERS)
-	$(CXX) --error-printer -o tests.cpp $^
+	$(CXX) --error-printer -o $(TESTCPP) $^
 
 ## Compilation des obj du projet ##
 compile_project_obj:
