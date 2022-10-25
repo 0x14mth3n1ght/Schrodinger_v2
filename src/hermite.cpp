@@ -13,12 +13,12 @@
  *
  * @param n_max Indice max des polynomes d'Hermites utilisés dans la matrice
  * @param Z Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
- * @return arma::mat Retourne une matrice de la forme suivante : exemple \f$n_{max}=2\f$ et \f$Z=\begin{bmatrix} z_0 & z_1 & z_2 \end{bmatrix}\f$
+ * @return arma::mat Retourne une matrice de la forme suivante : exemple \f$n_{max}=2\f$ et \f$Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}\f$
     \f[
     \begin{bmatrix}
-    H_0(z_0) & H_1(z_0) & H_2(z_0) \\
-    H_0(z_1) & H_1(z_1) & H_2(z_1) \\
-    H_0(z_2) & H_1(z_2) & H_2(z_2)
+    H_0(z_0) & .. & H_{n_{max}}(z_0) \\
+    .. & .. & .. \\
+    H_0(z_m) & .. & H_{n_{max}}(z_m)
     \end{bmatrix}
     \f]
  */

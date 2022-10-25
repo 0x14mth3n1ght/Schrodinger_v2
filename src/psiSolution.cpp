@@ -138,6 +138,17 @@ arma::mat psiSolution::orthoMat()
     return res;
 };
 
+/**
+ * @brief Calcule les niveaux d'énergie pour les solutions psi de l'équation à l'aide
+ * de l'équation 1D
+ * 
+ * @return arma::vec les niveaux d'énergies sous forme d'un vecteur colonne
+ *  \f[Z=
+        \begin{bmatrix}
+        E_0 \\ E_1 \\ ... \\ E_{n_{max}}
+        \end{bmatrix}
+    \f]
+ */
 arma::vec psiSolution::energyMat()
 {    
     //On va calculer l'énergie à partir du point Z=0.1 pour tous les niveaux d'énergie
