@@ -69,6 +69,19 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
     
     return res;
 };
+/**
+ * @brief Calcule la dérivée seconde de la solution en des points du vecteur. On peut utiliser
+ * l'approximation discrète : https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e_seconde_discr%C3%A8te
+ * @param Z Les points où seront calculés la dérivée seconde
+ * @return arma::vec Les résultats de la dérivée seconde
+ */
+arma::vec psiSolution::derivee_seconde(const arma::vec& Z)
+{
+    int tailleZ = Z.size();
+    arma::vec numerator=calculeSolution(Z + pas_der) + calculeSolution(Z - pas_der) - 2*calculeSolution(Z);
+    arma::vec res=numerator/pow(pas_der, 2);
+    return res;
+};
 
 /**
  * @brief Verifie l'orthonormalité des psi-solutions. On vérifie pour tous les
@@ -124,21 +137,14 @@ arma::mat psiSolution::orthoMat()
     return res;
 };
 
-/**
- * @brief 
- * 
- * @return arma::vec 
- */
 arma::vec psiSolution::energyMat()
 {    
-    arma::vec energy(n_max, arma::fill::zeros);
+    //On va calculer l'énergie à partir du point Z=0 pour tous les niveaux d'énergie
+    arma::vec Z(n_max, arma::fill::zeros);
+    arma::vec derivee_2nde=derivee_seconde(Z);
 
-    int n;
+    arma::vec numerator=derivee_2nde / (2*m);
+    arma::vec denominator=calculeSolution(Z);
 
-    for (n=0; n<n_max; n++)
-    {
-        energy(n) = hbar*omega*(n+0.5);
-    }
-    return energy;
-
+    return numerator / denominator;
 }
