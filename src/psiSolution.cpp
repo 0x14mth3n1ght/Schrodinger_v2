@@ -40,11 +40,13 @@ double fact(double n)
  * @param vecteurZ est le vecteur de rééls pour lesquels on possède les valeurs d'évaluation du polynome
  * d'Hermite
  * @return arma::mat Retourne une matrice de la forme suivante : exemple n_max=2
- $ \begin{matrix}
+    \f[
+    \begin{matrix}
     psi_0(z_0) & psi_1(z_0) & psi_2(z_0) \\
     psi_0(z_1) & psi_1(z_1) & psi_2(z_1) \\
     psi_0(z_2) & psi_1(z_2) & psi_2(z_2)
-    \end{matrix}  $
+    \end{matrix}
+    \f]
  */
 
 arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
@@ -74,10 +76,12 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
  * numéros de lignes et les colonnes correspondent aux valeurs de n et m.
  * 
  * @return arma::mat Retourne une matrice de la forme suivante : exemple n_max=1
- $ \begin{matrix}
+    \f[
+    \begin{matrix}
     \int \psi^*_0(z)\psi_0(z) dz & \int \psi^*_0(z)\psi_1(z) dz \\
     \int \psi^*_1(z)\psi_0(z) dz & \int \psi^*_1(z)\psi_1(z) dz \\
-    \end{matrix}  $
+    \end{matrix}
+    \f]
  */
 arma::mat psiSolution::orthoMat()
 {
