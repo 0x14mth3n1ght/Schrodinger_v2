@@ -84,24 +84,14 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
     \f]
  */
 arma::mat psiSolution::orthoMat()
-{
-    //On transfère les valeurs des zi dans un vecteur armadillo
-    //pour pouvoir appliquer hermiteMat
-    int i;
-    
-    arma::vec vecZi(degQuadrature, arma::fill::zeros);
-    for (i=0; i<degQuadrature; i++)
-    {
-        vecZi[i]=zi[i];
-    }
-    
-    //Récupération de la matrice Hermite
-    arma::mat hermiteMatrix = hermiteMat(n_max, vecZi);
+{    
+    //Récupération de la matrice Hermite avec les valeurs de zi
+    arma::mat hermiteMatrix = hermiteMat(n_max, zi);
     
     //On crée une matrice contenant les valeurs d'orthonormalité
     arma::mat res(n_max, n_max, arma::fill::zeros);
     
-    int n,l;
+    int i,n,l;
     double sum,c;
 
     for (n=0; n<n_max; n++)
@@ -110,10 +100,12 @@ arma::mat psiSolution::orthoMat()
         {
             c = 1/sqrt(pi*pow(2,n+l)*fact(n)*fact(l));
             sum=0;
+            // Calcul de la somme approximant l'intégrale
             for(i=0;i<degQuadrature;i++)
             {
                 sum+=wi[i]*hermiteMatrix(i,n)*hermiteMatrix(i,l);
             }
+            // On stock le résultat à la case correspondante dans la matrice
             res(n,l)=c*sum;
         }
     }

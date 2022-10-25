@@ -37,14 +37,15 @@ double pi = 3.141592653589793;
 int degQuadrature = 50;
 
 /**
- * @brief Tableau contenant les valeurs des z_i pour un degré de 50
+ * @brief Vecteur contenant les valeurs des z_i pour un degré de 50
+ * Contient 50 valeurs
  * zi[i] = z_i
  *
  * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
  * via la fonction : numpy.polynomial.hermite.hermgauss(50)
  *
  */
-double zi[50] = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,
+arma::vec zi = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,
                  -6.60864797, -6.20295252, -5.81299468, -5.43578609, -5.06911758,
                  -4.71129367, -4.36097316, -4.01706817, -3.67867706, -3.34503831,
                  -3.01549777, -2.6894847, -2.3664939, -2.04607197, -1.72780655,
@@ -57,13 +58,14 @@ double zi[50] = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351
                  };
 
 /**
- * @brief Tableau contenant la valeurs des w_i pour un degré de 50
+ * @brief Vecteur contenant la valeurs des w_i pour un degré de 50
+ * Contient 50 valeurs
  * wi[i] = w_i
  *
  * Pour obtenir ces valeurs, on a utilisé la bibliothèque numpy de Python
  * via la fonction : numpy.polynomial.hermite.hermgauss(50)
  */
-double wi[50] = {1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
+arma::vec wi = {1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
                  1.41709360e-22, 4.47098437e-20, 7.74238296e-18, 8.09426189e-16,
                  5.46594403e-14, 2.50665552e-12, 8.11187736e-11, 1.90904054e-09,
                  3.34679340e-08, 4.45702997e-07, 4.58168271e-06, 3.68401905e-05,
