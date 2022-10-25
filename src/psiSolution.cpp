@@ -124,19 +124,15 @@ arma::mat psiSolution::orthoMat()
     return res;
 };
 
-arma::mat psiSolution::energyMat()
+arma::vec psiSolution::energyMat()
 {    
-    arma::mat energy(n_max, n_max, arma::fill::zeros);
+    arma::vec energy(n_max, arma::fill::zeros);
 
-    int n,l;
+    int n;
 
     for (n=0; n<n_max; n++)
     {
-        for (l=0; l<=n ; l++)
-        {
-            // On stock le résultat à la case correspondante dans la matrice
-            energy(n,l)=pow(hbar, 2)*pow(n, 2)*pow(pi, 2)/(2*pow(l, 2)*m); //l=longueur = z
-        }
+        energy(n) = hbar*omega*(n+0.5);
     }
     return energy;
 

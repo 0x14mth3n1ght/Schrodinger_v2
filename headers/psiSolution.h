@@ -20,7 +20,7 @@ public :
     //Vérifie l'orthonormalité des psi-solutions
     arma::mat orthoMat();
 
-    arma::mat energyMat();
+    arma::vec energyMat();
 };
 
 #endif
