@@ -6,7 +6,7 @@
  * @brief Délimiteur de base des fichiers .csv
  * 
  */
-const char defaultDelimiter=',';
+const char defaultDelimiter=';';
 /**
  * @brief Exporte les résultats d'une fonction sous forme d'un fichier .csv dans ./target (Pour les visualiser sur matplotlib par exemple)
  *
@@ -26,7 +26,10 @@ void exportToCsv(arma::vec X, arma::mat Y, char* nom)
     for(int j=-1;j<nb_col;j++)
     {
         char input[255]="";
-        sprintf(input, "%i", j);
+        if(j==-1)
+        sprintf(input, "X%i", j);
+        else
+        sprintf(input, "Y%i", j);
         fichierExport<<input;
         if(j<nb_col-1)
             fichierExport<<defaultDelimiter;
