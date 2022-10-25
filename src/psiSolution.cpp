@@ -13,7 +13,7 @@ psiSolution::psiSolution(int n) : n_max(n)
 
 
 /**
- * @brief fonction factoriel
+ * @brief fonction factorielle
  * 
  * @param n un entier
  * @return double, n! 
@@ -122,4 +122,22 @@ arma::mat psiSolution::orthoMat()
     }
 
     return res;
+};
+
+arma::mat psiSolution::energyMat()
+{    
+    arma::mat energy(n_max, n_max, arma::fill::zeros);
+
+    int n,l;
+
+    for (n=0; n<n_max; n++)
+    {
+        for (l=0; l<=n ; l++)
+        {
+            // On stock le résultat à la case correspondante dans la matrice
+            energy(n,l)=(hbar**2)*(n**2)*(pi**2)/(2*(l**2)*m); //l=longueur = z
+        }
+    }
+    return energy;
+
 }
