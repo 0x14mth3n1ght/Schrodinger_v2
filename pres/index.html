@@ -43,398 +43,59 @@ class: animated fadeIn middle numbers
 Oscillateur harmonique 1D quantique - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022 - [:book:](../index.html)
 ]
 
+1. Calcul de la quadrature et des niveaux d'énergies 
+--
+
+
 ---
 
 # Calculer le résultat des polynomes d'Hermites
 
-* `remark.js` is a simple HTML5 + javascript presentation tool.
+`$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx =\sqrt{\frac{\pi \hbar}{2^{n+l}n!l!mw}} \int_0^\infty e^{\frac{-(l+n)wx^2}{2*\hbar}} H_{n}(\sqrt{\frac{mw}{\hbar}}*x)*H_{l}(\sqrt{\frac{mw}{\hbar}}*x) dx$$`
 
-  :arrow_right: to view your presentation, you only need a web browser (even offline).
-
-* the presentation description is written in **markdown** in the source file.
-
-  :arrow_right: the markdown code for this slide starts like this:
-
-```markdown
-# `remark.js` ??? WTF ?
-
-* `remark.js` is a simple HTML5 + javascript presentation tool.
-
-  :arrow_right: to view your presentation, you only need a web browser (even offline).
+`$$\int_0^\infty \phi_{l}(x)\phi_{n}(x) dx \simeq \sum_{i=0}^{n-1}w_if(x_i)$$`
 
 
-
-```
-
-* some extensions allow to include code, `$\LaTeX$`, tables, diagrams, emojis...
+Après changement de variable on se ramène à la forme de Gauss Laguerre
+`$$\frac{\frac{\pi \hbar}{m*\omega}^4}{\sqrt{2^{n}n!}} \int_0^\infty e^{\frac{-m\omega z^2}{2*\hbar}} H_{n}(z) dx$$`
 
 ---
 
-# :warning: important remark for firefox users
-
-Browsing a **local** `remark.js` presentation ?
-
-1. go to *`about:config`*,
-
-2. search for the *`origin_policy`* pattern,
-
-3. set the property *`security.fileuri.strict_origin_policy`* to *`false`*.
-
-.hcenter.shadow.w80.animated.fadeInUp.wait1s[
-![](images/firefox_config.png)
-]
-
-
----
-
-class: toc top
-# Example of a table of content
-
-1. First section
---
-
-  1. First subsection
---
-
-  2. Second subsection
---
-
-2. Second section
-  * First subsection
---
-
-2. Third section
-  1. First subsection
-
----
-
-# :clipboard: Example of table
-
-## A table
-.hcenter[
-| Points                  | `git` | `doxygen` | `VTK` | `python` | `gdb` | `MPI` | `$\LaTeX$` | `LAPACK` |
-|:------------------------|:-----:|:---------:|:-----:|:--------:|:-----:|:-----:|:------------:|:--------:|
-| *0*. What ?             |       |           |       |          |       |       |              |          |
-| *1*. I tried it once... |       |           |       |          |       |       |              |          |
-| *2*. I use it.          |       |           |  :+:  |          |  :+:  |       |              |          |
-| *3*. I love it !        |  :+:  |    :+:    |       |   :+:    |       |  :+:  |      :+:     |    :+:   |
-]
-
-.hcenter[Centered caption]
-
-## Some math
-`$$\int_0^\infty f(x)e^{-x} dx \simeq \sum_{i=0}^{n-1}w_if(x_i)$$`
-
----
-
-# How to include code ?
-
-* Use `<pre>`:
-
-<pre id="terminal">
-<span class="bold "></span><span class="green bold ">|</span><span class="green "></span><span class="green bg-reset ">cube2:hfb3_old</span><span class="green bg-reset bold ">| </span><span class="reset "></span><span class="reset bg-reset ">ll                                                                </span><span class="reset bg-reset bold "></span><span class="cyan bg-reset bold ">&lt;</span><span class="cyan "></span><span class="cyan bg-reset ">15:33:10</span><span class="cyan bg-reset bold ">&gt;</span><span class="reset "></span><span class="reset bg-reset "> 
-total 48               
--rw-r----- 1 dubrayn dubrayn  505 Mar  7 15:56 Makefile                                       
-drwxr-x--- 4 dubrayn dubrayn 4096 Mar  3 16:41 </span><span class="reset bg-reset bold "></span><span class="blue bg-reset bold ">bindings</span><span class="reset "></span><span class="reset bg-reset ">                                       
--rw-r----- 1 dubrayn dubrayn  807 Mar  3 16:40 README                                         
-</pre>
-<pre id="terminal">
-## vim example:
-<span class="bold "></span><span class="yellow bold "></span><span class="yellow bg-black bold ">   1 </span><span class="blue bg-black bold ">#include </span><span class="purple bg-black bold ">&quot;fields.h&quot;</span><span class="white "></span><span class="white bg-black ">                                                                       
-</span><span class="white bg-black bold "></span><span class="yellow bg-black bold ">   2 </span><span class="blue bg-black bold ">#include </span><span class="purple bg-black bold ">&quot;hfb.h&quot;</span><span class="white "></span><span class="white bg-black ">                                                                          
-</span><span class="white bg-black bold "></span><span class="yellow bg-black bold ">   3 </span><span class="white "></span><span class="white bg-black ">                                                                                          
-</span><span class="white bg-black bold "></span><span class="yellow bg-black bold ">   4 </span><span class="yellow "></span><span class="yellow bg-black ">/** \</span><span class="yellow bg-black bold "></span><span class="purple bg-black bold ">file</span><span class="white "></span><span class="white bg-black ">                                                                                 
-</pre>
-
-* or use quotes (this is the **preferred way**, thanks to the syntax highlighting):
+Génération des `$$z_{i}, \omega_{i}$$`
 
 ```python
-import sys
 
-print("Hello !")
+import numpy as np
+
+print(np.polynomial.hermite.hermgauss(50));
 ```
 
-* or use spaces (no syntax highlighting):
-
-
-    > make clean
-    print("ECHO")
-
-* to display line numbers, use the `numbers` class:
-
-.numbers[
-```python
-#!/usr/bin/env python
-
-print("Hello from the best language !")
-
 ```
-]
-
----
-
-class: middle
-# Example of an `asciinema` capture
-
-.hcenter[
-<asciinema-player src="scripts/example.cast"></asciinema-player>
-]
-
-:arrow_right: record your shell sessions with
-
-```shell
-$ asciinema rec
+(array([-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,
+       -6.60864797, -6.20295252, -5.81299468, -5.43578609, -5.06911758,
+       -4.71129367, -4.36097316, -4.01706817, -3.67867706, -3.34503831,
+       -3.01549777, -2.6894847 , -2.3664939 , -2.04607197, -1.72780655,
+       -1.41131775, -1.09625113, -0.78227173, -0.46905906, -0.15630255,
+        0.15630255,  0.46905906,  0.78227173,  1.09625113,  1.41131775,
+        1.72780655,  2.04607197,  2.3664939 ,  2.6894847 ,  3.01549777,
+        3.34503831,  3.67867706,  4.01706817,  4.36097316,  4.71129367,
+        5.06911758,  5.43578609,  5.81299468,  6.20295252,  6.60864797,
+        7.03432351,  7.48640943,  7.97562237,  8.52277103,  9.18240696]), array([1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,
+       1.41709360e-22, 4.47098437e-20, 7.74238296e-18, 8.09426189e-16,
+       5.46594403e-14, 2.50665552e-12, 8.11187736e-11, 1.90904054e-09,
+       3.34679340e-08, 4.45702997e-07, 4.58168271e-06, 3.68401905e-05,
+       2.34269892e-04, 1.18901178e-03, 4.85326383e-03, 1.60319411e-02,
+       4.30791592e-02, 9.45489355e-02, 1.70032456e-01, 2.51130856e-01,
+       3.05085129e-01, 3.05085129e-01, 2.51130856e-01, 1.70032456e-01,
+       9.45489355e-02, 4.30791592e-02, 1.60319411e-02, 4.85326383e-03,
+       1.18901178e-03, 2.34269892e-04, 3.68401905e-05, 4.58168271e-06,
+       4.45702997e-07, 3.34679340e-08, 1.90904054e-09, 8.11187736e-11,
+       2.50665552e-12, 5.46594403e-14, 8.09426189e-16, 7.74238296e-18,
+       4.47098437e-20, 1.41709360e-22, 2.13765831e-25, 1.21524412e-28,
+       1.67380167e-32, 1.83379405e-37]))
 ```
-
 ---
 
-# Want to include some emojis ? :joy:
-
-**Yes you can** :exclamation: :smile: :grinning: :trollface:
-
-:arrow_right: It is quite easy ! :+1:
-
-Try not to over-use it :blue_heart: :star2: :musical_note: :v: :panda_face: :cool: !
-
----
-
-# Want to include some math ? (`$a=\frac{\sqrt{b^2}}{c}$`)
-
-You can include some **inline math** like **`$\sum_aw_a=4$`**, or centered equations like
-`$$\sum_k\frac{1}{k^2}=\frac{\pi^2}{6}.$$`
-Let us suppose that
-`$$M\equiv\left[\begin{array}{ccc}1&0&0\\0&0&1\\0&1&0\end{array}\right],$$`
-one can check that
-`$$M \neq M^tM.$$`
-
-----
-
-Final expression for `$a(x)$`:
-`$$a(x) = \frac{A_0}{1 + x^2}+O\left(x^{-3}\right).$$`
-
----
-
-class: top
-# Want some item lists ?
-
-A simple item list :
-* first element
-* second element
-* third element
-* last element
-
-A simple *enumerated* list (with pauses between items):
-1. :melon: melon
---
-
-1. :apple: apple
---
-
-1. :banana: banana
---
-
-1. :grapes: grapes
-
-Take a look at the markdown source to see that an exact numbering is not needed :
-```
-1. :melon: melon
---
-
-1. :apple: apple
---
-
-1. :banana: banana
---
-
-1. :grapes: grapes
-
-```
-
----
-
-# Some tables / blocks ?
-
-.hcenter[
-| Example table           | `git` | `doxygen` | `VTK` | `python` | `gdb` | `MPI` | `$\LaTeX$` | `LAPACK` |
-|:------------------------|:-----:|:---------:|:-----:|:--------:|:-----:|:-----:|:------------:|:--------:|
-| *0*. What ?             |       |           |       |          |       |       |              |          |
-| *1*. I tried it once... |       |           |       |          |       |       |              |          |
-| *2*. I use it.          |       |           |  :+:  |          |  :+:  |       |              |          |
-| *3*. I love it !        |  :+:  |    :+:    |       |   :+:    |       |  :+:  |      :+:     |    :+:   |
-]
-
-.hcenter[This is a serious table.]
-.block[ Some text in a box, with some math: `$$a=b$$` ]
-some text
-.alert[ Some important text in a box, with some math: `$$\pi \simeq 3.1415926535$$` ]
-
----
-
-class: middle
-
-# A chart with `mermaid.js`
-
-.mermaid[
-    sequenceDiagram
-        Alice->>+Bob: git clone
-        Bob-->>-Alice: cloning
-        Carol->>+Bob: git clone
-        Bob-->>-Carol: cloning
-				Note over Alice: commits
-				Note over Carol: commits
-				Alice->>+Bob: git push
-        Bob-->>-Alice: new HEAD
-				Carol->>+Bob: git push
-        Bob-->>-Carol: not OK
-]
-
----
-
-# Highlight some text / include images
-
-.noflex[
-.rightf.w20[
- ![](images/wikipedia_logo.png)
-]
-
-## Scientific method
-1. Define a question
-2. Gather information and resources (observe)
-3. Form an explanatory hypothesis
-4. Test the hypothesis by *performing an experiment* and collecting data in a **reproducible manner**
-5. Analyze the data
-6. Interpret the data and draw conclusions that serve as a starting point for new hypothesis
-7. **Publish results**
-8. Retest (frequently done **by other scientists**)
-]
-
----
-
-# How can I insert images ?
-
-.noflex[
-Use **`![](image.png)`**
-
-## Some justified text wrapping around a floating image:
-
-Lorem ipsum morbi taciti id adipiscing sed magna integer arcu eros nibh tortor interdum ultricies senectus accumsan, lacus suscipit a cursus pretium pellentesque est arcu blandit duis vivamus condimentum rhoncus molestie.
-
-.block.rightf.w20.animated.fadeInRight.wait1s[ ![](images/wikipedia_logo.png).hcenter[Wikipedia logo] ]
-
-Fames quisque volutpat lacus cursus semper varius erat habitant, luctus litora sed pulvinar himenaeos quis sit, vel fermentum taciti posuere fusce quisque tincidunt ut congue aliquam eget.
-
-.block.leftf.w30.animated.fadeInLeft.wait1s[
-Some text in a floating box... `$$\sum_i \hat{\pi}\left[u_i^2\right]=1$$`
-]
-
-`$$a=1+2+3+4+5+6+\ldots$$`
-Fames quisque volutpat lacus cursus semper varius erat habitant, luctus litora sed pulvinar himenaeos quis sit, vel fermentum taciti posuere fusce quisque tincidunt ut congue aliquam eget.
-Fames quisque volutpat lacus cursus semper varius erat habitant, luctus litora sed pulvinar himenaeos quis sit, vel fermentum taciti posuere fusce quisque tincidunt ut congue aliquam eget.
-Fames quisque volutpat lacus cursus semper varius erat habitant, luctus litora sed pulvinar himenaeos quis sit, vel fermentum taciti posuere fusce quisque tincidunt ut congue aliquam eget.
-]
-
----
-
-class: middle
-# Animate ?
-
-Yes, you can animate things.
-
-.block.animated.fadeInRight[
-* Here is a sliding *block of text*.
-* On two lines.
-]
-
-.animated.wait1s.fadeIn[Some text fading in...]
-
-.alert.animated.wait2s.fadeInLeft[Another block :v:
-`$$\int_0^1 x^2 dx = \left[ \frac{x^3}{3} \right]_0^1 $$`]
-
-.animated.wait3s.fadeIn[and...]
-
-.hcenter.block.animated.wait4s.fadeInUp[Some final text with some math :panda_face: !!! `$$a=b$$`]
-
----
-
-# some `git` graphs
-
-.row[
-.column.w30[
-This is a serious `git` graph made with `gitgraph.js`.
-]
-.column.w65[
-<canvas id='gitExample0'></canvas>
-]
-]
-
----
-
-class: hcenter, middle
-# Include a video
-
-<video controls="yes" preload="auto" width="100%" height="auto" data-setup="{}" loop>
-<source src="videos/toto.webm" type="video/webm" />
-</video>
-
----
-
-# Include a tree
-
-A tree ? really ?
-.alert.tree.hcenter[
-This
-* is a
-    * **tree**
-* like
-    * no
-        * other
-]
-
----
-
-# Plot with `Bokeh.js`
-
-<div id='bokeh00' class='hcenter'></div>
-
----
-
-# Another plot with `Bokeh.js`
-
-<div id='bokeh01' class='hcenter'></div>
-
----
-
-# Plot with `Plotly.js`
-
-<div id='plotly00' class='hcenter shadow'></div>
-<div id='plotly01' class='hcenter shadow'></div>
-
-???
-
-:warning: BUG: due to a `scale()` rule in the CSS of `remark.js`, mouse coordinates in the plots are wrong.
-
----
-
-# Include `VTK` pipelines with [`vtk.js`](https://kitware.github.io/vtk-js/)
-
-<iframe src="./vtk00.html" width="100%" height="500px"></iframe>
-
----
-
-class: hcenter, middle
-# Conclusion
-
-**That's all folks !**
-
-Start playing with this by simply editing the source file.
-
-Did you try the presentation mode (by pressing **p**) ?
-
-You can also get some help by pressing **h**.
-
-???
-
-Holy :cow: !!! I can put notes on my slides !?!
     </textarea>
 
     <script src="core/javascript/remark.js"></script>
