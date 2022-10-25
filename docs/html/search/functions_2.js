@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testhermite1_23',['testHermite1',['../class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376',1,'TestHermiteSuite']]],
-  ['testhermite2_24',['testHermite2',['../class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6',1,'TestHermiteSuite']]]
+  ['energymat_32',['energyMat',['../classpsi_solution.html#a5152c6bc8eb8aebf5a7f03fc092c7ca9',1,'psiSolution']]]
 ];

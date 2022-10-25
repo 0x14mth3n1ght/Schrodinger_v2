@@ -74,32 +74,34 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;armadillo&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../headers/hermite.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_hermite_suite.html">TestHermiteSuite</a> : <span class="keyword">public</span> CxxTest::TestSuite </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_hermite_suite.html">TestHermiteSuite</a> : <span class="keyword">public</span> CxxTest::TestSuite</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">   25</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">testHermite1</a>( <span class="keywordtype">void</span> )</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">const</span> arma::mat res={{1, 2, 2, -4, -20}, {1, 10, 98, 940, 8812}};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//On teste si ||hermiteMat - res||_infinie &lt;= tolerance</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    TS_TRACE(<span class="stringliteral">&quot;Début du test : calcul matrice hermite&quot;</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    TS_ASSERT(arma::norm(<a class="code" href="hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472">hermiteMat</a>(4, {{1}, {5}}) - res, <span class="stringliteral">&quot;inf&quot;</span>) &lt;= tolerance);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    TS_TRACE(<span class="stringliteral">&quot;Fin du test : calcul matrice hermite&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">   50</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">testHermite2</a>( <span class="keywordtype">void</span> )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> arma::vec res={{1}, {1}, {1}};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//On teste si ||hermiteMat - res||_infinie &lt;= tolerance</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    TS_TRACE(<span class="stringliteral">&quot;Début du test : calcul matrice hermite n=0&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    TS_ASSERT(arma::norm(<a class="code" href="hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472">hermiteMat</a>(0, {{1}, {1}, {1}}) - res, <span class="stringliteral">&quot;inf&quot;</span>) &lt;= tolerance);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    TS_TRACE(<span class="stringliteral">&quot;Fin du test : calcul matrice hermite n=0&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance=1e-5;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance=1e-10;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">testHermite1</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">const</span> arma::vec Z= {{1}, {5}};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">const</span> arma::mat res= {{1, 2, 2, -4, -20}, {1, 10, 98, 940, 8812}};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">//On teste si ||hermiteMat - res||_infinie &lt;= tolerance</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        TS_TRACE(<span class="stringliteral">&quot;Début du test : calcul matrice hermite&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        TS_ASSERT(arma::norm(<a class="code" href="hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472">hermiteMat</a>(4, Z) - res, <span class="stringliteral">&quot;inf&quot;</span>) &lt;= tolerance);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        TS_TRACE(<span class="stringliteral">&quot;Fin du test : calcul matrice hermite&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">testHermite2</a>( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">const</span> arma::vec Z= {{1}, {5}, {2}, {8}};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">const</span> arma::mat res= {{1, 2}, {1, 10}, {1, 4}, {1, 16}};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//On teste si ||hermiteMat - res||_infinie &lt;= tolerance</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        TS_TRACE(<span class="stringliteral">&quot;Début du test : calcul matrice hermite n=1&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        TS_ASSERT(arma::norm(<a class="code" href="hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472">hermiteMat</a>(1, Z) - res, <span class="stringliteral">&quot;inf&quot;</span>) &lt;= tolerance);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        TS_TRACE(<span class="stringliteral">&quot;Fin du test : calcul matrice hermite n=1&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
 <div class="ttc" id="aclass_test_hermite_suite_html"><div class="ttname"><a href="class_test_hermite_suite.html">TestHermiteSuite</a></div><div class="ttdef"><b>Definition:</b> test_hermite.h:6</div></div>
-<div class="ttc" id="aclass_test_hermite_suite_html_a1a05eefb59bcedfd6c9b71c9e44048c6"><div class="ttname"><a href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">TestHermiteSuite::testHermite2</a></div><div class="ttdeci">void testHermite2(void)</div><div class="ttdoc">Test du calcul de la matrice Hermite avec n_max=0 et.</div><div class="ttdef"><b>Definition:</b> test_hermite.h:50</div></div>
-<div class="ttc" id="aclass_test_hermite_suite_html_ac268a4d10a60d8cfe22246daf8339376"><div class="ttname"><a href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">TestHermiteSuite::testHermite1</a></div><div class="ttdeci">void testHermite1(void)</div><div class="ttdoc">Test du calcul de la matrice Hermite avec n_max=5 et.</div><div class="ttdef"><b>Definition:</b> test_hermite.h:25</div></div>
+<div class="ttc" id="aclass_test_hermite_suite_html_a1a05eefb59bcedfd6c9b71c9e44048c6"><div class="ttname"><a href="class_test_hermite_suite.html#a1a05eefb59bcedfd6c9b71c9e44048c6">TestHermiteSuite::testHermite2</a></div><div class="ttdeci">void testHermite2(void)</div><div class="ttdoc">Test du calcul de la matrice Hermite avec n_max=1 et.</div><div class="ttdef"><b>Definition:</b> test_hermite.h:58</div></div>
+<div class="ttc" id="aclass_test_hermite_suite_html_ac268a4d10a60d8cfe22246daf8339376"><div class="ttname"><a href="class_test_hermite_suite.html#ac268a4d10a60d8cfe22246daf8339376">TestHermiteSuite::testHermite1</a></div><div class="ttdeci">void testHermite1(void)</div><div class="ttdoc">Test du calcul de la matrice Hermite avec n_max=5 et.</div><div class="ttdef"><b>Definition:</b> test_hermite.h:31</div></div>
 <div class="ttc" id="ahermite_8cpp_html_ac7bcec0301caadaa86c5b685e809a472"><div class="ttname"><a href="hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472">hermiteMat</a></div><div class="ttdeci">arma::mat hermiteMat(int n_max, arma::vec Z)</div><div class="ttdoc">Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné n_max appliqué à un vecteu...</div><div class="ttdef"><b>Definition:</b> hermite.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

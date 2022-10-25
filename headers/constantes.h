@@ -8,7 +8,7 @@
 
 /**
  * @brief Constante utilisée comme pas pour la dérivée seconde
- * 
+ *
  */
 double pas_der=1e-7;
 

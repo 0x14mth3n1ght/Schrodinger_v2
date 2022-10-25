@@ -77,13 +77,23 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>psiSolution</b> (int)</td></tr>
 <tr class="separator:a1fd135a2b8eadc5a471112fc50587732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0477fd513b0e885520cc92317d870eb6"><td class="memItemLeft" align="right" valign="top">arma::mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpsi_solution.html#a0477fd513b0e885520cc92317d870eb6">calculeSolution</a> (const arma::vec &amp;)</td></tr>
-<tr class="memdesc:a0477fd513b0e885520cc92317d870eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">retourne une matrice à 2 dimensions, contenant les valeurs de psi_i(z) ; La ième colonne correspond aux valeurs de psi_i évalué à une valeur de z différente à chaque ligne; Les valeurs de z sont données par le vecteur [vecteurZ] placé en argument  <a href="classpsi_solution.html#a0477fd513b0e885520cc92317d870eb6">More...</a><br /></td></tr>
+<tr class="memdesc:a0477fd513b0e885520cc92317d870eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule les psi-solutions.  <a href="classpsi_solution.html#a0477fd513b0e885520cc92317d870eb6">More...</a><br /></td></tr>
 <tr class="separator:a0477fd513b0e885520cc92317d870eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3fe7713917246fbace1d86918447d7"><td class="memItemLeft" align="right" valign="top">arma::mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpsi_solution.html#afa3fe7713917246fbace1d86918447d7">orthoMat</a> ()</td></tr>
+<tr class="memdesc:afa3fe7713917246fbace1d86918447d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie l'orthonormalité des psi-solutions.  <a href="classpsi_solution.html#afa3fe7713917246fbace1d86918447d7">More...</a><br /></td></tr>
+<tr class="separator:afa3fe7713917246fbace1d86918447d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0bf73f06c4280f75c2be41a414a8f2"><td class="memItemLeft" align="right" valign="top">arma::vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpsi_solution.html#a0d0bf73f06c4280f75c2be41a414a8f2">derivee_seconde</a> (const arma::vec &amp;)</td></tr>
+<tr class="memdesc:a0d0bf73f06c4280f75c2be41a414a8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule la dérivée seconde de la solution en des points du vecteur. On peut utiliser l'approximation discrète : <a href="https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e_seconde_discr%C3%A8te">https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e_seconde_discr%C3%A8te</a>.  <a href="classpsi_solution.html#a0d0bf73f06c4280f75c2be41a414a8f2">More...</a><br /></td></tr>
+<tr class="separator:a0d0bf73f06c4280f75c2be41a414a8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5152c6bc8eb8aebf5a7f03fc092c7ca9"><td class="memItemLeft" align="right" valign="top">arma::vec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpsi_solution.html#a5152c6bc8eb8aebf5a7f03fc092c7ca9">energyMat</a> ()</td></tr>
+<tr class="memdesc:a5152c6bc8eb8aebf5a7f03fc092c7ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule les niveaux d'énergie pour les solutions psi de l'équation à l'aide de l'équation 1D.  <a href="classpsi_solution.html#a5152c6bc8eb8aebf5a7f03fc092c7ca9">More...</a><br /></td></tr>
+<tr class="separator:a5152c6bc8eb8aebf5a7f03fc092c7ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad0c93dc6ac4d729e2fc4e8da63986288"><td class="memItemLeft" align="right" valign="top"><a id="ad0c93dc6ac4d729e2fc4e8da63986288"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>n_max</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpsi_solution.html#ad0c93dc6ac4d729e2fc4e8da63986288">n_max</a></td></tr>
+<tr class="memdesc:ad0c93dc6ac4d729e2fc4e8da63986288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jusqu'à quel niveau d'énergie max seront calculés les solutions de l'équation. <br /></td></tr>
 <tr class="separator:ad0c93dc6ac4d729e2fc4e8da63986288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -103,16 +113,96 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>n_max</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>retourne une matrice à 2 dimensions, contenant les valeurs de psi_i(z) ; La ième colonne correspond aux valeurs de psi_i évalué à une valeur de z différente à chaque ligne; Les valeurs de z sont données par le vecteur [vecteurZ] placé en argument </p>
+<p>Calcule les psi-solutions. </p>
+<p>retourne une matrice à 2 dimensions, contenant les valeurs de psi_i(z) ; La ième colonne correspond aux valeurs de psi_i évalué à une valeur de z différente à chaque ligne; Les valeurs de z sont données par le vecteur [vecteurZ] placé en argument</p>
+<dl class="section return"><dt>Returns</dt><dd>arma::mat</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hermiteMat</td><td>contient les valeurs du polynôme d'Hermite H_i(z) pour tout i tel que 0 &lt;= i &lt;= n La ième colonne correspond aux valeurs de H_i évalué à une valeur de z différente à chaque ligne; Les valeurs de z sont données par le vecteur [vecteurZ] </td></tr>
-    <tr><td class="paramname">n_max</td><td>est l'entier maximum pour lequel on possède les valeurs du polynome d'Hermite stocké dans [hermiteMat] </td></tr>
     <tr><td class="paramname">vecteurZ</td><td>est le vecteur de rééls pour lesquels on possède les valeurs d'évaluation du polynome d'Hermite </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>arma::mat </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>arma::mat Retourne une matrice de la forme suivante : exemple n_max=2 <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \begin{bmatrix} psi_0(z_0) &amp; psi_1(z_0) &amp; psi_2(z_0) \\ psi_0(z_1) &amp; psi_1(z_1) &amp; psi_2(z_1) \\ psi_0(z_2) &amp; psi_1(z_2) &amp; psi_2(z_2) \end{bmatrix} \]" src="form_17.png" width="164" height="46"/>
+</p>
+ </dd></dl>
+
+</div>
+</div>
+<a id="a0d0bf73f06c4280f75c2be41a414a8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0bf73f06c4280f75c2be41a414a8f2">&#9670;&nbsp;</a></span>derivee_seconde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::vec psiSolution::derivee_seconde </td>
+          <td>(</td>
+          <td class="paramtype">const arma::vec &amp;&#160;</td>
+          <td class="paramname"><em>Z</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule la dérivée seconde de la solution en des points du vecteur. On peut utiliser l'approximation discrète : <a href="https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e_seconde_discr%C3%A8te">https://fr.wikipedia.org/wiki/D%C3%A9riv%C3%A9e_seconde_discr%C3%A8te</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>arma::vec Les résultats de la dérivée seconde en ces points.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Z</td><td>Les points où seront calculés la dérivée seconde </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>arma::vec Les résultats de la dérivée seconde </dd></dl>
+
+</div>
+</div>
+<a id="a5152c6bc8eb8aebf5a7f03fc092c7ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5152c6bc8eb8aebf5a7f03fc092c7ca9">&#9670;&nbsp;</a></span>energyMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::vec psiSolution::energyMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule les niveaux d'énergie pour les solutions psi de l'équation à l'aide de l'équation 1D. </p>
+<dl class="section return"><dt>Returns</dt><dd>arma::vec les niveaux d'énergies sous forme d'un vecteur colonne <p class="formulaDsp">
+<img class="formulaDsp" alt="\[Z= \begin{bmatrix} E_0 \\ E_1 \\ ... \\ E_{n_{max}} \end{bmatrix} \]" src="form_19.png" width="74" height="61"/>
+</p>
+ </dd></dl>
+
+</div>
+</div>
+<a id="afa3fe7713917246fbace1d86918447d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3fe7713917246fbace1d86918447d7">&#9670;&nbsp;</a></span>orthoMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">arma::mat psiSolution::orthoMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie l'orthonormalité des psi-solutions. </p>
+<p>Verifie l'orthonormalité des psi-solutions. On vérifie pour tous les couples n,m &lt;= n_max. On retourne les résultats dans une matrice dont les numéros de lignes et les colonnes correspondent aux valeurs de n et m.</p>
+<dl class="section return"><dt>Returns</dt><dd>arma::mat une matrice avec les résultats des différents produits scalaires des solutions</dd>
+<dd>
+arma::mat Retourne une matrice de la forme suivante : exemple n_max=1 <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \begin{bmatrix} \int \psi^*_0(z)\psi_0(z) dz &amp; \int \psi^*_0(z)\psi_1(z) dz \\ \int \psi^*_1(z)\psi_0(z) dz &amp; \int \psi^*_1(z)\psi_1(z) dz \\ \end{bmatrix} \]" src="form_18.png" width="186" height="31"/>
+</p>
+ </dd></dl>
 
 </div>
 </div>

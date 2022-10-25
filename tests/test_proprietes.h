@@ -10,11 +10,13 @@ private:
      * @brief Variable tolérance globale
      *
      */
-    const double tolerance=1e-3;
+    const double tolerance=1e-1;
+    const double hbar=1;
+    const double omega=1;
 public:
     /**
      * @brief Test de l'orthonormalité des solutions de l'équation.
-     * 
+     *
      * On génère la matrice des produits scalaires des différentes solutions et on compare
      * avec la matrice identitée.
      *
@@ -32,18 +34,18 @@ public:
 
     /**
      * @brief Test des énergies déduits des solutions de l'équation.
-     * 
+     *
      */
     void testEnergies( void )
     {
         psiSolution solutions(10);
-        const arma::vec energies=solutions.energyMat();
-        const arma::vec res= arma::eye(size(energies));
-        
+        arma::vec energies=solutions.energyMat();
+        arma::vec res(size(energies));
+
         res(0)=hbar * omega /2;
-        for(int i=1;i<size(res);i++)
+        for(int i=1; i<(int)res.n_rows; i++)
             res(i)=res(0) + hbar * omega * i;
-        
+
         TS_TRACE("Début du test : énergies");
         TS_ASSERT(arma::norm(energies - res, "inf") <= tolerance);
         TS_TRACE("Fin du test : énergies");

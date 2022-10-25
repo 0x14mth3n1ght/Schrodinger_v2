@@ -14,7 +14,7 @@ psiSolution::psiSolution(int n) : n_max(n)
 
 /**
  * @brief fonction factorielle
- * 
+ *
  * @param n un entier
  * @return double, n!
  * @warning retourne 1 si n<0
@@ -56,17 +56,17 @@ arma::mat psiSolution::calculeSolution(const arma::vec &vecteurZ)
     int tailleZ = vecteurZ.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n_max, arma::fill::zeros);
-    
+
     double c;
     for(int n=0; n<n_max; n++)
     {
         c=pow((m*omega)/(pi*hbar),0.25) / sqrt(fact(n)*pow(2,n));
 
-        res.col(n) = c * hermiteMatrix.col(n) 
-        % (exp(-m*omega*square(vecteurZ)/(2*hbar)));
+        res.col(n) = c * hermiteMatrix.col(n)
+                     % (exp(-m*omega*square(vecteurZ)/(2*hbar)));
         // '%' est la multiplication termes à termes
     }
-    
+
     return res;
 };
 /**
@@ -141,7 +141,7 @@ arma::mat psiSolution::orthoMat()
 /**
  * @brief Calcule les niveaux d'énergie pour les solutions psi de l'équation à l'aide
  * de l'équation 1D
- * 
+ *
  * @return arma::vec les niveaux d'énergies sous forme d'un vecteur colonne
  *  \f[Z=
         \begin{bmatrix}
@@ -150,7 +150,7 @@ arma::mat psiSolution::orthoMat()
     \f]
  */
 arma::vec psiSolution::energyMat()
-{    
+{
     //On va calculer l'énergie à partir du point Z=0.1 pour tous les niveaux d'énergie
     arma::vec Z(n_max, arma::fill::zeros);
     double z_calcul=0.17;

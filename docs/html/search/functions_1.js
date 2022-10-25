@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hermitemat_22',['hermiteMat',['../hermite_8cpp.html#ac7bcec0301caadaa86c5b685e809a472',1,'hermiteMat(int n_max, arma::vec Z):&#160;hermite.cpp'],['../hermite_8h.html#ab04f86934857b023659da77576c116c0',1,'hermiteMat(int, arma::vec):&#160;hermite.cpp']]]
+  ['derivee_5fseconde_31',['derivee_seconde',['../classpsi_solution.html#a0d0bf73f06c4280f75c2be41a414a8f2',1,'psiSolution']]]
 ];
