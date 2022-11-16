@@ -3,24 +3,24 @@
 #include <iostream>
 
 /**
- * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné n_max
+ * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné deg_max
  *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
  *
- * @param n_max Indice max des polynomes d'Hermites utilisés dans la matrice
+ * @param deg_max Indice max des polynomes d'Hermites utilisés dans la matrice
  * @param Z Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
- * @return arma::mat Retourne une matrice de la forme suivante : \f$Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}\f$
+ * @return arma::mat Retourne une matrice de la forme suivante : \f$Z=\begin{bmatrix} z_0 & ... & z_q \end{bmatrix}\f$
     \f[
     \begin{bmatrix}
     H_0(z_0) & .. & H_{n_{max}}(z_0) \\
     .. & .. & .. \\
-    H_0(z_m) & .. & H_{n_{max}}(z_m)
+    H_0(z_q) & .. & H_{n_{max}}(z_q)
     \end{bmatrix}
     \f]
  */
-void poly::calcHermite(int n_max, const arma::vec &Z) {
-    //n_max car n_max non inclus
-    arma::mat res(Z.size(), n_max, arma::fill::zeros);
-    for(int i=0; i<n_max; i++)
+void poly::calcHermite(int deg_max, const arma::vec &Z) {
+    //deg_max car deg_max non inclus
+    arma::mat res(Z.size(), deg_max, arma::fill::zeros);
+    for(int i=0; i<deg_max; i++)
     {
         //1er cas i = 0; H_0(z)=1
         //2e cas i=1; H_1(z)=2z
@@ -38,13 +38,41 @@ void poly::calcHermite(int n_max, const arma::vec &Z) {
 }
 
 
+/**
+ * @brief Renvoie les résultats du polynome généralisé de Laguerre d'indice i=0 à un entier donné deg_max
+ *  appliqué à un vecteur colonne vec_eta, sous forme d'une matrice à 3 dimensions.
+ * 
+ * @param deg_max Indice max des polynomes d'Hermites utilisés dans la matrice
+ * @param m_max Valeur maximals de m
+ * @param vec_eta Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
+ * 
+ * @return arma::cube Retourne un cube, dont chaque tranche (m fixé) à la forme suivante : 
+ * \f$vec\_eta=\begin{bmatrix} \eta_0 & ... & \eta_q \end{bmatrix}\f$
+    \f[
+    \begin{bmatrix}
+    L_0^m(\eta_0) & .. & L_{n_{max}}^m(\eta_0) \\
+    .. & .. & .. \\
+    L_0^m(\eta_q) & .. & L_{n_{max}}^m(\eta_q)
+    \end{bmatrix}
+    \f]
+ */
+void poly::calcLaguerre(int deg_max, int m_max, const arma::vec &vec_eta) {
+    //deg_max car deg_max non inclus
+    arma::cube res(vec_eta.size(), deg_max, m_max, arma::fill::zeros);
+    for(int m=0 ; m<m_max ; m++){
+        for(int n=0 ; n<deg_max ; n++){
+            if(n==0)
+                res.slice(m).col(0) = arma::vec(arma::size(vec_eta),arma::fill::value(1));
+            if(n==1)
+                res.slice(m).col(1) = 1+m-vec_eta ;
+            else
+            {
+                res.slice(m).col(n) = (2+(m-1-vec_eta)/n)%res.slice(m).col(n-1)
+                                - (1+(m-1)/n)*res.slice(m).col(n-2) ;
+            }
 
-void poly::calcLaguerre(int n_max, int m_max, const arma::vec &Z) {
-    //n_max car n_max non inclus
-    arma::mat res(Z.size(), n_max, arma::fill::zeros);
-    for(int m=0; m<m_max; m++)
-    {
-        
+        }
     }
-    internHermiteMat = res;
+    
+    internLaguerreMat = res;
 }

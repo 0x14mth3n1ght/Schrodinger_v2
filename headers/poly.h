@@ -16,7 +16,7 @@ private:
      * @brief 
      * 
      */
-    arma::mat internLaguerreMat;
+    arma::cube internLaguerreMat;
 
 public:
 
