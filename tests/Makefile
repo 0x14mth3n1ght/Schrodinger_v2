@@ -2,7 +2,7 @@ TESTHEADERS=$(wildcard *.h)
 TESTSOURCES=$(patsubst %.h, %.cpp, $(TESTHEADERS))
 TESTOBJ=obj/tests.o
 TESTCPP=tests.cpp
-TARGET=target/test
+TARGET=bin/test
 
 PROJECTOBJ_A_TEST=../obj/hermite.o ../obj/psiSolution.o ../obj/dataExporter.o
 CXX=cxxtestgen
@@ -21,7 +21,7 @@ run_test:
 	./$(TARGET)
 
 ## Compilation de l'exécutable des tests ##
-compile_test: $(TESTOBJ) $(PROJECTOBJ_A_TEST)| target #Créer le dossier target s'il n'existe pas
+compile_test: $(TESTOBJ) $(PROJECTOBJ_A_TEST)| bin #Créer le dossier bin s'il n'existe pas
 	$(CC) $(CFLAGS) -o $(TARGET) $^
 
 $(TESTOBJ): $(TESTCPP) | obj #Créer le dossier obj s'il n'existe pas
@@ -45,8 +45,8 @@ clean:
 	rm -f $(TESTSOURCES)
 	rm -f tests.cpp
 
-## Création des dossiers obj et target ##
+## Création des dossiers obj et bin ##
 obj:
 	mkdir -p $@
-target:
+bin:
 	mkdir -p $@
