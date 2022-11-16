@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['psisolution_24',['psiSolution',['../classpsi_solution.html',1,'']]]
+  ['basis_18',['Basis',['../class_basis.html',1,'']]]
 ];

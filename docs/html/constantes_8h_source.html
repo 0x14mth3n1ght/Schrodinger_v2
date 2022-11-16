@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Oscillateur harmonique quantique 1D: headers/constantes.h Source File</title>
+<title>Calcul de la densité locale d&#39;un système nucléaire: headers/constantes.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Oscillateur harmonique quantique 1D
+   <div id="projectname">Calcul de la densité locale d&#39;un système nucléaire
    &#160;<span id="projectnumber">1</span>
    </div>
   </td>
@@ -75,53 +75,11 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="constantes_8h.html#a07120bf6f38cbd2853ce7811c40ef924">   13</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a07120bf6f38cbd2853ce7811c40ef924">pas_der</a>=1e-7;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="constantes_8h.html#a95c263f8fb6946aadc67b78ae9042c86">   19</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a95c263f8fb6946aadc67b78ae9042c86">hbar</a> = 1.0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">   19</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">pi</a> = 3.141592653589793;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="constantes_8h.html#a98ecc32b7ac0cf654d9f883cbe5cab35">   25</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a98ecc32b7ac0cf654d9f883cbe5cab35">omega</a> = 1.0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="constantes_8h.html#a5175b356eac1d83a42608b42a25d00b9">   31</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a5175b356eac1d83a42608b42a25d00b9">m</a> = 1.0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">   37</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">pi</a> = 3.141592653589793;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="constantes_8h.html#aa31b3060524311899380df9bf1949705">   43</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="constantes_8h.html#aa31b3060524311899380df9bf1949705">degQuadrature</a> = 50;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="constantes_8h.html#a2a4f6deeccd374f405e2997ca0285915">   54</a></span>&#160;arma::vec <a class="code" href="constantes_8h.html#a2a4f6deeccd374f405e2997ca0285915">zi</a> = {-9.18240696, -8.52277103, -7.97562237, -7.48640943, -7.03432351,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                -6.60864797, -6.20295252, -5.81299468, -5.43578609, -5.06911758,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                -4.71129367, -4.36097316, -4.01706817, -3.67867706, -3.34503831,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                -3.01549777, -2.6894847, -2.3664939, -2.04607197, -1.72780655,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                -1.41131775, -1.09625113, -0.78227173, -0.46905906, -0.15630255,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                0.15630255,  0.46905906,  0.78227173,  1.09625113,  1.41131775,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                1.72780655,  2.04607197,  2.3664939,  2.6894847,  3.01549777,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                3.34503831,  3.67867706,  4.01706817,  4.36097316,  4.71129367,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                5.06911758,  5.43578609,  5.81299468,  6.20295252,  6.60864797,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                7.03432351,  7.48640943,  7.97562237,  8.52277103,  9.18240696</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                };</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="constantes_8h.html#ada0e61b47484740d3f05afc6a2578059">   74</a></span>&#160;arma::vec <a class="code" href="constantes_8h.html#ada0e61b47484740d3f05afc6a2578059">wi</a> = {1.83379405e-37, 1.67380167e-32, 1.21524412e-28, 2.13765831e-25,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                1.41709360e-22, 4.47098437e-20, 7.74238296e-18, 8.09426189e-16,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                5.46594403e-14, 2.50665552e-12, 8.11187736e-11, 1.90904054e-09,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                3.34679340e-08, 4.45702997e-07, 4.58168271e-06, 3.68401905e-05,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                2.34269892e-04, 1.18901178e-03, 4.85326383e-03, 1.60319411e-02,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                4.30791592e-02, 9.45489355e-02, 1.70032456e-01, 2.51130856e-01,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                3.05085129e-01, 3.05085129e-01, 2.51130856e-01, 1.70032456e-01,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                9.45489355e-02, 4.30791592e-02, 1.60319411e-02, 4.85326383e-03,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                1.18901178e-03, 2.34269892e-04, 3.68401905e-05, 4.58168271e-06,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                4.45702997e-07, 3.34679340e-08, 1.90904054e-09, 8.11187736e-11,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                2.50665552e-12, 5.46594403e-14, 8.09426189e-16, 7.74238296e-18,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                4.47098437e-20, 1.41709360e-22, 2.13765831e-25, 1.21524412e-28,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                1.67380167e-32, 1.83379405e-37</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;               };</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aconstantes_8h_html_a07120bf6f38cbd2853ce7811c40ef924"><div class="ttname"><a href="constantes_8h.html#a07120bf6f38cbd2853ce7811c40ef924">pas_der</a></div><div class="ttdeci">double pas_der</div><div class="ttdoc">Constante utilisée comme pas pour la dérivée seconde.</div><div class="ttdef"><b>Definition:</b> constantes.h:13</div></div>
-<div class="ttc" id="aconstantes_8h_html_a2a4f6deeccd374f405e2997ca0285915"><div class="ttname"><a href="constantes_8h.html#a2a4f6deeccd374f405e2997ca0285915">zi</a></div><div class="ttdeci">arma::vec zi</div><div class="ttdoc">Vecteur contenant les valeurs des z_i pour un degré de 50 Contient 50 valeurs zi[i] = z_i.</div><div class="ttdef"><b>Definition:</b> constantes.h:54</div></div>
-<div class="ttc" id="aconstantes_8h_html_a31c17cc321db72d5ab448b71ea92792f"><div class="ttname"><a href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">pi</a></div><div class="ttdeci">double pi</div><div class="ttdoc">Contante pi.</div><div class="ttdef"><b>Definition:</b> constantes.h:37</div></div>
-<div class="ttc" id="aconstantes_8h_html_a5175b356eac1d83a42608b42a25d00b9"><div class="ttname"><a href="constantes_8h.html#a5175b356eac1d83a42608b42a25d00b9">m</a></div><div class="ttdeci">double m</div><div class="ttdoc">Constante m.</div><div class="ttdef"><b>Definition:</b> constantes.h:31</div></div>
-<div class="ttc" id="aconstantes_8h_html_a95c263f8fb6946aadc67b78ae9042c86"><div class="ttname"><a href="constantes_8h.html#a95c263f8fb6946aadc67b78ae9042c86">hbar</a></div><div class="ttdeci">double hbar</div><div class="ttdoc">Constante hbar.</div><div class="ttdef"><b>Definition:</b> constantes.h:19</div></div>
-<div class="ttc" id="aconstantes_8h_html_a98ecc32b7ac0cf654d9f883cbe5cab35"><div class="ttname"><a href="constantes_8h.html#a98ecc32b7ac0cf654d9f883cbe5cab35">omega</a></div><div class="ttdeci">double omega</div><div class="ttdoc">Constante omega.</div><div class="ttdef"><b>Definition:</b> constantes.h:25</div></div>
-<div class="ttc" id="aconstantes_8h_html_aa31b3060524311899380df9bf1949705"><div class="ttname"><a href="constantes_8h.html#aa31b3060524311899380df9bf1949705">degQuadrature</a></div><div class="ttdeci">int degQuadrature</div><div class="ttdoc">Degré utilisé pour la quadrature.</div><div class="ttdef"><b>Definition:</b> constantes.h:43</div></div>
-<div class="ttc" id="aconstantes_8h_html_ada0e61b47484740d3f05afc6a2578059"><div class="ttname"><a href="constantes_8h.html#ada0e61b47484740d3f05afc6a2578059">wi</a></div><div class="ttdeci">arma::vec wi</div><div class="ttdoc">Vecteur contenant la valeurs des w_i pour un degré de 50 Contient 50 valeurs wi[i] = w_i.</div><div class="ttdef"><b>Definition:</b> constantes.h:74</div></div>
+<div class="ttc" id="aconstantes_8h_html_a31c17cc321db72d5ab448b71ea92792f"><div class="ttname"><a href="constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f">pi</a></div><div class="ttdeci">double pi</div><div class="ttdoc">Contante pi.</div><div class="ttdef"><b>Definition:</b> constantes.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

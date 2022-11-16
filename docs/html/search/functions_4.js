@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orthomat_34',['orthoMat',['../classpsi_solution.html#afa3fe7713917246fbace1d86918447d7',1,'psiSolution']]]
+  ['rpart_30',['rPart',['../class_basis.html#a7e39ee2fd23c7db0c18907fe0bcd8387',1,'Basis']]]
 ];

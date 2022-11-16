@@ -1,0 +1,100 @@
+\hypertarget{class_basis}{}\doxysection{Basis Class Reference}
+\label{class_basis}\index{Basis@{Basis}}
+
+
+Classe pour les fonctions de base, et la troncature de base.  
+
+
+
+
+{\ttfamily \#include $<$basis.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_basis_ad9c63b88e88160648d2e961af3d894aa}{Basis}} (double, double, int, double)
+\begin{DoxyCompactList}\small\item\em Construit un objet servant à réaliser la troncature de base et à récupérer les composants Z et R de la densité locale. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{class_basis_a7e39ee2fd23c7db0c18907fe0bcd8387}{r\+Part}} (arma\+::vec, int, int)
+\item 
+arma\+::vec \mbox{\hyperlink{class_basis_afbf0c5c05659204e78e3dcabcb3a49c6}{z\+Part}} (arma\+::vec, int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_basis_ab6095856207deef6f202fdc127d7c076}{m\+Max}}
+\begin{DoxyCompactList}\small\item\em Indice de base max des m. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}\label{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}} 
+arma\+::ivec \mbox{\hyperlink{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}{n\+Max}}
+\begin{DoxyCompactList}\small\item\em Matrice contenant les indices de base max des n. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basis_a6024dca693a78c1a0ad98491e67927a1}\label{class_basis_a6024dca693a78c1a0ad98491e67927a1}} 
+arma\+::mat \mbox{\hyperlink{class_basis_a6024dca693a78c1a0ad98491e67927a1}{n\+\_\+z\+Max}}
+\begin{DoxyCompactList}\small\item\em Matrice contenant les indices de base max des n pour la partie z. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour les fonctions de base, et la troncature de base. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_basis_ad9c63b88e88160648d2e961af3d894aa}\label{class_basis_ad9c63b88e88160648d2e961af3d894aa}} 
+\index{Basis@{Basis}!Basis@{Basis}}
+\index{Basis@{Basis}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{Basis()}{Basis()}}
+{\footnotesize\ttfamily Basis\+::\+Basis (\begin{DoxyParamCaption}\item[{double}]{br,  }\item[{double}]{bz,  }\item[{int}]{N,  }\item[{double}]{Q }\end{DoxyParamCaption})}
+
+
+
+Construit un objet servant à réaliser la troncature de base et à récupérer les composants Z et R de la densité locale. 
+
+Construct a new \mbox{\hyperlink{class_basis}{Basis}}\+:\+: \mbox{\hyperlink{class_basis}{Basis}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em br} & \\
+\hline
+{\em bz} & \\
+\hline
+{\em N} & \\
+\hline
+{\em Q} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basis_a7e39ee2fd23c7db0c18907fe0bcd8387}\label{class_basis_a7e39ee2fd23c7db0c18907fe0bcd8387}} 
+\index{Basis@{Basis}!rPart@{rPart}}
+\index{rPart@{rPart}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{rPart()}{rPart()}}
+{\footnotesize\ttfamily arma\+::vec Basis\+::r\+Part (\begin{DoxyParamCaption}\item[{arma\+::vec}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_basis_afbf0c5c05659204e78e3dcabcb3a49c6}\label{class_basis_afbf0c5c05659204e78e3dcabcb3a49c6}} 
+\index{Basis@{Basis}!zPart@{zPart}}
+\index{zPart@{zPart}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{zPart()}{zPart()}}
+{\footnotesize\ttfamily arma\+::vec Basis\+::z\+Part (\begin{DoxyParamCaption}\item[{arma\+::vec}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basis_ab6095856207deef6f202fdc127d7c076}\label{class_basis_ab6095856207deef6f202fdc127d7c076}} 
+\index{Basis@{Basis}!mMax@{mMax}}
+\index{mMax@{mMax}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{mMax}{mMax}}
+{\footnotesize\ttfamily int Basis\+::m\+Max}
+
+
+
+Indice de base max des m. 
+
+TRONCATURE 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/basis.\+h\item 
+src/basis.\+cpp\end{DoxyCompactItemize}

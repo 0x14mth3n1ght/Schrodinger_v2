@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-I "./armadillo/include" -Wall -Wextra -O3 -std=c++11
-TARGET=target/main
+TARGET=bin/main
 HEADERS=$(wildcard headers/*.h)
 HEADERS_ASTYLE=$(wildcard headers/*.h.orig)
 SOURCES=$(wildcard src/*.cpp)
@@ -13,16 +13,16 @@ all: compile_main
 
 ## Edition de liens et compilation exécutable ##
 
-compile_main: $(OBJ) | target #Créer le dossier target s'il n'existe pas
+compile_main: $(OBJ) | bin #Créer le dossier bin s'il n'existe pas
 	$(CC) $(CFLAGS) -o $(TARGET) $^
 
 obj/%.o: src/%.cpp $(HEADERS) | obj #Créer le dossier obj s'il n'existe pas
 	$(CC) $(CFLAGS) $< -c -o $@
 
-## Création des dossiers obj et target ##
+## Création des dossiers obj et bin ##
 obj:
 	mkdir -p $@
-target:
+bin:
 	mkdir -p $@
 
 ## Target&Obj clean ##

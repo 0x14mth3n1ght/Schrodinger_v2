@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['degquadrature_39',['degQuadrature',['../constantes_8h.html#aa31b3060524311899380df9bf1949705',1,'constantes.h']]]
+  ['mmax_32',['mMax',['../class_basis.html#ab6095856207deef6f202fdc127d7c076',1,'Basis']]]
 ];

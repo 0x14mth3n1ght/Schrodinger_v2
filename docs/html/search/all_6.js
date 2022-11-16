@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['omega_11',['omega',['../constantes_8h.html#a98ecc32b7ac0cf654d9f883cbe5cab35',1,'constantes.h']]],
-  ['orthomat_12',['orthoMat',['../classpsi_solution.html#afa3fe7713917246fbace1d86918447d7',1,'psiSolution']]]
+  ['pas_5fder_13',['pas_der',['../constantes_8h.html#a07120bf6f38cbd2853ce7811c40ef924',1,'constantes.h']]],
+  ['pi_14',['pi',['../constantes_8h.html#a31c17cc321db72d5ab448b71ea92792f',1,'constantes.h']]],
+  ['poly_15',['poly',['../classpoly.html',1,'']]]
 ];

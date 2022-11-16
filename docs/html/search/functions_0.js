@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['calculesolution_30',['calculeSolution',['../classpsi_solution.html#a0477fd513b0e885520cc92317d870eb6',1,'psiSolution']]]
+  ['basis_24',['Basis',['../class_basis.html#ad9c63b88e88160648d2e961af3d894aa',1,'Basis']]]
 ];

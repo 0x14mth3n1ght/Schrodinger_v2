@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['m_9',['m',['../constantes_8h.html#a5175b356eac1d83a42608b42a25d00b9',1,'constantes.h']]]
+  ['mandatorytestsuite_9',['MandatoryTestSuite',['../class_mandatory_test_suite.html',1,'']]],
+  ['mmax_10',['mMax',['../class_basis.html#ab6095856207deef6f202fdc127d7c076',1,'Basis']]]
 ];
