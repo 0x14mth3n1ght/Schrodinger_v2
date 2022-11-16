@@ -2,6 +2,16 @@
 #include "../headers/constantes.h"
 #include <iostream>
 
+
+Poly::Poly(){
+    arma::mat mat(0,0,arma::fill::zeros);
+    arma::cube cube(0,0,0,arma::fill::zeros);
+
+    internHermiteMat = mat;
+    internLaguerreMat = cube;
+};
+
+
 /**
  * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné deg_max
  *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
@@ -17,7 +27,7 @@
     \end{bmatrix}
     \f]
  */
-void poly::calcHermite(int deg_max, const arma::vec &Z) {
+void Poly::calcHermite(int deg_max, const arma::vec &Z) {
     //deg_max car deg_max non inclus
     arma::mat res(Z.size(), deg_max, arma::fill::zeros);
     for(int i=0; i<deg_max; i++)
@@ -56,23 +66,51 @@ void poly::calcHermite(int deg_max, const arma::vec &Z) {
     \end{bmatrix}
     \f]
  */
-void poly::calcLaguerre(int deg_max, int m_max, const arma::vec &vec_eta) {
+void Poly::calcLaguerre(int deg_max, int m_max, const arma::vec &vec_eta) {
     //deg_max car deg_max non inclus
     arma::cube res(vec_eta.size(), deg_max, m_max, arma::fill::zeros);
+    arma::mat slice(vec_eta.size(),deg_max);
     for(int m=0 ; m<m_max ; m++){
         for(int n=0 ; n<deg_max ; n++){
+            slice = res.slice(m);
             if(n==0)
-                res.slice(m).col(0) = arma::vec(arma::size(vec_eta),arma::fill::value(1));
-            if(n==1)
-                res.slice(m).col(1) = 1+m-vec_eta ;
+                slice.col(0) = arma::vec(arma::size(vec_eta),arma::fill::value(1));
+            
+            else if(n==1)
+                slice.col(1) = 1+m-vec_eta ;
             else
             {
-                res.slice(m).col(n) = (2+(m-1-vec_eta)/n)%res.slice(m).col(n-1)
-                                - (1+(m-1)/n)*res.slice(m).col(n-2) ;
-            }
+                slice.col(n) = (2+(m-1-vec_eta)/n) % slice.col(n-1)
+                                - (1+(m-1)/n) * slice.col(n-2) ;
 
+            }
+            res.slice(m) = slice;
+            
         }
     }
     
     internLaguerreMat = res;
+}
+
+
+/**
+ * @brief 
+ * 
+ * @param n 
+ * @return const arma::vec 
+ */
+const arma::vec Poly::hermite(int n){
+    return internHermiteMat.col(n);
+}
+
+
+/**
+ * @brief 
+ * 
+ * @param n 
+ * @param m 
+ * @return const arma::vec 
+ */
+const arma::vec Poly::laguerre(int n, int m){
+    return internLaguerreMat.slice(m).col(n);
 }

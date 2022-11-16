@@ -3,7 +3,7 @@
 
 #include <armadillo>
 
-class poly
+class Poly
 {
 private:
     /**
@@ -21,7 +21,7 @@ private:
 public:
 
     //Constructeur
-    poly();
+    Poly();
 
     /**
      * @brief Construct a new arma::calc Hermite object
