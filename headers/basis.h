@@ -65,6 +65,13 @@ class Basis
          */
         arma::vec zPart(arma::vec, int);
 
+	/*
+	* @brief Matrice des phi
+	*
+	* @return arma::vec Le vecteur contenant les composantes phi
+	*/
+	arma::mat basisFunc(int, int, int, const arma::vec &, const arma::vec &);
+
     private:
         
 };

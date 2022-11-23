@@ -71,3 +71,16 @@ Basis::Basis(double br, double bz, uint N, double Q)
     }
 };
 
+arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
+{
+    //Récupération de la matrice Hermite
+    arma::mat hermiteMatrix = hermiteMat(n_z,zVals/bz);
+    int tailleZ = zVals.size();
+    int tailleR = rVals.size();
+    //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
+    arma::mat res(tailleZ, n_max, arma::fill::zeros);
+
+    
+    return res;
+
+}
