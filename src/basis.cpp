@@ -1,4 +1,5 @@
 #include "../headers/basis.h"
+#include "../headers/poly.h"
 #include "../headers/constantes.h"
 #include <math.h>
 #include <assert.h>
@@ -72,24 +73,30 @@ Basis::Basis(double br, double bz, uint N, double Q)
     }
 };
 
+double fact(int n)
+{
+    //TODO
+    return -99;
+}
+
 arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
     //Récupération de la matrice Hermite
     Poly poly;
-    poly.calcHermite(n_z,zVals/bz);
+    poly.calcHermite(n_z,zVals/b_z);
     //poly.calcHermite(n) colonne, % mul terme à terme
     int tailleZ = zVals.size();
     int tailleR = rVals.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
-    arma::mat res(tailleZ, n_max, arma::fill::zeros);
+    arma::mat res(tailleZ, n, arma::fill::zeros);
 
     //Calculs des Z
     double c;
     for(int k=0; k<n; k++)
     {
-        c= 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z);
+        c= 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z));
 
-        res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) );
+        res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) ));
     }
 
     //Calculs des R
