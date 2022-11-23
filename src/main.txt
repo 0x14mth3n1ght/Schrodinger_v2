@@ -11,9 +11,10 @@ int main()
     poly.calcHermite(6, zVals); // compute Hermite polynomials for n in {0 ... 5}
     calcVals   = poly.hermite(4); // n = 4
     calcVals.print("hermite n=4");
-    targetVals = { -4.76676832e+03, -3.88909760e+02,  8.00000000e+00, -3.17577600e+01,
-                1.18403200e+01,  3.48375818e+04,  1.98557479e+06,  1.50339793e+07};
+    targetVals = {  1.02835360e+03,  2.05825600e+02, -2.00000000e+01,  7.80960000e+00,
+                1.15216000e+01,  4.59456160e+03,  1.10572154e+05,  5.54643458e+05};
     targetVals.print("targetvals");
+    
     zVals = {0.1, 0.3, 1.2, 1.8, 2.0, 2.5, 7.1, 11.1};
     poly.calcLaguerre(6, 4, zVals); // compute generalized Laguerre polynomials for m in {0 ... 5} and n in {0 ... 3}
     calcVals   = poly.laguerre(4, 2); // m = 4, n = 2
