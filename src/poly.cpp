@@ -66,27 +66,28 @@ void Poly::calcHermite(int deg_max, const arma::vec &Z) {
     \end{bmatrix}
     \f]
  */
-void Poly::calcLaguerre(int deg_max, int m_max, const arma::vec &vec_eta) {
+void Poly::calcLaguerre(int m_max, int deg_max, const arma::vec &vec_eta) {
     //deg_max car deg_max non inclus
     arma::cube res(vec_eta.size(), deg_max, m_max, arma::fill::zeros);
-    arma::mat slice(vec_eta.size(),deg_max);
-    for(int m=0 ; m<m_max ; m++){
-        for(int n=0 ; n<deg_max ; n++){
-            slice = res.slice(m);
+
+    for(int m=0 ; m<m_max ; m++)
+    {
+        for(int n=0 ; n<deg_max ; n++)
+        {
             if(n==0)
-                slice.col(0) = arma::vec(arma::size(vec_eta),arma::fill::value(1));
+                res.slice(m).col(0) = arma::vec(arma::size(vec_eta),arma::fill::value(1));
             
             else if(n==1)
-                slice.col(1) = 1+m-vec_eta ;
+                res.slice(m).col(1) = 1+m-vec_eta ;
             else
             {
-                slice.col(n) = (2+(m-1-vec_eta)/n) % slice.col(n-1)
-                                - (1+(m-1)/n) * slice.col(n-2) ;
+                res.slice(m).col(n) = ((m-1-vec_eta)/n + 2) % res.slice(m).col(n-1)
+                                - ((m-1)/n + 1) * res.slice(m).col(n-2) ;
 
             }
-            res.slice(m) = slice;
-            
+             
         }
+        
     }
     
     internLaguerreMat = res;
@@ -107,10 +108,10 @@ const arma::vec Poly::hermite(int n){
 /**
  * @brief 
  * 
+ * @param m
  * @param n 
- * @param m 
  * @return const arma::vec 
  */
-const arma::vec Poly::laguerre(int n, int m){
+const arma::vec Poly::laguerre(int m, int n){
     return internLaguerreMat.slice(m).col(n);
 }
