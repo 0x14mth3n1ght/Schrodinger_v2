@@ -81,8 +81,8 @@ void Poly::calcLaguerre(int m_max, int deg_max, const arma::vec &vec_eta) {
                 res.slice(m).col(1) = 1+m-vec_eta ;
             else
             {
-                res.slice(m).col(n) = ((m-1-vec_eta)/n + 2) % res.slice(m).col(n-1)
-                                - ((m-1)/n + 1) * res.slice(m).col(n-2) ;
+                res.slice(m).col(n) = ((m-1-vec_eta)/((double) n) + 2) % res.slice(m).col(n-1)
+                                - ((m-1)/((double) n) + 1) * res.slice(m).col(n-2) ;
 
             }
              
@@ -95,10 +95,11 @@ void Poly::calcLaguerre(int m_max, int deg_max, const arma::vec &vec_eta) {
 
 
 /**
- * @brief 
+ * @brief Renvoie le vecteur de valeurs du polynome d'Hermite de degré n
+ * pour les valeurs de z qui ont été fournies dans calcHermite
  * 
- * @param n 
- * @return const arma::vec 
+ * @param n entier
+ * @return const arma::vec
  */
 const arma::vec Poly::hermite(int n){
     return internHermiteMat.col(n);
@@ -106,10 +107,11 @@ const arma::vec Poly::hermite(int n){
 
 
 /**
- * @brief 
+ * @brief Renvoie le vecteur de valeurs du polynome de Laguerre avec les valeurs
+ * m et n pour les valeurs de z qui ont été fournies dans calcLaguerre
  * 
- * @param m
- * @param n 
+ * @param m entier
+ * @param n entier
  * @return const arma::vec 
  */
 const arma::vec Poly::laguerre(int m, int n){
