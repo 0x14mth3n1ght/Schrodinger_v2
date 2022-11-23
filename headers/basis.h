@@ -70,7 +70,7 @@ class Basis
 	*
 	* @return arma::vec Le vecteur contenant les composantes phi
 	*/
-	arma::mat basisFunc(int m,int n,int n_z,arma::vec zVals,arma::vec rVals);
+	arma::mat basisFunc(int, int, int, const arma::vec &, const arma::vec &);
 
     private:
         

@@ -1,14 +1,6 @@
-#include "../headers/poly.h"
+#include "../headers/basis.h"
 #include "../headers/constantes.h"
 #include <iostream>
-
-Poly::Poly(){
-    arma::mat mat(0,0,arma::fill::zeros);
-    arma::cube cube(0,0,0,arma::fill::zeros);
-
-    internHermiteMat = mat;
-    internLaguerreMat = cube;
-};
 
 arma::mat result = arma::zeros(nbR, nbZ); // number of points on r- and z- axes
 Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
