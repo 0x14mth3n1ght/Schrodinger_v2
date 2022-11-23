@@ -13,9 +13,16 @@
 double pas_der=1e-7;
 
 /**
- * @brief Contante pi
+ * @brief Constante pi
  *
  */
 double pi = 3.141592653589793;
+
+
+/**
+ * @brief  Constante bz
+ *
+ */
+int b_z = 1;
 
 #endif
