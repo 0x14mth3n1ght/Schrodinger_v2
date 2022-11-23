@@ -89,7 +89,7 @@ arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const
     {
         c= 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z);
 
-        res.col(k) = c * poly.hermite(k) % (exp(-(vecteurZ**2)/(2*b_z**2)));
+        res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) );
     }
 
     //Calculs des R
