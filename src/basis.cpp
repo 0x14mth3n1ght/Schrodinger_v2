@@ -92,10 +92,7 @@ arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
         c=c/sqrt(i);
     }
 
-    for(int k=0; k<n; k++)
-    {
-        res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) ));
-    }
+    res= c * hermite_nz % ( exp(-square(zVals)/(2*pow(b_z,2))));
 
     return res;
 }
