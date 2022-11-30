@@ -75,11 +75,11 @@ Basis::Basis(double br, double bz, uint N, double Q)
 
 double fact(int n)
 {
-    //TODO
-    return -99;
+	if (n<=0) return 1;
+	else return n*fact(n-1);
 }
 
-arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
+arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
 {
     //Récupération de la matrice Hermite
     Poly poly;
@@ -91,15 +91,27 @@ arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const
     arma::mat res(tailleZ, n, arma::fill::zeros);
 
     //Calculs des Z
-    double c;
+    double c = 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z));
     for(int k=0; k<n; k++)
     {
-        c= 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z));
-
         res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) ));
     }
 
+    return res;
+}
+
+arma::mat Basis::rPart(int mp, int n, const arma::vec &rVals)
+{
+
+}
+
+arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
+{
+    //Calculs des Z
+
     //Calculs des R
+
+
 
     return res;
 
