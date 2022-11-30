@@ -71,6 +71,9 @@ Basis::Basis(double br, double bz, uint N, double Q)
             n_zMax(m, n)=round(nu(N, Q, m + 2 * n + 1));
         }
     }
+
+    b_r=br;
+    b_z=bz;
 };
 
 arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
