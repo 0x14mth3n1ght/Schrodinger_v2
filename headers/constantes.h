@@ -10,19 +10,19 @@
  * @brief Constante utilisée comme pas pour la dérivée seconde
  *
  */
-double pas_der=1e-7;
+const double pas_der=1e-7;
 
 /**
  * @brief Constante pi
  *
  */
-double pi = 3.141592653589793;
+const double pi = 3.141592653589793;
 
 
 /**
  * @brief  Constante bz
  *
  */
-int b_z = 1;
+const int b_z = 1;
 
 #endif
