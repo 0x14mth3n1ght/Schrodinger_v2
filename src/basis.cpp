@@ -86,7 +86,6 @@ arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
     poly.calcHermite(n_z,zVals/b_z);
     //poly.calcHermite(n) colonne, % mul terme à terme
     int tailleZ = zVals.size();
-    int tailleR = rVals.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n, arma::fill::zeros);
 
@@ -100,19 +99,34 @@ arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
     return res;
 }
 
-arma::mat Basis::rPart(int mp, int n, const arma::vec &rVals)
+arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
 {
+    //Récupération de la matrice Hermite
+    Poly poly;
+    poly.calcLaguerre(abs(m), n, pow( (rVals/b_r),2 );
+    //poly.calcHermite(n) colonne, % mul terme à terme
+    int tailleR = rVals.size();
+    //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
+    arma::mat res(tailleZ, n, arma::fill::zeros);
+
+    double c = ( sqrt(fact(n)/(fact(n+abs(m))*pi))/b_r );
+
+    for(int k=0; k<n; k++)
+    {
+        res.col(k) = c * poly.laguerre(k) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
+    }
+
+    return res;
 
 }
 
 arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
-    //Calculs des Z
+    //Récupération Z et R
+    arma::vec zPart = zPart(int m, int n, const arma::vec &rVals);
+    arma::vec rPart = rPart(int m, int n, const arma::vec &rVals);
 
-    //Calculs des R
-
-
-
-    return res;
+    //Module (pas de theta) (?)
+    return abs(zPart%rPart);
 
 }
