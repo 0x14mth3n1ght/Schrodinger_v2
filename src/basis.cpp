@@ -73,24 +73,25 @@ Basis::Basis(double br, double bz, uint N, double Q)
     }
 };
 
-double fact(int n)
-{
-	if (n<=0) return 1;
-	else return n*fact(n-1);
-}
-
 arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
 {
     //Récupération de la matrice Hermite
     Poly poly;
     poly.calcHermite(n_z,zVals/b_z);
-    //poly.calcHermite(n) colonne, % mul terme à terme
+
     int tailleZ = zVals.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n, arma::fill::zeros);
 
     //Calculs des Z
-    double c = 1/( sqrt(sqrt(pi)*fact(n_z)*pow(2,n_z) ) * sqrt(b_z));
+    double c = 1/( sqrt(sqrt(pi)*pow(2,n_z) ) * sqrt(b_z));
+
+    //Factorielle 
+    for (int i=1; i<=n_z; i++)
+    {
+        c=c/sqrt(i);
+    }
+
     for(int k=0; k<n; k++)
     {
         res.col(k) = c * poly.hermite(k) % ( exp(-square(zVals)/(2*pow(b_z,2)) ));
@@ -104,16 +105,27 @@ arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
     //Récupération de la matrice Hermite
     Poly poly;
     poly.calcLaguerre(abs(m), n, pow( (rVals/b_r),2 );
-    //poly.calcHermite(n) colonne, % mul terme à terme
+
     int tailleR = rVals.size();
     //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
     arma::mat res(tailleZ, n, arma::fill::zeros);
 
-    double c = ( sqrt(fact(n)/(fact(n+abs(m))*pi))/b_r );
+    double c = 1/ (b_r*sqrt(pi));
+
+    //Factorielle
+    for (int i=1; i<=n; i++)
+    {
+        c=c*sqrt(i);
+    }
+    for (int i=1; i<=n+abs(m); i++)
+    {
+        c=c/sqrt(i);
+    }
+
 
     for(int k=0; k<n; k++)
     {
-        res.col(k) = c * poly.laguerre(k) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
+        res.col(k) = c * poly.laguerre(abs(m),k) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
     }
 
     return res;
