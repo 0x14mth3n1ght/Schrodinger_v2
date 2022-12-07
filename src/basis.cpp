@@ -12,7 +12,7 @@
  * @param i argument en entrée de la fonction
  * @return double Résultat de nu(i)
  */
-double nu(const uint N, const double Q, const uint i)
+double nu(const int N, const double Q, const int i)
 {
     return (N+2)*pow(Q, 2.0/3.0) + 1/2 - i * Q;
 }
@@ -24,7 +24,7 @@ double nu(const uint N, const double Q, const uint i)
  * 
  * @return L'indice mMax pour la troncature de base
  */
-int calcule_mMax(const uint N, const double Q)
+int calcule_mMax(const int N, const double Q)
 {
     //Vérifier que Q est bien positif ou nul
     assert (Q>=0);
@@ -50,23 +50,23 @@ int calcule_mMax(const uint N, const double Q)
  * @param N paramètre de troncation de base
  * @param Q paramètre de troncation de base
  */
-Basis::Basis(double br, double bz, uint N, double Q) 
+Basis::Basis(double br, double bz, int N, double Q) 
 {
     /* Préparation de la troncature */
     //Calcul de mMax
     mMax=calcule_mMax(N, Q);
     //Calcul de nMax
     nMax.zeros(mMax);
-    for(uint m=0; m<mMax; m++)
+    for(int m=0; m<mMax; m++)
     {
         nMax(m)=1.0/2.0 * (mMax - m - 1) + 1;
     }
     //Calcul de n_zMax
     //La taille de cette matrice est égale à mMax x (plus grand des nMax)
     n_zMax.zeros(mMax, nMax(0));
-    for(uint m=0; m<mMax; m++)
+    for(int m=0; m<mMax; m++)
     {
-        for(uint n=0; n<nMax(m); n++)
+        for(int n=0; n<nMax(m); n++)
         {
             n_zMax(m, n)=round(nu(N, Q, m + 2 * n + 1));
         }
@@ -76,15 +76,15 @@ Basis::Basis(double br, double bz, uint N, double Q)
     b_z=bz;
 };
 
-arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
+arma::vec Basis::zPart(int n_z, const arma::vec &zVals)
 {
     //Récupération de la matrice Hermite
     Poly poly;
     poly.calcHermite(n_z,zVals/b_z);
 
     int tailleZ = zVals.size();
-    //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
-    arma::mat res(tailleZ, n, arma::fill::zeros);
+    //On crée le vecteur resultat
+    arma::vec res(tailleZ, arma::fill::zeros);
 
     //Calculs des Z
     double c = 1/( sqrt(sqrt(pi)*pow(2,n_z) ) * sqrt(b_z));
@@ -95,7 +95,7 @@ arma::mat Basis::zPart(int n_z, const arma::vec &zVals)
         c=c/sqrt(i);
     }
 
-    res= c * hermite_nz % ( exp(-square(zVals)/(2*pow(b_z,2))));
+    res= c * poly.hermite(n_z) % ( exp(-square(zVals)/(2*pow(b_z,2))));
 
     return res;
 }
@@ -104,11 +104,11 @@ arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
 {
     //Récupération de la matrice Hermite
     Poly poly;
-    poly.calcLaguerre(abs(m), n, pow( (rVals/b_r),2 );
+    poly.calcLaguerre(abs(m), n, pow( (rVals/b_r),2 ));
 
     int tailleR = rVals.size();
-    //On crée une matrice contenant le facteur manquant pour la valeur de psi_s(z)
-    arma::mat res(tailleZ, n, arma::fill::zeros);
+    //On crée le vecteur resultat
+    arma::vec res(tailleR, arma::fill::zeros);
 
     double c = 1/ (b_r*sqrt(pi));
 
@@ -123,22 +123,20 @@ arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
     }
 
 
-    for(int k=0; k<n; k++)
-    {
-        res.col(k) = c * poly.laguerre(abs(m),k) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
-    }
+    res = c * poly.laguerre(abs(m),n) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
+    
 
     return res;
 
 }
 
-arma::mat Basis::basisFunc(int mp, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
+arma::mat Basis::basisFunc(int m, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
     //Récupération Z et R
-    arma::vec zPart = zPart(int m, int n, const arma::vec &rVals);
-    arma::vec rPart = rPart(int m, int n, const arma::vec &rVals);
+    arma::vec zPart_vec = zPart(n_z, zVals);
+    arma::vec rPart_vec = rPart(n, m, rVals);
 
     //Module (pas de theta) (?)
-    return abs(zPart%rPart);
+    return abs(zPart_vec%rPart_vec);
 
 }

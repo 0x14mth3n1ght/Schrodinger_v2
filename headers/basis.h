@@ -10,7 +10,7 @@
  * 
  * @return L'indice mMax pour la troncature de base
  */
-int calcule_mMax(const uint, const double);
+int calcule_mMax(const int, const double);
 
 /**
  * @brief Classe pour les fonctions de base, et la troncature de base
@@ -23,7 +23,7 @@ class Basis
          * @brief Construit un objet servant à réaliser la troncature de base et à récupérer les composants Z et R de la densité locale.
          * 
          */
-        Basis(double, double, uint, double);
+        Basis(double, double, int, double);
 
         /**
          *  Troncature de base
@@ -57,20 +57,20 @@ class Basis
          * 
          * @return arma::vec Le vecteur contenant les composantes R de la densité locale pour un vecteur donné contenant les coordonnées r.
          */
-        arma::vec rPart(arma::vec, int, int);
+        arma::vec rPart(int, int, const arma::vec &);
         /**
          * @brief Composante Z de la densité locale. 
          * 
          * @return arma::vec Le vecteur contenant les composantes Z de la densité locale pour un vecteur donné contenant les coordonnées z.
          */
-        arma::vec zPart(arma::vec, int);
+        arma::vec zPart(int, const arma::vec &);
 
         /*
         * @brief Matrice des phi
         *
         * @return arma::vec Le vecteur contenant les composantes phi
         */
-        arma::mat basisFunc(int, int, int, const arma::vec &, const arma::vec &);
+        arma::mat basisFunc(int m, int n, int n_z, const arma::vec &, const arma::vec &);
 
     private:
         double b_z,b_r;
