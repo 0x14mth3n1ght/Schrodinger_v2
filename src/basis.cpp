@@ -123,7 +123,7 @@ arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
     }
 
 
-    res = c * poly.laguerre(abs(m),n) % ( exp(-rVals/(2*pow(b_r,2)))*pow((rVals/b_r),abs(m)));
+    res = c * poly.laguerre(abs(m),n) % ( exp(-pow(rVals,2)/(2*pow(b_r,2))) % pow((rVals/b_r),abs(m)));
     
 
     return res;
@@ -134,9 +134,9 @@ arma::mat Basis::basisFunc(int m, int n, int n_z, const arma::vec &zVals, const 
 {
     //Récupération Z et R
     arma::vec zPart_vec = zPart(n_z, zVals);
-    arma::vec rPart_vec = rPart(n, m, rVals);
+    arma::vec rPart_vec = rPart(m, n, rVals);
 
     //Module (pas de theta) (?)
-    return abs(zPart_vec%rPart_vec);
+    return zPart_vec % rPart_vec;
 
 }
