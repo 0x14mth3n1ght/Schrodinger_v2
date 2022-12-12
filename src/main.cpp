@@ -69,37 +69,40 @@ int main()
     arma::mat res_1=algo_opti(rho, zVals, rVals);
     std::cout<<"Algorithme opti : "<<timer.toc()<<"s\n";
 
-    arma::vec X = arma::linspace(config["x"]["min"], config["x"]["max"], config["x"]["points"]);
-    arma::vec Y = arma::linspace(config["y"]["min"], config["y"]["max"], config["y"]["points"]);
-    arma::vec Z = arma::linspace(config["z"]["min"], config["z"]["max"], config["z"]["points"]);
-
-    arma::mat plane = naive(rho, X, Z);
+    arma::vec X = arma::linspace(MINVALUE, MAXVALUE, STEPS);
+    arma::vec Y = arma::linspace(MINVALUE, MAXVALUE, STEPS);
+    arma::vec Z = arma::linspace(MINVALUE, MAXVALUE, STEPS);
 
     arma::cube cube(X.size(), Y.size(), Z.size());
-    for (uint i = 0 ; i < X.size() ; i++) {
-        double x = X(i);
-        for (uint j = 0 ; j < Y.size() ; j++) {
+    /**
+     * Il faut passer des coordonnées cartésiennes à cylindriques
+     * On a R=sqrt(x²+y²), puis il faudrait chercher le r le plus proche d'un x donné
+     * 
+     * Z reste le même
+     */
+    for (int i = 0 ; i < X.size() ; i++) {
+        for (int j = 0 ; j < Y.size() ; j++) {
+            double x = X(i);
             double y = Y[j];
-            
             double r = sqrt(x * x + y * y);
+            int u = 0;
 
-            uint l = 0;
-
-            for (uint ll = 1 ; ll < X.size() ; ll++) {
-                if (abs(r - X[ll]) < abs(r - X[l])) {
-                    l = ll;
+            //On va chercher l'indice du r le PLUS PROCHE de x
+            for (int v = 1 ; v < X.size() ; v++) {
+                if (abs(r - X[v]) < abs(r - X[u])) {
+                    u = v;
                 }
             }
 
-            for (uint k = 0 ; k < Z.size() ; k++) {
-
-                cube(i, j, k) = plane(l, k);
+            for (int k = 0 ; k < Z.size() ; k++) {
+                //En fait c'est un plan=tranche qu'on va mettre en perspective 3d
+                cube(i, j, k) = res_1(u, k);
             }
         }
     }
 
     std::ofstream file;
-    file.open (df3File);
+    file.open("res/df3/res.df3");
     file << exportToDf3(cube);
     file.close();
 
