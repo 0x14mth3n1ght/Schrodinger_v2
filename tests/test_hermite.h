@@ -31,7 +31,7 @@ public:
         //On teste si ||hermiteMat - res||_infinie <= tolerance
         TS_TRACE("Début du test : calcul matrice hermite");
         for(int i=0;i<5;i++)
-            TS_ASSERT(arma::norm(poly.hermite(i) - res(i), "inf") <= 1e-10);
+            TS_ASSERT(arma::norm(poly.hermite(i) - res.col(i), "inf") <= 1e-10);
         TS_TRACE("Fin du test : calcul matrice hermite");
     }
     /**
@@ -61,7 +61,7 @@ public:
         //On teste si ||hermiteMat - res||_infinie <= tolerance
         TS_TRACE("Début du test : calcul matrice hermite n=1");
         for(int i=0;i<2;i++)
-          TS_ASSERT(arma::norm(poly.hermite(i) - res, "inf") <= 1e-10);
+          TS_ASSERT(arma::norm(poly.hermite(i) - res.col(i), "inf") <= 1e-10);
         TS_TRACE("Fin du test : calcul matrice hermite n=1");
     }
 
