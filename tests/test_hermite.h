@@ -1,6 +1,6 @@
 #include <cxxtest/TestSuite.h>
 #include <armadillo>
-#include "../headers/hermite.h"
+#include "../headers/poly.h"
 
 class TestHermiteSuite : public CxxTest::TestSuite
 {
