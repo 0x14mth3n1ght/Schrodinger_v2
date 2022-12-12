@@ -4,7 +4,7 @@ TESTOBJ=obj/tests.o
 TESTCPP=tests.cpp
 TARGET=bin/test
 
-PROJECTOBJ_A_TEST=../obj/hermite.o ../obj/psiSolution.o ../obj/dataExporter.o
+PROJECTOBJ_A_TEST=../obj/algorithms.o ../obj/poly.o ../obj/dataExporter.o ../obj/basis.o
 CXX=cxxtestgen
 CC=g++
 CFLAGS=-I "../armadillo/include" -Wall -Wextra -std=c++11 -O3
