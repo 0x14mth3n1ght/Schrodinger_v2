@@ -1,6 +1,7 @@
 #include <cxxtest/TestSuite.h>
 #include <armadillo>
 #include "../headers/poly.h"
+#include "../headers/basis.h"
 
 class MandatoryTestSuite : public CxxTest::TestSuite
 {
