@@ -57,13 +57,13 @@ class Basis
          * 
          * @return arma::vec Le vecteur contenant les composantes R de la densité locale pour un vecteur donné contenant les coordonnées r.
          */
-        arma::vec rPart(int, int, const arma::vec &);
+        arma::vec rPart(const arma::vec &, int, int);
         /**
          * @brief Composante Z de la densité locale. 
          * 
          * @return arma::vec Le vecteur contenant les composantes Z de la densité locale pour un vecteur donné contenant les coordonnées z.
          */
-        arma::vec zPart(int, const arma::vec &);
+        arma::vec zPart(const arma::vec &, int);
 
         /*
         * @brief Matrice des phi

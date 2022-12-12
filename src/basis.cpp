@@ -76,11 +76,11 @@ Basis::Basis(double br, double bz, int N, double Q)
     b_z=bz;
 };
 
-arma::vec Basis::zPart(int n_z, const arma::vec &zVals)
+arma::vec Basis::zPart(const arma::vec & zVals, int n_z)
 {
     //Récupération de la matrice Hermite
     Poly poly;
-    poly.calcHermite(n_z,zVals/b_z);
+    poly.calcHermite(n_z+1,zVals/b_z);
 
     int tailleZ = zVals.size();
     //On crée le vecteur resultat
@@ -100,11 +100,11 @@ arma::vec Basis::zPart(int n_z, const arma::vec &zVals)
     return res;
 }
 
-arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
+arma::vec Basis::rPart(const arma::vec & rVals, int m, int n)
 {
     //Récupération de la matrice Hermite
     Poly poly;
-    poly.calcLaguerre(abs(m), n, pow( (rVals/b_r),2 ));
+    poly.calcLaguerre(abs(m)+1, n+1, pow( (rVals/b_r),2 ));
 
     int tailleR = rVals.size();
     //On crée le vecteur resultat
@@ -133,8 +133,8 @@ arma::vec Basis::rPart(int m, int n, const arma::vec &rVals)
 arma::mat Basis::basisFunc(int m, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
     //Récupération Z et R
-    arma::vec zPart_vec = zPart(n_z, zVals);
-    arma::vec rPart_vec = rPart(m, n, rVals);
+    arma::vec zPart_vec = zPart(zVals, n_z);
+    arma::vec rPart_vec = rPart(rVals, m, n);
 
     //Module (pas de theta) (?)
     return zPart_vec % rPart_vec;

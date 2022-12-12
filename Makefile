@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I "./armadillo/include" -L "./armadillo/lib" -larmadillo -Wall -Wextra -O3 -std=c++11 
+CFLAGS=-I "./armadillo/include" -L "./armadillo/lib" -Wall -Wextra -O3 -std=c++11 
 TARGET=bin/main
 HEADERS=$(wildcard headers/*.h)
 HEADERS_ASTYLE=$(wildcard headers/*.h.orig)
