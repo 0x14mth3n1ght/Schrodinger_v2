@@ -45,7 +45,7 @@ class Basis
          * @brief Matrice contenant les indices de base max des n pour la partie z.
          * 
          */
-        arma::mat n_zMax;
+        arma::imat n_zMax;
 
         /**
          * Composantes R et Z de la densité locale (Base cylindrique)
@@ -65,14 +65,16 @@ class Basis
          */
         arma::vec zPart(const arma::vec &, int);
 
-        /*
+        /**
         * @brief Matrice des phi
-        *
         * @return arma::vec Le vecteur contenant les composantes phi
         */
         arma::mat basisFunc(int m, int n, int n_z, const arma::vec &, const arma::vec &);
 
     private:
+        /**
+         * @brief Constantes de base
+        */
         double b_z,b_r;
         
 };

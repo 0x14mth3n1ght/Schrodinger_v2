@@ -3,6 +3,11 @@
 #include "../headers/dataExporter.h"
 #include "../headers/poly.h"
 #include "../headers/basis.h"
+#include "../headers/algorithms.h"
+
+#define MINVALUE -5
+#define MAXVALUE 5
+#define STEPS 100
 
 int main()
 {
@@ -49,5 +54,18 @@ int main()
                         2.44977220882127e-01};
     (basis.zPart(z, 15)).print("2e calcul zPart");
     (res15).print("2e res zPart");
+
+    arma::mat rho;
+    rho.load("rho.arma", arma::arma_ascii);
+    std::cout<<"taille de rho:"<<size(rho)<<"\n";
+    arma::vec zVals=arma::linspace(MINVALUE, MAXVALUE, STEPS);
+    arma::vec rVals=arma::linspace(MINVALUE, MAXVALUE, STEPS);
+
+    arma::wall_clock timer;
+    timer.tic();
+    arma::mat res_0=naive(rho, zVals, rVals);
+    double temps_naive=timer.toc();
+    std::cout<<"Algorithme naif : "<<temps_naive<<"s\n";
+
     return 0;
 }

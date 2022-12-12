@@ -12,5 +12,11 @@
  * @param nom Le nom du fichier.
  */
 void exportToCsv(arma::vec X, arma::mat Y, char* nom);
+/**
+ * @brief Exporte la matrice au format Df3
+ * 
+ * @param m la matrice à exporter
+ */
+void exportToDf3(const arma::cube &m);
 
 #endif

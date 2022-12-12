@@ -59,7 +59,7 @@ Basis::Basis(double br, double bz, int N, double Q)
     nMax.zeros(mMax);
     for(int m=0; m<mMax; m++)
     {
-        nMax(m)=1.0/2.0 * (mMax - m - 1) + 1;
+        nMax(m)=0.5 * (mMax - m - 1) + 1;
     }
     //Calcul de n_zMax
     //La taille de cette matrice est égale à mMax x (plus grand des nMax)
@@ -133,10 +133,9 @@ arma::vec Basis::rPart(const arma::vec & rVals, int m, int n)
 arma::mat Basis::basisFunc(int m, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
     //Récupération Z et R
-    arma::vec zPart_vec = zPart(zVals, n_z);
+    arma::rowvec zPart_row = zPart(zVals, n_z).t();
     arma::vec rPart_vec = rPart(rVals, m, n);
 
     //Module (pas de theta) (?)
-    return zPart_vec % rPart_vec;
-
+    return rPart_vec * zPart_row;
 }

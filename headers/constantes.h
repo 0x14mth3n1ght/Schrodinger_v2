@@ -18,9 +18,4 @@ const double pas_der=1e-7;
  */
 const double pi = 3.141592653589793;
 
-
-/**
- * @brief  Constantes bz, br (btau(r)) 
- *
- */
 #endif
