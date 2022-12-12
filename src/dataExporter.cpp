@@ -55,7 +55,7 @@ void exportToCsv(arma::vec X, arma::mat Y, char* nom)
     fichierExport.close();
 }
 
-void exportToDf3(const arma::cube &m)
+std::string exportToDf3(const arma::cube &m)
 {
   std::stringstream ss(std::stringstream::out | std::stringstream::binary);
   int nx = m.n_rows;
@@ -80,5 +80,5 @@ void exportToDf3(const arma::cube &m)
       }
     }
   }
-  std::string res=ss.str();
+  return ss.str();
 }

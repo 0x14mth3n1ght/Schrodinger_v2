@@ -38,3 +38,44 @@ arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals)
   }
   return result;
 }
+
+arma::mat algo_opti(arma::mat rho, arma::vec zVals, arma::vec rVals)
+{
+  arma::mat result = arma::zeros(rVals.size(), zVals.size());
+  Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
+
+  arma::vec * Z = new arma::vec[basis.n_zMax(0, 0)];
+  for (int n_z = 0; n_z < basis.n_zMax(0, 0); n_z++) {
+      Z[n_z] = basis.zPart(zVals, n_z);
+  }
+
+  int i = 0;
+  arma::mat * RZ = new arma::mat[basis.mMax * basis.nMax(0) * basis.n_zMax(0, 0)];
+  for (int m = 0 ; m < basis.mMax ; m++) {
+      for (int n = 0 ; n < basis.nMax(m) ; n++) {
+          arma::mat R = basis.rPart(rVals, m, n);
+          for (int n_z = 0; n_z < basis.n_zMax(m, n); n_z++) {
+              RZ[i] = R * Z[n_z].t();
+              i++;
+          }
+      }
+  }
+
+  int a = 0;
+  int b_bgn = 0;
+  for (int m = 0; m < basis.mMax; m++) {
+      for (int na = 0; na < basis.nMax(m); na++) {
+          for (int n_za = 0; n_za < basis.n_zMax(m, na); n_za++) {
+              // on utilise la symétrie
+              for (int b = b_bgn ; b < a ; b++) {
+                  result += rho(a, b) * RZ[a] % RZ[b] * 2.0;
+              }
+              result += rho(a, a) * RZ[a] % RZ[a];
+              a++;
+          }
+      }
+      b_bgn = a;
+  }
+
+  return result;
+}
