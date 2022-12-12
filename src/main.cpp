@@ -69,5 +69,39 @@ int main()
     arma::mat res_1=algo_opti(rho, zVals, rVals);
     std::cout<<"Algorithme opti : "<<timer.toc()<<"s\n";
 
+    arma::vec X = arma::linspace(config["x"]["min"], config["x"]["max"], config["x"]["points"]);
+    arma::vec Y = arma::linspace(config["y"]["min"], config["y"]["max"], config["y"]["points"]);
+    arma::vec Z = arma::linspace(config["z"]["min"], config["z"]["max"], config["z"]["points"]);
+
+    arma::mat plane = naive(rho, X, Z);
+
+    arma::cube cube(X.size(), Y.size(), Z.size());
+    for (uint i = 0 ; i < X.size() ; i++) {
+        double x = X(i);
+        for (uint j = 0 ; j < Y.size() ; j++) {
+            double y = Y[j];
+            
+            double r = sqrt(x * x + y * y);
+
+            uint l = 0;
+
+            for (uint ll = 1 ; ll < X.size() ; ll++) {
+                if (abs(r - X[ll]) < abs(r - X[l])) {
+                    l = ll;
+                }
+            }
+
+            for (uint k = 0 ; k < Z.size() ; k++) {
+
+                cube(i, j, k) = plane(l, k);
+            }
+        }
+    }
+
+    std::ofstream file;
+    file.open (df3File);
+    file << exportToDf3(cube);
+    file.close();
+
     return 0;
 }
