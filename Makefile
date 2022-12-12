@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I "./armadillo/include" -L "./armadillo/lib" -Wall -Wextra -O3 -std=c++11 
+CFLAGS=-Wall -Wextra -O3 -std=c++11 
 LFLAGS=-larmadillo
 TARGET=bin/main
 HEADERS=$(wildcard headers/*.h)
@@ -18,7 +18,7 @@ compile_main: $(OBJ) | bin #Créer le dossier bin s'il n'existe pas
 	$(CC) $(CFLAGS) -o $(TARGET) $^ $(LFLAGS)
 
 obj/%.o: src/%.cpp $(HEADERS) | obj #Créer le dossier obj s'il n'existe pas
-	$(CC) $(CFLAGS) $< -c -o $@
+	$(CC) $(CFLAGS) $< -c -o $@ $(LFLAGS)
 
 ## Création des dossiers obj et bin ##
 obj:

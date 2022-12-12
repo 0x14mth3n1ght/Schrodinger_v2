@@ -64,8 +64,10 @@ int main()
     arma::wall_clock timer;
     timer.tic();
     arma::mat res_0=naive(rho, zVals, rVals);
-    double temps_naive=timer.toc();
-    std::cout<<"Algorithme naif : "<<temps_naive<<"s\n";
+    std::cout<<"Algorithme naif : "<<timer.toc()<<"s\n";
+    timer.tic();
+    arma::mat res_1=algo_opti(rho, zVals, rVals);
+    std::cout<<"Algorithme opti : "<<timer.toc()<<"s\n";
 
     arma::vec X = arma::linspace(config["x"]["min"], config["x"]["max"], config["x"]["points"]);
     arma::vec Y = arma::linspace(config["y"]["min"], config["y"]["max"], config["y"]["points"]);

@@ -20,16 +20,13 @@
 class: titlepage
 
 .title[
-Projet IPS - Oscillateur harmonique 1D quantique
+Projet IPS - Densité locale
 ]
 
 .subtitle[
 N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022
 ]
 
-.row[
-`$$\left(\frac{\hat{p}_{(z)}^2}{2m} + \frac{1}{2}m\omega^2\hat{z}^2\right)\psi_n = E_n\psi_n.$$`
-]
 
 .footnote[
 [:book:](../index.html)
@@ -47,22 +44,17 @@ Oscillateur harmonique 1D quantique - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT -
 ---
 # Travail
 
-## Équation de Schrödinger 1D étudiée : `$\hat{H}_{(z)}\psi_n(z) = E_n\psi_n(z)$`
-<br/><br/><br/>
-avec
-`$\hat{H}_{(z)}\equiv \frac{\hat{p}_{(z)}^2}{2m} + \frac{1}{2}m\omega^2\hat{z}^2, \hspace{5mm}\hat{p}_{(z)}\equiv -i\hbar\frac{\partial}{\partial z}.$`
-<br/><br/>
-## Forme des solutions :
-
-`$$\psi_n(z) = \frac{1}{\sqrt{2^n n!}}\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}e^{-\frac{m\omega z^2}{2\hbar}}H_n\left(\sqrt{\frac{m\omega}{\hbar}} . z\right).$$`
-
 ## Objectifs :
 
-* Calculer `$\psi_n(z)$`
+* Calculer les polynomes d'Hermite de Laguerre généralisés
 
-* Vérifier ces propriétés : Énergies, orthonormalité
+* Définir les fonctions de base
 
-* Représenter les résultats
+* Calculer la densité locale avec l'algorithme naïf
+
+* Optimiser l'algorithme et comparer les temps de calcul
+
+* Afficher les résultats
 
 ---
 
