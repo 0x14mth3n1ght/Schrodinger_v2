@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['laguerre_29',['laguerre',['../classpoly.html#a75b9ecb713ca333d4ebb54be2713119a',1,'poly']]]
+  ['laguerre_0',['laguerre',['../class_poly.html#a6e517890a1da5c0ea7d9be547400f98d',1,'Poly']]]
 ];

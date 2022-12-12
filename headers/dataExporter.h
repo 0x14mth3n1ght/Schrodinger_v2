@@ -20,5 +20,12 @@ void exportToCsv(arma::vec X, arma::mat Y, char* nom);
  * @return Le résultat de l'exportation de la matrice
  */
 std::string exportToDf3(const arma::cube &m);
+/**
+ * @brief Exporte la matrice au format Raw
+ * 
+ * @param m la matrice à exporter
+ * @return std::string  le résultat de l'exportation
+ */
+std::string cubeToRaw(const arma::cube &m);
 
 #endif

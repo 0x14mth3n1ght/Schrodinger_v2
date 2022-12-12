@@ -82,3 +82,22 @@ std::string exportToDf3(const arma::cube &m)
   }
   return ss.str();
 }
+
+std::string cubeToRaw(const arma::cube &m)
+{
+  std::stringstream ss(std::stringstream::out | std::stringstream::binary);
+  double theMin = 0.0;
+  double theMax = m.max();
+  for (int k = 0; k < m.n_slices; k++)
+  {
+    for (int j = 0; j < m.n_cols; j++)
+    {
+      for (int i = 0; i < m.n_rows; i++)
+      {
+        int v = 255 * (fabs(m(i, j, k)) - theMin) / (theMax - theMin);
+        ss.put(v);
+      }
+    }
+  }
+  return ss.str();
+}

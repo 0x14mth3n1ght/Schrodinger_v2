@@ -6,6 +6,10 @@
 class MandatoryTestSuite : public CxxTest::TestSuite
 {
 public:
+    /**
+     * @brief 
+     * 
+     */
     void testMandatory0( void )
     {
         // Mandatory test #00 - Hermite and Laguerre polynomials
@@ -31,7 +35,10 @@ public:
                     14.66666667,   8.39583333,  -0.81183333,  10.1015};
         TS_ASSERT_DELTA(arma::norm(calcVals / targetVals - 1.0), 0.0, 1e-08);
     }
-
+    /**
+     * @brief 
+     * 
+     */
     void testMandatory1( void )
     {
         // Mandatory test #01 - Basis truncation
@@ -57,7 +64,10 @@ public:
         // check if matrices are equal
         TS_ASSERT((basis.n_zMax - n_zMax).is_zero());
     }
-
+    /**
+     * @brief 
+     * 
+     */
     void testMandatory2( void )
     {
         // Mandatory test #02 - Basis r-functions
@@ -83,7 +93,10 @@ public:
                             1.44615166152252e-05};
         TS_ASSERT_DELTA(arma::norm(basis.rPart(r, 8, 2) - res82), 0.0, 1e-15);
     }
-
+    /**
+     * @brief 
+     * 
+     */
     void testMandatory3( void )
     {
         // Mandatory test #03 - Basis z-functions

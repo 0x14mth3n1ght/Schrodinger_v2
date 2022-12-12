@@ -13,17 +13,17 @@ Poly::Poly(){
 
 
 /**
- * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné deg_max
+ * @brief Calcule les résultats du polynome d'Hermite d'indice i=0 à un entier donné deg_max
  *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
  *
  * @param deg_max Indice max des polynomes d'Hermites utilisés dans la matrice
  * @param Z Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
- * @return arma::mat Retourne une matrice de la forme suivante : \f$Z=\begin{bmatrix} z_0 & ... & z_q \end{bmatrix}\f$
+ * Calcule une matrice de la forme suivante : \f$Z=\begin{bmatrix} z_0 & ... & z_{q-1} \end{bmatrix}\f$
     \f[
     \begin{bmatrix}
-    H_0(z_0) & .. & H_{n_{max}}(z_0) \\
+    H_0(z_0) & .. & H_{n_{max}-1}(z_0) \\
     .. & .. & .. \\
-    H_0(z_q) & .. & H_{n_{max}}(z_q)
+    H_0(z_q) & .. & H_{n_{max}-1}(z_q)
     \end{bmatrix}
     \f]
  */
@@ -49,20 +49,20 @@ void Poly::calcHermite(int deg_max, const arma::vec &Z) {
 
 
 /**
- * @brief Renvoie les résultats du polynome généralisé de Laguerre d'indice i=0 à un entier donné deg_max
+ * @brief Calcule les résultats du polynome généralisé de Laguerre d'indice i=0 à un entier donné deg_max
  *  appliqué à un vecteur colonne vec_eta, sous forme d'une matrice à 3 dimensions.
  * 
  * @param deg_max Indice max des polynomes d'Hermites utilisés dans la matrice
  * @param m_max Valeur maximals de m
  * @param vec_eta Vecteur colonne contenant les points à appliquer aux polynomes d'Hermite
  * 
- * @return arma::cube Retourne un cube, dont chaque tranche (m fixé) à la forme suivante : 
- * \f$vec\_eta=\begin{bmatrix} \eta_0 & ... & \eta_q \end{bmatrix}\f$
+ * Calcule un cube, dont chaque tranche (m fixé) à la forme suivante : 
+ * \f$vec\_eta=\begin{bmatrix} \eta_0 & ... & \eta_{q-1} \end{bmatrix}\f$
     \f[
     \begin{bmatrix}
-    L_0^m(\eta_0) & .. & L_{n_{max}}^m(\eta_0) \\
+    L_0^m(\eta_0) & .. & L_{n_{max}-1}^m(\eta_0) \\
     .. & .. & .. \\
-    L_0^m(\eta_q) & .. & L_{n_{max}}^m(\eta_q)
+    L_0^m(\eta_q) & .. & L_{n_{max}-1}^m(\eta_q)
     \end{bmatrix}
     \f]
  */

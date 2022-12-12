@@ -106,5 +106,15 @@ int main()
     file << exportToDf3(cube);
     file.close();
 
+    std::ofstream file2;
+    file2.open ("res/raw/res.raw");
+    file2 << cubeToRaw(cube);
+    file2.close();
+
+    std::ofstream file3;
+    file3.open("res/res.mat");
+    file3 << res_1 << std::endl;
+    file3.close();
+
     return 0;
 }

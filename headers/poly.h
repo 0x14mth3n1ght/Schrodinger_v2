@@ -20,7 +20,10 @@ private:
 
 public:
 
-    //Constructeur
+    /**
+     * @brief Construct a new Poly object
+     * 
+     */
     Poly();
 
     /**

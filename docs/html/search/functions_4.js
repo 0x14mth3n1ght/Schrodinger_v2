@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rpart_30',['rPart',['../class_basis.html#a7e39ee2fd23c7db0c18907fe0bcd8387',1,'Basis']]]
+  ['poly_0',['Poly',['../class_poly.html#aa3def076b74bed67904976ad4f9fe9b1',1,'Poly']]]
 ];

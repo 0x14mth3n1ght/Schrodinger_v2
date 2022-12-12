@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['calchermite_25',['calcHermite',['../classpoly.html#a62b9018ffc67b85d9fcad77c4dc45a35',1,'poly']]],
-  ['calclaguerre_26',['calcLaguerre',['../classpoly.html#a3246a792682d2e6cfe55bc6b630020ad',1,'poly']]]
+  ['calchermite_0',['calcHermite',['../class_poly.html#af78f9fdc4a0de3343f4b9b845a31e74b',1,'Poly']]],
+  ['calclaguerre_1',['calcLaguerre',['../class_poly.html#a197e90d8cdbe9110b6b67cdb2bd3944e',1,'Poly']]]
 ];

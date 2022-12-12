@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zpart_17',['zPart',['../class_basis.html#afbf0c5c05659204e78e3dcabcb3a49c6',1,'Basis']]]
+  ['zpart_0',['zPart',['../class_basis.html#a22a3d3b6b36eabfa5405fce84ac6dd4e',1,'Basis']]]
 ];
