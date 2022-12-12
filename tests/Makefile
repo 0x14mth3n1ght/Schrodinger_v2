@@ -7,7 +7,8 @@ TARGET=bin/test
 PROJECTOBJ_A_TEST=../obj/algorithms.o ../obj/poly.o ../obj/dataExporter.o ../obj/basis.o
 CXX=cxxtestgen
 CC=g++
-CFLAGS=-I "../armadillo/include" -Wall -Wextra -std=c++11 -O3
+CFLAGS=-Wall -Wextra -std=c++11 -O3
+LFLAGS=-larmadillo
 
 ###
 #  Les tests ont besoin des .obj pour pouvoir se faire, donc on va aller les chercher en les compilant d'abord.
@@ -22,10 +23,10 @@ run_test:
 
 ## Compilation de l'exécutable des tests ##
 compile_test: $(TESTOBJ) $(PROJECTOBJ_A_TEST)| bin #Créer le dossier bin s'il n'existe pas
-	$(CC) $(CFLAGS) -o $(TARGET) $^
+	$(CC) $(CFLAGS) -o $(TARGET) $^ $(LFLAGS)
 
 $(TESTOBJ): $(TESTCPP) | obj #Créer le dossier obj s'il n'existe pas
-	$(CC) $(CFLAGS) $< -c -o $@
+	$(CC) $(CFLAGS) $< -c -o $@ $(LFLAGS)
 
 ## CXXtest ##
 CXX: $(TESTHEADERS)
