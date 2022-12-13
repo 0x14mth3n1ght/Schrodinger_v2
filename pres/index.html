@@ -70,12 +70,12 @@ Projet IPS - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022 - [:book:](../index
 
 `$$\forall n\ge 1, \begin{bmatrix} \\(C_{n+1})\\ \\ \end{bmatrix} = 2* \begin{bmatrix} \\(Z)\\ \\ \end{bmatrix} * \begin{bmatrix} \\(C_{n})\\ \\ \end{bmatrix} - 2 * n * \begin{bmatrix} \\(C_{n-1})\\ \\ \end{bmatrix}$$`
 <br/><br/>
-* `$n_{max} \in \mathbb{N}$` et `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}, \text{on a }
+* `$n_{max} \in \mathbb{N}$` et `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_{m-1} \end{bmatrix}, \text{on a }
 H=
 \begin{bmatrix} 
 H_0(z_0) & H_1(z_0) & .. & H_{n_{max}-1}(z_0) \\
 .. & .. & .. \\
-H_0(z_m) & H_1(z_m) & .. & H_{n_{max}-1}(z_m)
+H_0(z_{m-1}) & H_1(z_{m-1}) & .. & H_{n_{max}-1}(z_{m-1})
 \end{bmatrix}$`
 
 ---
@@ -111,7 +111,7 @@ zPart=
 \begin{bmatrix} 
 zPart_0(z_0) & zPart_1(z_0) & .. & zPart_{n_{max}-1}(z_0) \\
 .. & .. & .. \\
-zPart_0(z_m) & zPart_1(z_m) & .. & zPart_{n_{max}-1}(z_{m-1})
+zPart_0(z_{m-1}) & zPart_1(z_{m-1}) & .. & zPart_{n_{max}-1}(z_{m-1})
 \end{bmatrix}
 $$`
 ---
@@ -121,7 +121,7 @@ $$`
 `$$R(r_{\perp},\theta,Z)=\frac{1}{b_{\perp}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\perp}^{2}}}(\frac{r_{\perp}}{b_{\perp}})^m L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2})$$`
 
 
-* `$R=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$`
+* `$R=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_{m-1} \end{bmatrix}$`
 
 1. `$ R(r_{\perp},\theta,Z) \leftarrow L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2}) . Z$`
 2. `$ R(r_{\perp},\theta,Z) \leftarrow \frac{1}{b_{\perp}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}(\frac{r_{\perp}}{b_{\perp}})^m L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2}) . Z$`
@@ -134,7 +134,7 @@ rPart=
 \begin{bmatrix} 
 rPart_0(z_0) & rPart_1(z_0) & .. & rPart_{n_{max}-1}(z_0) \\
 .. & .. & .. \\
-rPart_0(z_m) & rPart_1(z_m) & .. & rPart_{n_{max}-1}(z_m)
+rPart_0(z_{m-1}) & rPart_1(z_{m-1}) & .. & rPart_{n_{max}-1}(z_{m-1})
 \end{bmatrix}$$`
 
 
