@@ -41,14 +41,17 @@ arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals)
 
 arma::mat algo_opti(arma::mat rho, arma::vec zVals, arma::vec rVals)
 {
+  // matrice resultat
   arma::mat result = arma::zeros(rVals.size(), zVals.size());
   Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
 
+  // precalcul de Z
   arma::vec * Z = new arma::vec[basis.n_zMax(0, 0)];
   for (int n_z = 0; n_z < basis.n_zMax(0, 0); n_z++) {
       Z[n_z] = basis.zPart(zVals, n_z);
   }
 
+  // precalcul de R*Z
   int i = 0;
   arma::mat * RZ = new arma::mat[basis.mMax * basis.nMax(0) * basis.n_zMax(0, 0)];
   for (int m = 0 ; m < basis.mMax ; m++) {
@@ -61,20 +64,21 @@ arma::mat algo_opti(arma::mat rho, arma::vec zVals, arma::vec rVals)
       }
   }
 
+  // calcul de la sommme
   int a = 0;
-  int b_bgn = 0;
+  int b_init = 0;
   for (int m = 0; m < basis.mMax; m++) {
       for (int na = 0; na < basis.nMax(m); na++) {
           for (int n_za = 0; n_za < basis.n_zMax(m, na); n_za++) {
-              // on utilise la symétrie
-              for (int b = b_bgn ; b < a ; b++) {
+              // on utilise la symetrie
+              for (int b = b_init ; b < a ; b++) {
                   result += rho(a, b) * RZ[a] % RZ[b] * 2.0;
               }
               result += rho(a, a) * RZ[a] % RZ[a];
               a++;
           }
       }
-      b_bgn = a;
+      b_init = a;
   }
 
   return result;
