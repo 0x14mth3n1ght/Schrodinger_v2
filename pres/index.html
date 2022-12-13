@@ -91,22 +91,16 @@ H_0(z_m) & H_1(z_m) & .. & H_{n_{max}-1}(z_m)
 
 ## Passage par des matrices
 
-* `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$`, nos points où seront calculés les solutions
-
- `$$ \psi(Z) \leftarrow H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
- 
- `$$ \psi(Z) \leftarrow \frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})}*H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
- 
- `$$\psi(Z) = \left(\frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})\right)*e^{\frac{-z^2}{2b_{z}^{2}}}*H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
+* `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_{m-1} \end{bmatrix}$`, nos points où seront calculés les solutions
 <br/><br/>
 `$$
-\zPart=
+zPart=
 \begin{bmatrix} 
-\zPart_0(z_0) & \zPart_1(z_0) & .. & \zPart_{n_{max}-1}(z_0) \\
+zPart_0(z_0) & zPart_1(z_0) & .. & zPart_{n_{max}-1}(z_0) \\
 .. & .. & .. \\
-\zPart_0(z_m) & \zPart_1(z_m) & .. & \zPart_{n_{max}-1}(z_m)
-\end{bmatrix}$$`
-
+zPart_0(z_m) & zPart_1(z_m) & .. & zPart_{n_{max}-1}(z_{m-1})
+\end{bmatrix}
+$$`
 ---
 
 # 2: Calcul des rParts
