@@ -4,7 +4,7 @@
 #include <iostream>
 #include <armadillo>
 
-arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals)
+arma::mat naive(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals)
 {
   arma::mat result = arma::zeros(rVals.size(), zVals.size()); // number of points on r- and z- axes
   Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
@@ -39,11 +39,10 @@ arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals)
   return result;
 }
 
-arma::mat algo_opti(arma::mat rho, arma::vec zVals, arma::vec rVals)
+arma::mat algo_opti(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals)
 {
   // matrice resultat
   arma::mat result = arma::zeros(rVals.size(), zVals.size());
-  Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
 
   // precalcul de Z
   arma::vec * Z = new arma::vec[basis.n_zMax(0, 0)];

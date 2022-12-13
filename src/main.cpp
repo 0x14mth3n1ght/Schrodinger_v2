@@ -14,23 +14,23 @@ int main()
     Basis basis(1.935801664793151,      2.829683956491218,     14,     1.3);
     arma::mat rho;
     rho.load("rho.arma", arma::arma_ascii);
-    std::cout<<"taille de rho:"<<size(rho)<<"\n";
+    std::cout<<"Calcul en cours...\n";
     arma::vec zVals=arma::linspace(MINVALUE*2, MAXVALUE*2, STEPS*2);
     arma::vec rVals=arma::linspace(MINVALUE, MAXVALUE, STEPS);
 
     arma::wall_clock timer;
     timer.tic();
-    arma::mat res_0=naive(rho, zVals, rVals);
+    arma::mat res_0=naive(rho, basis, zVals, rVals);
     std::cout<<"Algorithme naif : "<<timer.toc()<<"s\n";
     timer.tic();
-    arma::mat res_1=algo_opti(rho, zVals, rVals);
+    arma::mat res_1=algo_opti(rho, basis, zVals, rVals);
     std::cout<<"Algorithme opti : "<<timer.toc()<<"s\n";
 
     arma::vec X = arma::linspace(MINVALUE, MAXVALUE, STEPS);
     arma::vec Y = arma::linspace(MINVALUE, MAXVALUE, STEPS);
     arma::vec Z = arma::linspace(MINVALUE*2, MAXVALUE*2, STEPS*2);
 
-    arma::cube cube(X.size(), Y.size(), Z.size());
+    arma::cube cube=arma::zeros(X.size(), Y.size(), Z.size());
     /** Exportation en 3D
      * Il faut passer des coordonnées cartésiennes à cylindriques
      * On a R=sqrt(x²+y²), puis il faudrait chercher le r le plus proche d'un x pour x,y donné
@@ -44,9 +44,9 @@ int main()
             double r = sqrt(x * x + y * y);
             unsigned int u = 0;
 
-            //On va chercher l'indice du r le PLUS PROCHE de x
-            for (unsigned int v = 1 ; v < X.size() ; v++) {
-                if (abs(r - X(v)) < abs(r - X(u))) {
+            //On va chercher l'indice du r le PLUS PROCHE de r calculé
+            for (unsigned int v = 1 ; v < rVals.size() ; v++) {
+                if (abs(r - rVals(v)) < abs(r - rVals(u))) {
                     u = v;
                 }
             }
