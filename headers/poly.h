@@ -7,13 +7,13 @@ class Poly
 {
 private:
     /**
-     * @brief 
+     * @brief Matrice interne qui stocke le résultat de calcHermite
      * 
      */
     arma::mat internHermiteMat;
 
     /**
-     * @brief 
+     * @brief Matrice interne qui stocke le résultat de calcLaguerre
      * 
      */
     arma::cube internLaguerreMat;
@@ -27,30 +27,29 @@ public:
     Poly();
 
     /**
-     * @brief Construct a new arma::calc Hermite object
+     * @brief Calcule en interne les polynomes de Hermite, à utiliser avant hermite(int)
      *
      */
     void calcHermite(int, const arma::vec &);
 
     /**
-     * @brief
+     * @brief Calcule en interne les polynomes de Laguerre, à utiliser avant laguerre(int, int)
      *
-     * @return arma::mat
      */
     void calcLaguerre(int, int, const arma::vec &);
 
     /**
-     * @brief Renvoie les résultats du polynome d'Hermite d'indice i=0 à un entier donné n_max
-     *  appliqué à un vecteur colonne Z, sous forme d'une matrice.
-     *
-     * @return arma::mat La matrice avec les résultats du polynome d'Hermite
+     * @brief Retourne le résultat des polynomes de Hermite
+     * pour l'indice donné, utilisez calcHermite avant
+     * 
+     * @return const arma::vec 
      */
     const arma::vec hermite(int);
-
     /**
-     * @brief
-     *
-     * @return arma::mat
+     * @brief Retourne le résultat des polynomes de laguerre
+     * pour les deux indices donnés, utilisez calcLaguerre avant
+     * 
+     * @return const arma::vec 
      */
     const arma::vec laguerre(int, int);
 };
