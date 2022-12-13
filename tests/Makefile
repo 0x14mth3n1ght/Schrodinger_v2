@@ -14,7 +14,7 @@ LFLAGS=-larmadillo
 #  Les tests ont besoin des .obj pour pouvoir se faire, donc on va aller les chercher en les compilant d'abord.
 #  On peut ensuite lancer cxxtestgen et compiler notre exécutable de test. Et enfin on le lance.
 ###
-all: compile_project_obj CXX compile_test run_test
+all: compile_project_obj CXX compile_test
 
 ## Lancement des tests ##
 run_test:

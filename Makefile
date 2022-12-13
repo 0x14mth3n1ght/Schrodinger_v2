@@ -47,6 +47,10 @@ docs:
 	doxygen Doxygen
 
 ## Tests ##
+.PHONY: tests
+tests:
+	$(MAKE) -C tests/ all
+	
 .PHONY: runtests
 runtests:
-	$(MAKE) -C tests/
+	$(MAKE) -C tests/ all run_test
