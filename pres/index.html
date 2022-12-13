@@ -80,13 +80,26 @@ H_0(z_m) & H_1(z_m) & .. & H_{n_{max}-1}(z_m)
 
 ---
 
-# Calculer les solutions
+# Calculer le résultat des polynomes de Laguerre
 
-## Formes des solutions
 
-`$$\psi(r_{\tau},\theta,Z) = Z(n,n_{z}).R(r_{\tau},m,n).e^{im\theta}$$`
+`$$
+\begin{aligned}
+L^{m}_0(\eta)&=1\\
+L^{m}_1(\eta)&=1+m-\eta\\
+\forall (m, n) \in \mathbb{N}^{+2}, n > 1, L^{m}_{n}(\eta)&=\left(2+\frac{m-1-\eta}{n}\right)L^{m}_{n-1}(\eta)-\left(1+\frac{m-1}{n}\right)L^{m}_{n-2}(\eta)
+\end{aligned}
+$$`
 
-## 1: Calcul des zParts
+---
+
+# Calcul des zParts
+
+## Formes des `$\psi$`
+
+`$$\psi(r_{\perp},\theta,Z) = Z(n,n_{z}).R(r_{\perp},m,n).e^{im\theta}$$`
+
+## Calcul des zParts
 `$$Z(z,n_{z})=\frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})}e^{\frac{-z^2}{2b_{z}^{2}}}H_{n_{z}}(\frac{z}{b_{z}})$$`
 
 ## Passage par des matrices
@@ -103,35 +116,71 @@ zPart_0(z_m) & zPart_1(z_m) & .. & zPart_{n_{max}-1}(z_{m-1})
 $$`
 ---
 
-# 2: Calcul des rParts
+# Calcul des rParts
 
-$$R(r_{\tau},\theta,Z)=\frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\tau}^{2}}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2})$$
-
-
-##  Laguerre 
-
-$$
-\begin{aligned}
-L^{m}_0(\eta)&=1\\
-L^{m}_1(\eta)&=1+m-\eta\\
-\forall (m, n) \in \mathbb{N}^{+2}, n > 1, L^{m}_{n}(\eta)&=\left(2+\frac{m-1-\eta}{n}\right)L^{m}_{n-1}(\eta)-\left(1+\frac{m-1}{n}\right)L^{m}_{n-2}(\eta)
-\end{aligned}
-$$
-
-* $R=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$
-
-1. $ \R(r_{\tau},\theta,Z) \leftarrow L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
-2. $ \R(r_{\tau},\theta,Z) \leftarrow \frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
-3. $\R(r_{\tau},\theta,Z) =\frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\tau}^{2}}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
+`$$R(r_{\perp},\theta,Z)=\frac{1}{b_{\perp}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\perp}^{2}}}(\frac{r_{\perp}}{b_{\perp}})^m L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2})$$`
 
 
-$$
-\rPart=
+* `$R=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$`
+
+1. `$ R(r_{\perp},\theta,Z) \leftarrow L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2}) . Z$`
+2. `$ R(r_{\perp},\theta,Z) \leftarrow \frac{1}{b_{\perp}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}(\frac{r_{\perp}}{b_{\perp}})^m L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2}) . Z$`
+3. `$R(r_{\perp},\theta,Z) \leftarrow \frac{1}{b_{\perp}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\perp}^{2}}}(\frac{r_{\perp}}{b_{\perp}})^m L_{n}(\frac{r_{\perp}^2}{b_{\perp}^2}) . Z$`
+
+    </br></br>
+
+`$$
+rPart=
 \begin{bmatrix} 
-\rPart_0(z_0) & \rPart_1(z_0) & .. & \rPart_{n_{max}-1}(z_0) \\
+rPart_0(z_0) & rPart_1(z_0) & .. & rPart_{n_{max}-1}(z_0) \\
 .. & .. & .. \\
-\rPart_0(z_m) & \rPart_1(z_m) & .. & \rPart_{n_{max}-1}(z_m)
-\end{bmatrix}$$
+rPart_0(z_m) & rPart_1(z_m) & .. & rPart_{n_{max}-1}(z_m)
+\end{bmatrix}$$`
+
+
+---
+
+# Basis truncation
+
+On définit
+`$$
+\nu(i) \equiv (N+2).Q^\frac{2}{3}+\frac{1}{2}-i.Q
+$$`
+
+
+`$$
+m^\textrm{max} \equiv \textrm{sup}\left\{i:\nu(i)\ge 1\right\}.
+$$`
+
+Les **quantum** sont donnés par
+
+`$$
+\begin{alignedat}{4}
+0 & \le &&m  & \lt & \textrm{ mMax} \equiv m^\textrm{max}\\
+0 & \le &&n  & \lt & \textrm{ nMax[m]} \equiv \frac{1}{2}(m^\textrm{max}-m-1) + 1\\
+0 & \le &&n_z& \lt & \textrm{ n\_zMax[m, n]} \equiv \nu(m+2n+1).
+\end{alignedat}
+$$`
+
+Dans la fonction basis
+
+```C++
+{
+    //Vérifier que Q est bien positif ou nul
+    assert (Q>=0);
+
+    //Initialisation
+    int res=1;
+    double nu_i=nu(N, Q, 1);
+
+    //On incrémente res tant que nu_i est supérieur/égal à 1
+    for(int i=1; nu_i >= 1.0; i++)
+    {
+        nu_i=nu(N, Q, i);
+        res=i;
+    }
+    return res;
+};```
 
 
 
@@ -591,21 +640,35 @@ for (unsigned int i = 0 ; i < X.size() ; i++) {
   }
 }
 ```
+---
 
-.rightf.w20[
+#Exportation .raw, .df3
+
+.rightf.w30[
  ![](images/cercle.png)
 ]
 
-.leftf.w20[
+.leftf.w30[
  ![](images/cylindre.png)
 ]
 ---
 
 #Résultat
 
+```
+$ bin/main.exe
+Calcul en cours...
+Algorithme naif : 8.00577s
+Algorithme opti : 0.0667744s
+```
+
+---
+
+#Résultat
 
 
-.rightf.w100[
+
+.rightf.w80[
  ![](images/Figure_1.png)
 ]
 
@@ -615,7 +678,7 @@ for (unsigned int i = 0 ; i < X.size() ; i++) {
 
 
 
-.rightf.w100[
+.rightf.w80[
  ![](images/visu.png)
 ]
 
