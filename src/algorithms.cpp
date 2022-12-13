@@ -7,7 +7,6 @@
 arma::mat naive(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals)
 {
   arma::mat result = arma::zeros(rVals.size(), zVals.size()); // number of points on r- and z- axes
-  Basis basis(1.935801664793151, 2.829683956491218, 14, 1.3);
 
   //Il faut incrémenter a et b à la fin de la dernière boucle qui change funcA et funcB respectivement
   int a=0;

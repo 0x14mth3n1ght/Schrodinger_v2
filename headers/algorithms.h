@@ -1,4 +1,5 @@
 #include <armadillo>
+#include "basis.h"
 
 #ifndef ALGORITHMS
 #define ALGORITHMS
@@ -10,11 +11,12 @@
  * 
  * 
  * @param rho 
+ * @param basis
  * @param zVals 
  * @param rVals 
  * @return arma::mat 
  */
-arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals);
+arma::mat naive(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals);
 /**
  * @brief Algorithme optimisé pour calculer la matrice de densité locale.
  * Pour des valeurs de Z=\f$Z=\begin{bmatrix} z_0 & ... & z_{m-1} \end{bmatrix}\f$
@@ -25,6 +27,6 @@ arma::mat naive(arma::mat rho, arma::vec zVals, arma::vec rVals);
  * @param rVals 
  * @return arma::mat 
  */
-arma::mat algo_opti(arma::mat rho, arma::vec zVals, arma::vec rVals);
+arma::mat algo_opti(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals);
 
 #endif
