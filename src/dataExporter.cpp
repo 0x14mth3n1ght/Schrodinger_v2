@@ -61,12 +61,9 @@ std::string exportToDf3(const arma::cube &m)
   int nx = m.n_rows;
   int ny = m.n_cols;
   int nz = m.n_slices;
-  ss.put(nx >> 8);
-  ss.put(nx & 0xff);
-  ss.put(ny >> 8);
-  ss.put(ny & 0xff);
-  ss.put(nz >> 8);
-  ss.put(nz & 0xff);
+  ss.put(nx >> 8); ss.put(nx & 0xff);
+  ss.put(ny >> 8); ss.put(ny & 0xff);
+  ss.put(nz >> 8); ss.put(nz & 0xff);
   double theMin = 0.0;
   double theMax = m.max();
   for (int k = 0; k < m.n_slices; k++)

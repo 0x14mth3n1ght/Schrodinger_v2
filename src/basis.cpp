@@ -133,9 +133,9 @@ arma::vec Basis::rPart(const arma::vec & rVals, int m, int n)
 arma::mat Basis::basisFunc(int m, int n, int n_z, const arma::vec &zVals, const arma::vec &rVals)
 {
     //Récupération Z et R
-    arma::rowvec zPart_row = zPart(zVals, n_z).t();
+    arma::vec zPart_vec = zPart(zVals, n_z);
     arma::vec rPart_vec = rPart(rVals, m, n);
 
     //Module (pas de theta) (?)
-    return rPart_vec * zPart_row;
+    return rPart_vec * zPart_vec.t();
 }
