@@ -38,7 +38,7 @@ layout: true
 class: animated fadeIn middle numbers
 
 .footnote[
-Oscillateur harmonique 1D quantique - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022 - [:book:](../index.html)
+Projet IPS - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT - 2022 - [:book:](../index.html)
 ]
 
 ---
@@ -66,9 +66,7 @@ Oscillateur harmonique 1D quantique - N. DUONG, L. REGNIER, A. MAZAHERI--PETIT -
 \rho(\mathbf{r}) = \sum_{m_a}\sum_{n_a}\sum_{n_{za}}\sum_{m_b}\sum_{n_b}\sum_{n_{zb}} \psi_{a}(\mathbf{r})\psi^*_{b}(\mathbf{r})\rho(a,b).
 $$`
 
-## Première optimisation
-
-On sort `$\psi_{a}$` de la somme de droite 
+* On sort `$\psi_{a}$` de la somme de droite 
 
 `$$
 \equiv \sum_{m_a}\sum_{n_a}\sum_{n_{za}}\psi_{a}(r_\perp, \theta, z)\sum_{m_b}\sum_{n_b}\sum_{n_{zb}} \rho(a,b)\psi^*_{b}(r_\perp, \theta, z).
@@ -98,7 +96,7 @@ $$`
 
 `$$
 \equiv \sum_m\sum_{n_a}\sum_{n_{za}}
-Z(z, n_{za}) R(r_\perp, m, n_{za})
+Z(z, n_{za}) R(r_\perp, m, n_a)
 \sum_{n_b}\sum_{n_{zb}} \rho(a,b)
 Z(z, n_{zb}) R(r_\perp, m, n_b)
 $$`
@@ -109,13 +107,121 @@ $$`
 
 `$$
 \equiv \sum_m\sum_{n_a}\sum_{n_{za}}
-Z(z, n_{za}) R(r_\perp, m, n_{za})
+Z(z, n_{za}) R(r_\perp, m, n_a)
 \sum_{n_b}\sum_{n_{zb}} \rho(a,b)
 Z(z, n_{zb}) R(r_\perp, m, n_b)
 $$`
 
+* On peut sortir les fonctions `$R$` des sommes sur `$n_{za}$` et `$n_{zb}$`
+
+`$$
+\equiv \sum_m\sum_{n_a}
+ R(r_\perp, m, n_a)
+\sum_{n_{za}}
+Z(z, n_{za})
+\sum_{n_b}
+R(r_\perp, m, n_b)
+\sum_{n_{zb}} \rho(a,b)
+Z(z, n_{zb})
+$$`
 
 
+* On identifie des quantités présommables
+
+`$$
+\equiv \sum_m\sum_{n_a}
+ R(r_\perp, m, n_a)
+\left( \sum_{n_{za}}
+Z(z, n_{za}) \right)
+\sum_{n_b}
+R(r_\perp, m, n_b)
+\left( \sum_{n_{zb}} 
+Z(z, n_{zb}) \right) \rho(a,b)
+$$`
+
+`$$
+\equiv \sum_m\sum_{n_a}
+ R(r_\perp, m, n_a)
+\mathcal{Z}_a(z)
+\sum_{n_b}
+R(r_\perp, m, n_b)
+\mathcal{Z}_b(z)
+\rho(a,b)
+$$`
+
+---
+
+# Optimisation de l'algorithme 
+
+* On calcule les produits `$R*\mathcal{Z}$` au préalable
+
+`$$
+\equiv \sum_m\sum_{n_a}
+\sum_{n_{za}}
+\sum_{n_b}
+\sum_{n_{zb}} \rho(a,b).RZ(a).RZ(b)
+$$`
+
+* Enfin, on utilise la symétrie de `$\rho$` pour simplifier encore les passages dans la dernière boucle
+
+---
+
+# Optimisation de l'algorithme 
+
+## On obtient l'algorithme optimisé :
+
+```
+
+arma::mat algo_opti(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals)
+{
+  // matrice resultat
+  arma::mat result = arma::zeros(rVals.size(), zVals.size());
+
+  // precalcul de Z
+  arma::vec * Z = new arma::vec[basis.n_zMax(0, 0)];
+  for (int n_z = 0; n_z < basis.n_zMax(0, 0); n_z++) {
+      Z[n_z] = basis.zPart(zVals, n_z);
+  }
+
+  // precalcul de R*Z
+  int i = 0;
+  arma::mat * RZ = new arma::mat[basis.mMax * basis.nMax(0) * basis.n_zMax(0, 0)];
+  for (int m = 0 ; m < basis.mMax ; m++) {
+      for (int n = 0 ; n < basis.nMax(m) ; n++) {
+          arma::mat R = basis.rPart(rVals, m, n);
+          for (int n_z = 0; n_z < basis.n_zMax(m, n); n_z++) {
+              RZ[i] = R * Z[n_z].t();
+              i++;
+          }
+      }
+  }
+```
+---
+# Optimisation de l'algorithme 
+
+## On obtient l'algorithme optimisé :
+
+```
+  // calcul de la sommme
+  int a = 0;
+  int b_init = 0;
+  for (int m = 0; m < basis.mMax; m++) {
+      for (int na = 0; na < basis.nMax(m); na++) {
+          for (int n_za = 0; n_za < basis.n_zMax(m, na); n_za++) {
+              // on utilise la symetrie
+              for (int b = b_init ; b < a ; b++) {
+                  result += rho(a, b) * RZ[a] % RZ[b] * 2.0;
+              }
+              result += rho(a, a) * RZ[a] % RZ[a];
+              a++;
+          }
+      }
+      b_init = a;
+  }
+
+  return result;
+}
+```
 
 ---
 
