@@ -78,6 +78,68 @@ H_0(z_0) & H_1(z_0) & .. & H_{n_{max}-1}(z_0) \\
 H_0(z_m) & H_1(z_m) & .. & H_{n_{max}-1}(z_m)
 \end{bmatrix}$`
 
+---
+
+# Calculer les solutions
+
+## Formes des solutions
+
+`$$\psi(r_{\tau},\theta,Z) = Z(n,n_{z}).R(r_{\tau},m,n).e^{im\theta}$$`
+
+## 1: Calcul des zParts
+`$$Z(z,n_{z})=\frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})}e^{\frac{-z^2}{2b_{z}^{2}}}H_{n_{z}}(\frac{z}{b_{z}})$$`
+
+## Passage par des matrices
+
+* `$Z=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$`, nos points où seront calculés les solutions
+
+ `$$ \psi(Z) \leftarrow H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
+ 
+ `$$ \psi(Z) \leftarrow \frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})}*H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
+ 
+ `$$\psi(Z) = \left(\frac{1}{\sqrt(b_{z})}\frac{1}{\sqrt(2^{n_{z}}\sqrt{\pi}n_{z})\right)*e^{\frac{-z^2}{2b_{z}^{2}}}*H_{n_{z}}(\frac{z}{b_{z}}) . Z\right)$$`
+<br/><br/>
+`$$
+\zPart=
+\begin{bmatrix} 
+\zPart_0(z_0) & \zPart_1(z_0) & .. & \zPart_{n_{max}-1}(z_0) \\
+.. & .. & .. \\
+\zPart_0(z_m) & \zPart_1(z_m) & .. & \zPart_{n_{max}-1}(z_m)
+\end{bmatrix}$$`
+
+---
+
+# 2: Calcul des rParts
+
+$$R(r_{\tau},\theta,Z)=\frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\tau}^{2}}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2})$$
+
+
+##  Laguerre 
+
+$$
+\begin{aligned}
+L^{m}_0(\eta)&=1\\
+L^{m}_1(\eta)&=1+m-\eta\\
+\forall (m, n) \in \mathbb{N}^{+2}, n > 1, L^{m}_{n}(\eta)&=\left(2+\frac{m-1-\eta}{n}\right)L^{m}_{n-1}(\eta)-\left(1+\frac{m-1}{n}\right)L^{m}_{n-2}(\eta)
+\end{aligned}
+$$
+
+* $R=\begin{bmatrix} z_0 \\ z_1 \\ .. \\ z_m \end{bmatrix}$
+
+1. $ \R(r_{\tau},\theta,Z) \leftarrow L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
+2. $ \R(r_{\tau},\theta,Z) \leftarrow \frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
+3. $\R(r_{\tau},\theta,Z) =\frac{1}{b_{\tau}\sqrt{\pi}}\sqrt{\frac{n!}{(n+m)!}}e^{\frac{-r^2}{2b_{\tau}^{2}}}(\frac{r_{\tau}}{b_{\tau}})^m L_{n}(\frac{r_{\tau}^2}{b_{\tau}^2}) . Z\right)$
+
+
+$$
+\rPart=
+\begin{bmatrix} 
+\rPart_0(z_0) & \rPart_1(z_0) & .. & \rPart_{n_{max}-1}(z_0) \\
+.. & .. & .. \\
+\rPart_0(z_m) & \rPart_1(z_m) & .. & \rPart_{n_{max}-1}(z_m)
+\end{bmatrix}$$
+
+
 
 ---
 
@@ -507,6 +569,62 @@ bin:
 .rightf.w100[
  ![](images/documentation.png)
 ]
+
+
+---
+
+#Exportation .raw, .df3
+
+```C++
+for (unsigned int i = 0 ; i < X.size() ; i++) {
+  for (unsigned int j = 0 ; j < Y.size() ; j++) {
+      double x = X(i);
+      double y = Y(j);
+      double r = sqrt(x * x + y * y);
+      unsigned int u = 0;
+
+      //On va chercher l'indice du r le PLUS PROCHE de r calculé
+      for (unsigned int v = 1 ; v < rVals.size() ; v++) {
+          if (abs(r - rVals(v)) < abs(r - rVals(u))) {
+              u = v;
+          }
+      }
+
+      for (unsigned int k = 0 ; k < Z.size() ; k++) {
+          //Tranches qu'on va mettre en perspective 3d
+          cube(i, j, k) = res_1(u, k);
+      }
+  }
+}
+```
+
+.rightf.w20[
+ ![](images/cercle.png)
+]
+
+.leftf.w20[
+ ![](images/cylindre.png)
+]
+---
+
+#Résultat
+
+
+
+.rightf.w100[
+ ![](images/Figure_1.png)
+]
+
+---
+
+#Résultat
+
+
+
+.rightf.w100[
+ ![](images/visu.png)
+]
+
 
 ---
 
