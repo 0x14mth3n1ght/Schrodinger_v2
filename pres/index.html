@@ -380,6 +380,59 @@ arma::mat algo_opti(arma::mat rho, Basis basis, arma::vec zVals, arma::vec rVals
 
 ---
 
+# Utilitaires makefile
+
+```Makefile
+## Astyle ##
+.PHONY: format
+format: $(SOURCES) $(HEADERS) $(TESTS)
+	./astyle --style=allman $^
+
+## Documentation ##
+.PHONY: docs
+docs:
+	doxygen Doxygen
+
+## Tests ##
+.PHONY: tests
+tests:
+	$(MAKE) -C tests/ all
+	
+.PHONY: runtests
+runtests:
+	$(MAKE) -C tests/
+```
+
+
+
+
+---
+
+# Chaîne de compilation
+
+```Makefile
+SOURCES=$(wildcard src/*.cpp)
+
+all: compile_main
+
+## Edition de liens et compilation exécutable ##
+
+compile_main: $(OBJ) | bin #Créer le dossier bin s'il n'existe pas
+	$(CC) $(CFLAGS) -o $(TARGET) $^
+
+obj/%.o: src/%.cpp $(HEADERS) | obj #Créer le dossier obj s'il n'existe pas
+	$(CC) $(CFLAGS) $< -c -o $@
+
+## Création des dossiers obj et bin ##
+obj:
+	mkdir -p $@
+bin:
+	mkdir -p $@
+```
+
+---
+
+
 #Tests
 
 ## Polynomes d'Hermite (Portage)
@@ -553,57 +606,6 @@ void testMandatory3( void )
 ```
 ---
 
-# Utilitaires makefile
-
-```Makefile
-## Astyle ##
-.PHONY: format
-format: $(SOURCES) $(HEADERS) $(TESTS)
-	./astyle --style=allman $^
-
-## Documentation ##
-.PHONY: docs
-docs:
-	doxygen Doxygen
-
-## Tests ##
-.PHONY: tests
-tests:
-	$(MAKE) -C tests/ all
-	
-.PHONY: runtests
-runtests:
-	$(MAKE) -C tests/
-```
-
-
-
-
----
-
-# Chaîne de compilation
-
-```Makefile
-SOURCES=$(wildcard src/*.cpp)
-
-all: compile_main
-
-## Edition de liens et compilation exécutable ##
-
-compile_main: $(OBJ) | bin #Créer le dossier bin s'il n'existe pas
-	$(CC) $(CFLAGS) -o $(TARGET) $^
-
-obj/%.o: src/%.cpp $(HEADERS) | obj #Créer le dossier obj s'il n'existe pas
-	$(CC) $(CFLAGS) $< -c -o $@
-
-## Création des dossiers obj et bin ##
-obj:
-	mkdir -p $@
-bin:
-	mkdir -p $@
-```
-
----
 
 #Documentation
 
