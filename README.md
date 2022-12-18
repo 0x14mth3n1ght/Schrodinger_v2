@@ -1,14 +1,18 @@
-# Oscillateur harmonique quantique 1D
+# Densité nucléaire 3D
 
-Projet scientifique
+Suite de ce ![projet](https://github.com/0x14mth3n1ght/Schrodinger). 
+
+Une présentation de ce projet est disponible dans <code>pres/index.html</code>.
 
 ## Description
 
-Le but de ce projet est de calculer les solutions de l'équation d'un oscillateur harmonique quantique 1D.
+Le but de ce projet est de calculer les solutions de l'équation d'un oscillateur harmonique quantique généralisées, puis d'afficher la densité nucléaire d'un système (approximation par une triple somme), avec un algorithme optimisé.
 
-Avec ces solutions, on pourra également calculer les niveaux d'énergie pour l'équation de l'oscillateur harmonique Schrödinger 1D. On affichera tous ces résultats sous forme d'une graphe.
+Ces solutions possèdent des propriétés qui seront également vérifiées, par des tests unitaires.
 
-Ces solutions possèdent des propriétés qui seront également vérifiées, potentiellement par des tests unitaires.
+L'éxécutable effectue le calcul des fonctions d'onde, de la densité locale avec un algorithme naïf puis un algorithme optimisé (ordre et contenu des boucles), exporte les données dans une matrice dans res/ que l'on pourra afficher.
+
+Pour afficher la densité en 3D "cube", on utilise povray.
 
 ## Commandes make
 
@@ -36,6 +40,33 @@ Ces solutions possèdent des propriétés qui seront également vérifiées, pot
 
 -tests => Pour les tests
 
-## Pour compiler sans avoir à installer armadillo
+## Installer armadillo
 
-Ajouter le flag à g++ : -I "./armadillo/include"
+```
+sudo apt update #sudo pacman -Syu
+sudo apt install liblapack-dev && sudo apt install libblas-dev && sudo apt install libboost-dev
+sudo apt install libarmadillo-dev #yay -S armadillo
+```
+
+## Résultats
+
+```
+#2D
+cd res
+python plot.py
+```
+
+![](plot2D.png)
+
+```
+#3D
+cd res/df3
+sudo apt install povray #sudo pacman -S povray
+povray +A0.0001 -W800 -H600 +P +Q11 visu.pov
+```
+
+![](plot3D.png)
+
+## Crédits
+
+Consulter https://dubrayn.github.io/ pour plus de détails.
