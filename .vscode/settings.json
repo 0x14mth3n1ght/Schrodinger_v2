@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "armadillo": "cpp",
-        "cmath": "cpp",
-        "iosfwd": "cpp"
-    }
-}
